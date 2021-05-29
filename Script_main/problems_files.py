@@ -63,9 +63,9 @@ class Changkong_and_haimes_problem(Problem):
         out["F"] = np.column_stack([f1, f2]) 
         out["G"] = np.column_stack([g1, g2]) 
     
-def Changkong_and_haimes():
-    Changkong_and_haimes = Changkong_and_haimes_problem()
-    return Changkong_and_haimes
+def changkong_and_haimes():
+    changkong_and_haimes = Changkong_and_haimes_problem()
+    return changkong_and_haimes
 
 
 #################problem_3

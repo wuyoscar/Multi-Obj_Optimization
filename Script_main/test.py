@@ -1,11 +1,11 @@
-from problems_files import binh_and_korn, test, constr_ex, Changkong_and_haimes,filter_input
+from problems_files import binh_and_korn, test, constr_ex, changkong_and_haimes,filter_input
 import numpy as np
 
 
 binh_and_korn = binh_and_korn()
 test = test()
 constr_ex = constr_ex()
-Changkong_and_haimes = Changkong_and_haimes
+changkong_and_haimes = changkong_and_haimes
 
 #print(binh_and_korn)
 #print(test)
