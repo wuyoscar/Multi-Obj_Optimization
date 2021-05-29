@@ -4,7 +4,7 @@
 
 ## *Script-main folder*
 
-
+----
 ### problems_files
   1. Call the problems from **problems_files**
   
@@ -26,5 +26,5 @@ problem = binh_and_korn()
 from problem_files import filter_input
 feasible_X, infeasible_X, feasible_F,infeasible_F,feasible_G,infeasible_G =  filter_input(problem, X = input)
 ```
----
+----
 ### Algorithmns
