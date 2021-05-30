@@ -1,46 +1,95 @@
-from problems_files import binh_and_korn, test, constr_ex, changkong_and_haimes,filter_input
+
+from problems import visual_problems,visual_algorithms,changkong_and_haimes, filter_input
 import numpy as np
 
-
-binh_and_korn = binh_and_korn()
-test = test()
-constr_ex = constr_ex()
-changkong_and_haimes = changkong_and_haimes
-
-#print(binh_and_korn)
-#print(test)
-#print(constr_ex)
-#print(Changkong_and_haimes)
+ch_problem = changkong_and_haimes()
+print(ch_problem)
 
 
-
-
+#give random input
 
 rng = np.random.default_rng(seed=22)
-x = 11*rng.random((20000,1))-7 #[0,5]
-y = 11*rng.random((20000,1))-7  #[0,3]
+
+x = 40*rng.random((10000,1))-20 #[-20,20]
+y = 40*rng.random((10000,1))-20 #[-20,20]
+
 X = np.concatenate([x,y],axis=1)
 
 
-feasible_X, infeasible_X, feasible_F,infeasible_F,feasible_G,infeasible_G = filter_input(problem = test, X=X)
+#evaluation
+feasible_X_old, infeasible_X_old, feasible_F_old,infeasible_F_old,feasible_G_old,infeasible_G_old = filter_input(X= X, problem= ch_problem)
 
-from matplotlib import pyplot as plt
-number_of_input = X.shape[0]
-number_of_feasible = feasible_X.shape[0]
-number_of_infeasible = infeasible_X.shape[0]
+#visual_problems(feasible_F_old,infeasible_F_old)
 
-figure, ax = plt.subplots(1,2)
-#figure for feasible input
-ax[0].scatter(feasible_F[:,0],feasible_F[:,1], alpha=0.03, color = 'blue', edgecolor= 'black') #alpha change color tranparent
-ax[0].set_xlabel("$minf(1)$")
-ax[0].set_ylabel("$minf(2)$")
-ax[0].set_title('{} feasible input out of {}'.format(number_of_feasible, number_of_input))
-
-#figure for infeasible input
-ax[1].scatter(infeasible_F[:,0], infeasible_F[:,1],alpha=0.2)
-ax[1].set_xlabel("$minf(1)$")
-ax[1].set_ylabel("$minf(2)$")
-ax[1].set_title('{} infeasible input out of {}'.format(number_of_infeasible, number_of_input))
-plt.show()
+#feasible_X, infeasible_X, feasible_F,infeasible_F,feasible_G,infeasible_G = filter_input(X=X, problem=ch_problem)
+#visual_problems(feasible_F,infeasible_F)
 
 
+#apply algorithm
+
+from algorithms import nsga2, generation_history
+res= nsga2(ch_problem)
+
+feasible_X,infeasible_X, feasible_F,infeasible_F,feasible_G,infeasible_G = filter_input(X=res.X,problem= ch_problem)
+
+
+n_evals, F, cv =  generation_history(res)
+
+
+#compare algrotihmns
+
+#visual_algorithms(feasible_F, feasible_F_old, infeasible_F_old,'NSGA-II')
+
+
+
+
+
+
+
+
+
+
+########
+##############output
+
+#import os
+#print(os.getcwd())
+
+#path = '/Users/wuyoscar/Documents/Project/MOOP/Result/'
+
+#received_X_file = path+'NSGA-ch_problem_X.txt'
+#input_infeas_file=path+'NSGA-ch_problem_infeasible_X.txt'
+#input_feas_file=path+'NSGA-ch_problem_feasible_X.txt'
+
+#optimal_solution_set = path + 'NSGA-ch_problem_ps_X.txt'
+
+
+#np.savetxt(received_X_file, X)
+#np.savetxt(input_infeas_file, infeasible_X_old)
+#np.savetxt(optimal_solution_set, res.X)
+
+
+
+
+
+n_evals = []    # corresponding number of function evaluations\
+F = []          # the objective space values in each generation
+cv = []         # constraint violation in each generation
+
+
+# iterate over the deepcopies of algorithms
+for algorithm in res.history:
+
+    # store the number of function evaluations
+    n_evals.append(algorithm.evaluator.n_eval)
+
+    # retrieve the optimum from the algorithm
+    opt = algorithm.opt
+
+    # store the least contraint violation in this generation
+    cv.append(opt.get("CV").min())
+
+    # filter out only the feasible and append
+    feas = np.where(opt.get("feasible"))[0]
+    _F = opt.get("F")[feas]
+    F.append(_F)
