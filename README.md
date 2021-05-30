@@ -5,8 +5,8 @@
 ## *Script-main folder*
 
 ----
-### problems_files
-  1. Call the problems from **problems_files**
+### problems
+  1. Call the problems from **problems**
   
    - Available problems:
       - [binh_and_korn](https://en.wikipedia.org/wiki/File:Binh_and_Korn_function.pdf)
@@ -16,15 +16,24 @@
   
    
 ```
-from problems_files imnport binh_and_korn 
+from problems imnport binh_and_korn 
 problem = binh_and_korn()
 ```
-  2. Call the filter_input from **problems_files**
+  2. Call the filter_input from **problems**
 
    - Filtering the feasible input and infeasible input; feasible objective value as well
 ```
-from problem_files import filter_input
+from problem import filter_input
 feasible_X, infeasible_X, feasible_F,infeasible_F,feasible_G,infeasible_G =  filter_input(problem, X = input)
+```
+
+  3. call visaul_algorithmns from **problems**
+```
+#feasible_F produced after applying algorithmns
+#feasible_F_old produced by random picked
+from problems import visaul_algorithmns
+visaul_algorithmns(feasible_F,feasible_F_old,'algorithms_name')
+
 ```
 ----
 ### Algorithmns
