@@ -6,7 +6,7 @@
 
 ----
 ### [problems](https://en.wikipedia.org/wiki/Test_functions_for_optimization)
-  1. Call the problems from * [* means all]
+  1. Call the problems from *problems*
   
    - Available problems:
       - [binh_and_korn](https://en.wikipedia.org/wiki/File:Binh_and_Korn_function.pdf)
@@ -16,7 +16,7 @@
   
    
 ```
-from problems imnport binh_and_korn 
+from problems imnport *
 # call aval_problems to see problems
 aval_problems()
 
