@@ -1,8 +1,38 @@
 
 from pymoo.model.problem import Problem
 import numpy as np
+    
+
+#reference for input define using np.random
+#rng.random --uniform distribution [0,1)
+#rng.uniform(a,b) --uniform distribution [a,b, size]
+#rng.gauss(mu, sigma)
+#rng = np.random.default_rng(seed=22)
+#x = 40*rng.random((10000,1))-20 #[-20,20]
+#y = 40*rng.random((10000,1))-20 #[-20,20]
+#X = np.concatenate([x,y],axis=1)
+
+####################################################
+def aval_problems():
+    p_list = ['binh_and_korn_Problem', 'changkong_and_haimes_problem', 'test_problem','constr_ex_problem' ]
+        
+    print('The multiple obejective problems:')
+    print('-'*40)
+    for i in p_list:
+        print('\n')
+        print(i)
+    print('\n-----------------------\n')
+    print('Call problem by name')
+    
 
 
+    print('\n\n*****\n')
+    print('split_X(given_design_space,given_problem):\n')
+    
+    print('feasible_X,infeasible_X, feasible_F,infeasible_F,feasible_G,infeasible_G')
+
+    return 'Updating more problems'
+aval_problems()
 ####################################################
 #################problem_1#######################################
 class binh_and_korn_Problem(Problem):
@@ -32,9 +62,7 @@ class binh_and_korn_Problem(Problem):
         out["F"] = np.column_stack([f1, f2]) 
         out["G"] = np.column_stack([g1, g2]) 
     
-def binh_and_korn():
-    binh_and_korn = binh_and_korn_Problem()
-    return binh_and_korn
+
 
 
 #################################################################
@@ -66,9 +94,7 @@ class changkong_and_haimes_problem(Problem):
         out["F"] = np.column_stack([f1, f2]) 
         out["G"] = np.column_stack([g1, g2]) 
     
-def changkong_and_haimes():
-    changkong_and_haimes = changkong_and_haimes_problem()
-    return changkong_and_haimes
+
 
 #################################################################
 #################problem_3#######################################
@@ -100,9 +126,7 @@ class test_problem(Problem):
         out["F"] = np.column_stack([f1, f2]) 
         out["G"] = np.column_stack([g1, g2, g3]) 
     
-def test():
-    test = test_problem()
-    return test
+
 
 
 
@@ -135,10 +159,7 @@ class constr_ex_problem(Problem):
 
         out["F"] = np.column_stack([f1, f2]) 
         out["G"] = np.column_stack([g1, g2]) 
-    
-def constr_ex():
-    constr_ex = constr_ex_problem()
-    return constr_ex
+
 
 
 # filter input
@@ -151,12 +172,12 @@ def constr_ex():
 #X = np.concatenate([x,y],axis=1)
 ##############################################################################
 ##############################################################################
-def filter_input(X,problem):
+
+def split_X(X,problem):
     result = problem.evaluate(X, return_as_dictionary=True)
     #filter infeasible and feasible index
     infeasible_index = np.where(result['CV'] > 0)[0]
     feasible_index = [i for i in range(X.shape[0]) if i not in infeasible_index ]
-
     #get feasible and infeasible input
     feasible_X = X[feasible_index]         
     #result include three types of oupt 
@@ -164,81 +185,47 @@ def filter_input(X,problem):
     # result['CV'], if CV ==0, feasible; otherwise, infeasible 
     # result['G'] == constraint value
     infeasible_X = X[infeasible_index]
-
     feasible_F = result['F'][feasible_index]
     infeasible_F = result['F'][infeasible_index]
-
     feasible_G = result['G'][feasible_index]
     infeasible_G = result['G'][infeasible_index]
 
+    print('{} data points and {} n_vars in Receive X:'.format(X.shape[0], X.shape[1]))
+    print('\n{}--feasible\n{}--infesiable'.format(len(feasible_index), len(infeasible_index)))
+
+
+    print('\n*****\n')
+    print('plot_problem(X, problem)')
     return feasible_X,infeasible_X, feasible_F,infeasible_F,feasible_G,infeasible_G
 
+from matplotlib import pyplot as plt
+def plot_problem(X, problem):
+    feasible_X,infeasible_X, feasible_F,infeasible_F,feasible_G,infeasible_G= split_X(X, problem=problem)
+    figure, ax = plt.subplots(1,2)
+    #figure for feasible input
+    ax[0].scatter(feasible_F[:,0],feasible_F[:,1], alpha=0.3, color = 'blue', edgecolor= 'black') #alpha change color tranparent
+    ax[0].set_xlabel("min $f(1)$")
+    ax[0].set_ylabel("min $f(2)$")
+    ax[0].set_title('{} feasible input out of {}'.format(feasible_F.shape[0], feasible_F.shape[0]+infeasible_F.shape[0]))
+    #figure for infeasible input
+    ax[1].scatter(infeasible_F[:,0], infeasible_F[:,1],alpha=0.3, color = 'blue', edgecolor= 'black')
+    ax[1].set_xlabel("min $f(1)$")
+    ax[1].set_ylabel("min $f(2)$")
+    ax[1].set_title('{} infeasible input out of {}'.format(feasible_F.shape[0],feasible_F.shape[0]+infeasible_F.shape[0]))
+    plt.tight_layout()
+    plt.show()
 
-#result_1 = bk_problem.evaluate(np.array([5,8]), return_as_dictionary= True)
-#print(result)
 
 
-#reference for input define using np.random
-#rng.random --uniform distribution [0,1)
-#rng.uniform(a,b) --uniform distribution [a,b, size]
-#rng.gauss(mu, sigma)
 
 #define input here
 
 ########################################################################################################
 ###########################################################################################
-def visual_algorithms(feasible_f_new, feasible_f_old, infeasible_F_old, algorithmns_name = 'Algorithmn'):
-    from matplotlib import pyplot as plt
-    fig, ax = plt.subplots(nrows=2, ncols=2)
-    ax = ax.flatten()
-    #figure for feasible input
-    ax[0].scatter(feasible_f_new[:,0],feasible_f_new[:,1], alpha=0.3, color = 'blue', edgecolor= 'black',label = 'pareto front') #alpha change color tranparent
-    ax[0].set_xlabel("$minf(1)$")
-    ax[0].set_ylabel("$minf(2)$")
-    ax[0].set_title('{}-{}data points'.format(algorithmns_name, feasible_f_new.shape[0]))
-    ax[0].legend()
-    #figure for infeasible input
-    ax[1].scatter(feasible_f_old[:,0], feasible_f_old[:,1], alpha=0.2, color = 'blue',edgecolor= 'black', label = 'feasible_obejct_space' )
-    ax[1].scatter(infeasible_F_old[:,0], infeasible_F_old[:,1], alpha=0.2, color = 'orange',  label = 'infeasible_obejct_space')
-    ax[1].set_xlabel("$minf(1)$")
-    ax[1].set_ylabel("$minf(2)$")
-    ax[1].set_title('Random Pick {} data points'.format(feasible_f_old.shape[0]+infeasible_F_old.shape[0]))
-    ax[1].legend()
-
-    ax[2].scatter(feasible_f_old[:,0], feasible_f_old[:,1],alpha=0.3, color = 'blue', edgecolor= 'black', label='feasible_obejct_space')
-    ax[2].set_xlabel("$minf(1)$")
-    ax[2].set_ylabel("$minf(2)$")
-    ax[2].set_title('{} feasible input out of {}'.format(feasible_f_old.shape[0],feasible_f_old.shape[0]+infeasible_F_old.shape[0]))
-    ax[2].legend()
-
-    ax[3].scatter(infeasible_F_old[:,0], infeasible_F_old[:,1],alpha=0.17, color = 'orange',  label='infeasible_obejct_space')
-    ax[3].set_xlabel("$minf(1)$")
-    ax[3].set_ylabel("$minf(2)$")
-    ax[3].set_title('{} infeasible input out of {}'.format(infeasible_F_old.shape[0],feasible_f_old.shape[0]+infeasible_F_old.shape[0]))
-    ax[3].legend()
-    plt.tight_layout()
-    plt.legend()
-    plt.show()
 
 ##############################################################################
 #################################################################
-from matplotlib import pyplot as plt
-def visual_problems(feasible_f, infeasible_f):
-    figure, ax = plt.subplots(1,2)
-    #figure for feasible input
-    ax[0].scatter(feasible_f[:,0],feasible_f[:,1], alpha=0.3, color = 'blue', edgecolor= 'black') #alpha change color tranparent
-    ax[0].set_xlabel("$minf(1)$")
-    ax[0].set_ylabel("$minf(2)$")
-    ax[0].set_title('{} feasible input out of {}'.format(feasible_f.shape[0], feasible_f.shape[0]+infeasible_f.shape[0]))
 
-    #figure for infeasible input
-    ax[1].scatter(infeasible_f[:,0], infeasible_f[:,1],alpha=0.3, color = 'blue', edgecolor= 'black')
-    ax[1].set_xlabel("$minf(1)$")
-    ax[1].set_ylabel("$minf(2)$")
-    ax[1].set_title('{} infeasible input out of {}'.format(infeasible_f.shape[0],feasible_f.shape[0]+infeasible_f.shape[0]))
-
-
-    plt.show()
 
 
 

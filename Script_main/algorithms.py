@@ -1,12 +1,24 @@
-from problems import binh_and_korn, test, constr_ex, changkong_and_haimes, filter_input
 import numpy as np
 import time
 from pymoo.algorithms.nsga2 import NSGA2
 from pymoo.util.termination.f_tol import MultiObjectiveSpaceToleranceTermination
 from pymoo.optimize import minimize
+import matplotlib.pyplot as plt
+from pymoo.performance_indicator.hv import Hypervolume
+from problems import split_X
 
 #call NSGAII from packages
 #! lack of tuning algorithms parameters code here:
+print('algorithmn:')
+print('nsga2')
+
+
+print('\n******\n')
+
+print('n_evals, F, cv = gen_res(res)')
+print('plot_cv(res)')
+print('plot_hv(res, ref_point =np.array([1.0, 1.0]))')
+print('plot_cc(res,problem, X ,algorithmns_name = \'Algorithmn\')')
 
 
 #################################################
@@ -48,8 +60,13 @@ def nsga2(problem):
 
 
 ####################################################
-####################################################    
-def generation_history(res):
+########################evluation visualization############################    
+
+
+
+
+
+def gen_res(res):
     # iterate over the deepcopies of algorithms
     for algorithm in res.history:
         n_evals = []    # corresponding number of function evaluations\
@@ -72,6 +89,82 @@ def generation_history(res):
     
     
     return n_evals, F, cv
+
+
+
+
+def plot_cv(res):
+    n_evals, F, cv = gen_res(res)
+    k = min([i for i in range(len(cv)) if cv[i] <= 0])
+    first_feas_evals = n_evals[k]
+    print(f"First feasible solution found after {first_feas_evals} evaluations")
+
+    plt.plot(n_evals, cv, '--', label="CV")
+    plt.scatter(first_feas_evals, cv[k], color="red", label="First Feasible")
+    plt.xlabel("Function Evaluations")
+    plt.ylabel("Constraint Violation (CV)")
+    plt.legend()
+    plt.show()
+
+
+
+def plot_hv(res, ref_point =np.array([1.0, 1.0])):
+    n_evals, F, cv = gen_res(res)
+    # MODIFY - this is problem dependend
+    
+    # create the performance indicator object with reference point
+    metric = Hypervolume(ref_point=ref_point, normalize=False)
+
+    # calculate for each generation the HV metric
+    hv = [metric.calc(f) for f in F]
+
+    # visualze the convergence curve
+    plt.plot(n_evals, hv, '-o', markersize=4, linewidth=2)
+    plt.title("Convergence")
+    plt.xlabel("Function Evaluations")
+    plt.ylabel("Hypervolume")
+    plt.show()
+
+
+def plot_cc(res,problem, X ,algorithmns_name = 'Algorithmn'):
+    feasible_X,infeasible_X, feasible_F,infeasible_F,feasible_G,infeasible_G= split_X(X, problem)
+
+    feasible_f_old = feasible_F
+    infeasible_F_old = infeasible_F
+    
+    from matplotlib import pyplot as plt
+    fig, ax = plt.subplots(nrows=2, ncols=2)
+    ax = ax.flatten()
+    #figure for feasible input
+    ax[0].scatter(res.F[:,0],res.F[:,1], alpha=0.3, color = 'blue', edgecolor= 'black',label = 'pareto front') #alpha change color tranparent
+    ax[0].set_xlabel("$min f(1)$")
+    ax[0].set_ylabel("$min f(2)$")
+    ax[0].set_title('{}-{}data points'.format(algorithmns_name, res.F.shape[0]))
+    ax[0].legend()
+    #figure for infeasible input
+    ax[1].scatter(feasible_f_old[:,0], feasible_f_old[:,1], alpha=0.2, color = 'blue',edgecolor= 'black', label = 'feasible_obejct_space' )
+    ax[1].scatter(infeasible_F_old[:,0], infeasible_F_old[:,1], alpha=0.2, color = 'orange',  label = 'infeasible_obejct_space')
+    ax[1].set_xlabel("$min f(1)$")
+    ax[1].set_ylabel("$min f(2)$")
+    ax[1].set_title('Random Pick {} data points'.format(feasible_f_old.shape[0]+infeasible_F_old.shape[0]))
+    ax[1].legend()
+
+    ax[2].scatter(feasible_f_old[:,0], feasible_f_old[:,1],alpha=0.3, color = 'blue', edgecolor= 'black', label='feasible_obejct_space')
+    ax[2].set_xlabel("$min f(1)$")
+    ax[2].set_ylabel("$min f(2)$")
+    ax[2].set_title('{} feasible input out of {}'.format(feasible_f_old.shape[0],feasible_f_old.shape[0]+infeasible_F_old.shape[0]))
+    ax[2].legend()
+
+    ax[3].scatter(infeasible_F_old[:,0], infeasible_F_old[:,1],alpha=0.17, color = 'orange',  label='infeasible_obejct_space')
+    ax[3].set_xlabel("$min f(1)$")
+    ax[3].set_ylabel("$min f(2)$")
+    ax[3].set_title('{} infeasible input out of {}'.format(infeasible_F_old.shape[0],feasible_f_old.shape[0]+infeasible_F_old.shape[0]))
+    ax[3].legend()
+    plt.tight_layout()
+    plt.legend()
+    plt.show()
+
+
 
 
 
