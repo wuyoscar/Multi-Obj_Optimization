@@ -1,9 +1,10 @@
 
-from problems import visual_problems,visual_algorithms,changkong_and_haimes, filter_input
+from problems import *
+from algorithms import *
 import numpy as np
 
-ch_problem = changkong_and_haimes()
-print(ch_problem)
+
+
 
 
 #give random input
@@ -17,7 +18,7 @@ X = np.concatenate([x,y],axis=1)
 
 
 #evaluation
-feasible_X_old, infeasible_X_old, feasible_F_old,infeasible_F_old,feasible_G_old,infeasible_G_old = filter_input(X= X, problem= ch_problem)
+#feasible_X_old, infeasible_X_old, feasible_F_old,infeasible_F_old,feasible_G_old,infeasible_G_old = split_X(X= X, problem= )
 
 #visual_problems(feasible_F_old,infeasible_F_old)
 
