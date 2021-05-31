@@ -23,11 +23,11 @@ problem = binh_and_korn()
 
    - Filtering the feasible input and infeasible input; feasible objective value as well
 ```
-from problem import sp
-feasible_X, infeasible_X, feasible_F,infeasible_F,feasible_G,infeasible_G =  filter_input(problem, X = input)
+from problem import split_X
+feasible_X, infeasible_X, feasible_F,infeasible_F,feasible_G,infeasible_G = split_X(problem, X = input)
 ```
 
-  3. call visaul_algorithmns from **problems**
+  3. call visaul_algorithmns from **problems**[updating]
 ```
 #feasible_F produced after applying algorithmns
 #feasible_F_old produced by random picked
