@@ -23,7 +23,7 @@ problem = binh_and_korn()
 
    - Filtering the feasible input and infeasible input; feasible objective value as well
 ```
-from problem import filter_input
+from problem import sp
 feasible_X, infeasible_X, feasible_F,infeasible_F,feasible_G,infeasible_G =  filter_input(problem, X = input)
 ```
 
