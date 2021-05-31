@@ -17,6 +17,10 @@
    
 ```
 from problems imnport binh_and_korn 
+# call aval_problems to see problems
+aval_problems()
+
+#pass problem into variable
 problem = binh_and_korn()
 ```
   2. Call the filter_input from **problems**
