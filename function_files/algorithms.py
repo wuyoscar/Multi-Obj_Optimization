@@ -25,6 +25,8 @@ print('plot_cc(res,problem, X ,algorithmns_name = \'Algorithmn\')')
 ####################################################
 def nsga2(problem):
     algorithm = NSGA2()
+
+    
     #define termination criterion
     #recommend supplying a maximum number of generations n_max_gen or function evaluations n_max_evals
     termination = MultiObjectiveSpaceToleranceTermination(#tol=0.0025,
@@ -35,7 +37,6 @@ def nsga2(problem):
 
     #process algorithm
     start = time.time()
-
     res = minimize(problem = problem, # define problem, here bk_problem
             algorithm = algorithm, # pass algorithm, here NSGA-II
             termination= termination, #define algorithmn terminations
@@ -110,7 +111,7 @@ def plot_cv(res):
 
 def plot_hv(res, ref_point =np.array([1.0, 1.0])):
     n_evals, F, cv = gen_res(res)
-    # MODIFY - this is problem dependend
+    #! MODIFY - this is problem dependend
     
     # create the performance indicator object with reference point
     metric = Hypervolume(ref_point=ref_point, normalize=False)

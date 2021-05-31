@@ -56,7 +56,8 @@ n_evals, F, cv =  generation_history(res)
 #import os
 #print(os.getcwd())
 
-#path = '/Users/wuyoscar/Documents/Project/MOOP/Result/'
+#path = '/Users/wuyoscar/Documents/Project/MOOP/Result/'w =
+
 
 #received_X_file = path+'NSGA-ch_problem_X.txt'
 #input_infeas_file=path+'NSGA-ch_problem_infeasible_X.txt'
