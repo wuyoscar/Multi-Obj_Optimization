@@ -6,7 +6,7 @@
 
 ----
 ### [problems](https://en.wikipedia.org/wiki/Test_functions_for_optimization)
-  1. Call the problems from **problems**
+  1. Call the problems from * [* means all]
   
    - Available problems:
       - [binh_and_korn](https://en.wikipedia.org/wiki/File:Binh_and_Korn_function.pdf)
