@@ -12,6 +12,28 @@ import numpy as np
 #y = 40*rng.random((10000,1))-20 #[-20,20]
 #X = np.concatenate([x,y],axis=1)
 
+
+
+def split_X(X,problem_F,problem_CV, lb, lp):
+    
+    #filter infeasible and feasible index
+    infeasible_index = np.where(problem_CV > 0)[0]
+    feasible_index = [i for i in range(X.shape[0]) if i not in infeasible_index ]
+    #get feasible and infeasible input
+    feasible_X = X[feasible_index]         
+
+    infeasible_X = X[infeasible_index]
+    feasible_F = problem_F[feasible_index]
+    infeasible_F = problem_F[infeasible_index]
+
+    print('------problem evaluation-----')
+    print('Give search domain {} ~ {}  with {} data points'.format(lb, lp, X.shape[0]))
+    print('{} is feasible and {} is infeasiebl'.format(len(feasible_index), len(infeasible_index)))
+
+    return feasible_X,infeasible_X, feasible_F,infeasible_F
+
+
+
 ####################################################
 def aval_problems():
     p_list = ['binh_and_korn_Problem', 'changkong_and_haimes_problem', 'test_problem','constr_ex_problem' ]
@@ -32,7 +54,7 @@ def aval_problems():
     print('feasible_X,infeasible_X, feasible_F,infeasible_F,feasible_G,infeasible_G')
 
     return 'Updating more problems'
-aval_problems()
+
 ####################################################
 #################problem_1#######################################
 class binh_and_korn_Problem(Problem):
@@ -173,30 +195,7 @@ class constr_ex_problem(Problem):
 ##############################################################################
 ##############################################################################
 
-def split_X(X,problem):
-    result = problem.evaluate(X, return_as_dictionary=True)
-    #filter infeasible and feasible index
-    infeasible_index = np.where(result['CV'] > 0)[0]
-    feasible_index = [i for i in range(X.shape[0]) if i not in infeasible_index ]
-    #get feasible and infeasible input
-    feasible_X = X[feasible_index]         
-    #result include three types of oupt 
-    # result['F'] == objective values
-    # result['CV'], if CV ==0, feasible; otherwise, infeasible 
-    # result['G'] == constraint value
-    infeasible_X = X[infeasible_index]
-    feasible_F = result['F'][feasible_index]
-    infeasible_F = result['F'][infeasible_index]
-    feasible_G = result['G'][feasible_index]
-    infeasible_G = result['G'][infeasible_index]
 
-    print('{} data points and {} n_vars in Receive X:'.format(X.shape[0], X.shape[1]))
-    print('\n{}--feasible\n{}--infesiable'.format(len(feasible_index), len(infeasible_index)))
-
-
-    print('\n*****\n')
-    print('plot_problem(X, problem)')
-    return feasible_X,infeasible_X, feasible_F,infeasible_F,feasible_G,infeasible_G
 
 from matplotlib import pyplot as plt
 def plot_problem(X, problem):
