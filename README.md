@@ -2,7 +2,7 @@
 
 ----
 
-## *All the loop files has been updated*
+## *All the problems loop files has been updated*
 
 ----
 ### [problems](https://en.wikipedia.org/wiki/Test_functions_for_optimization)
