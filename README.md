@@ -6,7 +6,7 @@
 
 ----
 ### [problems](https://en.wikipedia.org/wiki/Test_functions_for_optimization)
-  1. Call the problems from *problems*
+  
   
    - Available problems:
       - [binh_and_korn](https://en.wikipedia.org/wiki/File:Binh_and_Korn_function.pdf)
@@ -15,6 +15,17 @@
       - [changkong_and_haimes](https://en.wikipedia.org/wiki/File:Chakong_and_Haimes_function.pdf)
   
       - Problem list : **problem_list = ['BNH', 'OSY', 'TNK', 'Truss2D', 'Welded_Beam', 'zdt1','ZDT2','ZDT3','ZDT4','ZDT5','ZDT6']**
+
+----
+
+### Click here to use [Problems files](https://github.com/wuyoscar/MOOP/tree/master/Loop%20files/problems)
+   - Can be used for random searching, and will generate result files, including:
+      1. search_domain_feasible_X.txt, 
+      2. search_domain_infeasible_X.txt, 
+      3. search_domain_feasible_F.txt, 
+      4. search_domain_infeasible_F.txt
+
+   - **Options**: The number of datapoints and search domain can be defined by user, default: random searching
 
 ----
 ### Algorithmns
