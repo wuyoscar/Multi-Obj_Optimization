@@ -25,7 +25,7 @@
       3. search_domain_feasible_F.txt, 
       4. search_domain_infeasible_F.txt
 
-   - **Options**: The number of datapoints and search domain can be defined by user, default: random searching
+   - **Options**: The number of data points (code line 73)and search domain can be defined by user (code line 69), default: random searching
 
 ----
 ### Algorithmns
