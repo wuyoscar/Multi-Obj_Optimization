@@ -2,7 +2,7 @@
 
 ----
 
-## *Script-main folder*
+## *All the loop files has been updated*
 
 ----
 ### [problems](https://en.wikipedia.org/wiki/Test_functions_for_optimization)
@@ -14,31 +14,8 @@
       - [constr_ex](https://en.wikipedia.org/wiki/File:Constr-Ex_problem.pdf)
       - [changkong_and_haimes](https://en.wikipedia.org/wiki/File:Chakong_and_Haimes_function.pdf)
   
-   
-```
-from problems imnport *
+      - Problem list : **problem_list = ['BNH', 'OSY', 'TNK', 'Truss2D', 'Welded_Beam', 'zdt1','ZDT2','ZDT3','ZDT4','ZDT5','ZDT6']**
 
-# call aval_problems to see problems
-aval_problems()
-
-#pass problem into variable
-problem = binh_and_korn()
-```
-  2. Call the filter_input from **problems**
-
-   - Filtering the feasible input and infeasible input; feasible objective value as well
-```
-from problem import split_X
-
-#based on given input, filtering into feasible and infeasible
-feasible_X, infeasible_X, feasible_F,infeasible_F,feasible_G,infeasible_G = split_X(problem = problem, X = given_input)
-```
-
-  3. call visaul_algorithmns from **problems**[updating......]
-```
-updating..........
-
-```
 ----
 ### Algorithmns
 
