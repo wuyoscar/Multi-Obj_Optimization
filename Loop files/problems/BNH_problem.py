@@ -42,7 +42,7 @@ problem = get_problem(p)
 ub = np.random.randint(20) #upper bound
 lb = - np.random.randint(20) # Lower bound
 
-X = random_pick_X(n_var = problem.n_var, bound = [lb,ub], datasize=300) #! define data size here
+X = random_pick_X(n_var = problem.n_var, bound = [lb,ub], datasize=300) #! define data points size here
 print('\n')
 
 

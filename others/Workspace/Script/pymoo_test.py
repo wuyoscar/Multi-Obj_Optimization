@@ -18,12 +18,15 @@ input_infeas_file=path+'thupymoo_input_infeasible.txt'
 input_feas_file=path+'thupymoo_input_feasible.txt'
 output_scalar_file=path+'thupymoo_output_scalar.txt'
 output_vector_file=path+'thupymoo_output_vector.txt'
+input_vector = [2,3]
 
 # define function to call later
+
 def my_function(input_vector):
 # this is where you implement your test functions
     f1 = input_vector[0]+input_vector[1]
-	f2 = input_vector[0]-input_vector[1]
+    f2 = input_vector[0]-input_vector[1]
+    
     return [f1, f2]
 
 
@@ -54,7 +57,7 @@ class MyProblem(Problem):
         out["F"] = fs  #I think this is the output, see pyMOO manual how to do multiobjective problems
 		
 		# now we write inputs and outputs into respective files. The below part may be implemented better, without opening files all he time
-        if sum(fsr[i] for i in range(n_var)) >= 0:
+        if sum(fsr[i] for i in range(2)) >= 0:
             with open(input_infeas_file, 'a') as f:  # infeasible point, outside feasible domain
                 print(x, sep=' ', file=f)
         else:
@@ -82,7 +85,7 @@ algorithm = NSGA2(x0=ref_starting,pop_size=100,sampling=get_sampling("int_random
 
 res = minimize(problem,
                algorithm,
-               ("n_iter", 15),
+               ("n_gen", 15),
                verbose=True,
                seed=1)
 
