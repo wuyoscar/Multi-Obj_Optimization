@@ -95,7 +95,7 @@ for problem_name in select_problem_list:
     print('\n!!!!!!Find the best parameter here !!!!!\n')
     print(sorted_dict)
 
-
+print('-'*60)
 print(problem_parameter_dict)
 
 

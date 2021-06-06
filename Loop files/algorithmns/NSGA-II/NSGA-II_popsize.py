@@ -16,8 +16,6 @@ import os
 This loop file to evaluating performance of NSGA-II by selecting problems and pop_size 
 '''
 
-
-
 #for path in sys.path:
 #    print(path)
 

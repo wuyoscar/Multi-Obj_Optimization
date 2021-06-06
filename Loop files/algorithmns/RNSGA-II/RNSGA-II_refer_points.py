@@ -36,8 +36,7 @@ for problem_name in select_problem_list:
         
         #algorithm parameters
         algorithm = RNSGA2(
-            ref_points=rp,
-            
+            ref_points=rp, #！！！！！
             epsilon= 0.0001,
             normalization='front',
             extreme_points_as_reference_points=False,
