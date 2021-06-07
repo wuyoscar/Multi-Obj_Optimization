@@ -1,4 +1,6 @@
 # MOOP
+## Author : Oscar Wu
+## No public access
 
 ----
 
