@@ -16,14 +16,14 @@ import os
 problem_list = ['BNH', 'OSY', 'TNK', 'Truss2D', 'Welded_Beam', 'zdt1','ZDT2','ZDT3','ZDT4','ZDT5','ZDT6']
 
 #!select problem here
-select_problem_list = ['BNH','TNK']
+select_problem_list = ['BNH', 'OSY', 'TNK','Truss2D','Welded_Beam']
 
 
 problem_parameter_dict = {}
 
 #! set generation times list here
 ####!!!!!!!!!!!
-gen_list = [10,20,80,100,200,300,500,800,900,1000]
+gen_list = list(range(10,3000,50))
 for problem_name in select_problem_list:
     res_dict = {}
 
@@ -92,11 +92,15 @@ for problem_name in select_problem_list:
                         key=lambda item: item[1],
                         reverse=False)) 
     problem_parameter_dict[problem_name] = sorted_dict
-    print('\n!!!!!!Find the best parameter here !!!!!\n')
+    
     print(sorted_dict)
 
 print('-'*60)
-print(problem_parameter_dict)
+print('\n!!!!!!Find the best parameter here !!!!!\n')
+for i in problem_parameter_dict.keys():
+    print(i,problem_parameter_dict[i])
+    print('\n')
+
 
 
 

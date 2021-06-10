@@ -16,14 +16,14 @@ import os
 problem_list = ['BNH', 'OSY', 'TNK', 'Truss2D', 'Welded_Beam', 'zdt1','ZDT2','ZDT3','ZDT4','ZDT5','ZDT6']
 
 #!select problem here
-select_problem_list = ['BNH','TNK']
+select_problem_list = ['BNH', 'OSY', 'TNK','Truss2D','Welded_Beam']
 
 
 problem_parameter_dict = {}
 
 #! set generation times list here
 ####!!!!!!!!!!!
-pro_list = np.linspace(0,1,50) #from 0 to 1, 50 datapoints
+pro_list = np.linspace(0,1,50) #from 0 to 1, 50 data points
 
 for problem_name in select_problem_list:
     res_dict = {}
@@ -38,7 +38,7 @@ for problem_name in select_problem_list:
         #algorithm parameters
         algorithm = NSGA2( 
         n_offspring = 5,
-        crossover=get_crossover("real_sbx", prob=pro, eta=25),
+        crossover=get_crossover("real_sbx", prob=pro, eta=25), #!parameters
         mutation=get_mutation("real_pm", eta=20),
         eliminate_duplicates=True
     )
@@ -74,29 +74,32 @@ for problem_name in select_problem_list:
         else:
             print ("Successfully created the directory %s" % path)
         
-        best_solution_path = path + '/NSGA-II_' + str(problem_name)+'_proba_' + str(pro) + '_X'
-        objective_value_path= path + '/NSGA-II_' + str(problem_name) + '_proba_' +str(pro) + '_F'
+        best_solution_path = path + '/NSGA-II_' + str(problem_name)+'_crossover_proba_' + str(pro) + '_X'
+        objective_value_path= path + '/NSGA-II_' + str(problem_name) + '_crossover_proba_' +str(pro) + '_F'
         
-        
+    
 
         print(best_solution_path)
-
+    '''
         with open(best_solution_path, 'w+') as f:  # infeasible point, outside feasible domain
             print(res.X, sep=' ', file=f)
 
         with open(objective_value_path, 'w+') as f:  # infeasible point, outside feasible domain
             print(res.F, sep=' ', file=f)
 
-
+    '''
     sorted_dict = dict(sorted(res_dict.items(),
                         key=lambda item: item[1],
                         reverse=False)) 
     problem_parameter_dict[problem_name] = sorted_dict
-    print('\n!!!!!!Find the best parameter here !!!!!\n')
+    
     print(sorted_dict)
 
 print('-'*60)
-print(problem_parameter_dict)
+print('\n!!!!!!Find the best parameter here !!!!!\n')
+for i in problem_parameter_dict.keys():
+    print(i,problem_parameter_dict[i])
+    print('\n')
 
 
 

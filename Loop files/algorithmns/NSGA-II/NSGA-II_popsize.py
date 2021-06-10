@@ -21,13 +21,13 @@ This loop file to evaluating performance of NSGA-II by selecting problems and po
 
 #!select problems here 
 problem_list = ['BNH', 'OSY', 'TNK', 'Truss2D', 'Welded_Beam', 'zdt1','ZDT2','ZDT3','ZDT4','ZDT5','ZDT6']
-select_problem_list = ['BNH','Truss2D']
+select_problem_list = ['BNH', 'OSY', 'TNK','Truss2D','Welded_Beam']
 
 
 problem_dict = {}
 
 #! set pop_size list here
-pop_list = [10,20,50,80,100,150,200,250, 500]####!!!!!!!!!!!
+pop_list = list(range(10,1500,10)) ####!!!!!!!!!!!
 
 
 for problem_name in select_problem_list:
@@ -106,7 +106,11 @@ for problem_name in select_problem_list:
     problem_dict[problem_name] = sorted_dict
 
 print('-'*60)
-print(problem_dict)
+
+for i in problem_dict.keys():
+    print(i,problem_dict[i])
+    print('\n')
+
 
         
         

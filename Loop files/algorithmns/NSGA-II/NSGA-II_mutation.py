@@ -16,8 +16,9 @@ import os
 problem_list = ['BNH', 'OSY', 'TNK', 'Truss2D', 'Welded_Beam', 'zdt1','ZDT2','ZDT3','ZDT4','ZDT5','ZDT6']
 
 #!select problem here
-select_problem_list = ['BNH','TNK']
+select_problem_list = ['BNH', 'OSY', 'TNK','Truss2D','Welded_Beam']
 
+#eta list
 eta_list = [1,2,5,7,9,10,13,16,18,20,25,27,30 ]
 problem_parameter_dict = {}
 
@@ -35,8 +36,7 @@ for problem_name in select_problem_list:
         algorithm = NSGA2( 
         n_offspring = 5,
         crossover=get_crossover("real_sbx", prob=0.4, eta=15),
-        mutation=get_mutation("real_pm", eta=eta),
-        
+        mutation=get_mutation("real_pm", eta=eta), #!! eta
         eliminate_duplicates=True
     )
 
@@ -91,11 +91,15 @@ for problem_name in select_problem_list:
                         reverse=False)) 
     problem_parameter_dict[problem_name] = sorted_dict
     print('eta is ', eta)
-    print('\n!!!!!!Find the best parameter here !!!!!\n')
+    
     print(sorted_dict)
 
 print('-'*60)
-print(problem_parameter_dict)
+print('\n!!!!!!Find the best parameter here !!!!!\n')
+for i in problem_parameter_dict.keys():
+    print(i,problem_parameter_dict[i])
+    print('\n')
+
 
 
 

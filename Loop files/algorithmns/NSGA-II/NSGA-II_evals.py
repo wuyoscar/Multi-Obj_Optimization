@@ -15,16 +15,15 @@ import os
 
 problem_list = ['BNH', 'OSY', 'TNK', 'Truss2D', 'Welded_Beam', 'zdt1','ZDT2','ZDT3','ZDT4','ZDT5','ZDT6']
 
-select_problem_list = ['BNH','Welded_Beam']
+select_problem_list = ['BNH', 'OSY', 'TNK','Truss2D','Welded_Beam']
 
 problem_dict = {}
 
 
 
-
 #! set pop_size list here
 ####!!!!!!!!!!!
-n_evals_list = [10,20,80,100,200,300,500,800,900,1000]
+n_evals_list = list(range(10,3000,50))
 
 
 for problem_name in select_problem_list:
@@ -43,7 +42,10 @@ for problem_name in select_problem_list:
         #algorithm parameters
         algorithm = NSGA2(
         n_offspring = 20,
+        crossover=get_crossover("real_sbx", prob=0.9, eta=15),
+        mutation=get_mutation("real_pm", eta=20),
         eliminate_duplicates=True
+        
     )
         termination = get_termination("n_eval", n_evals)
         start = time.time()
@@ -93,13 +95,15 @@ for problem_name in select_problem_list:
     sorted_dict = dict(sorted(GD_list.items(),
                         key=lambda item: item[1],
                         reverse=False))      
-    
 
 
     problem_dict[problem_name] = sorted_dict
 
 print('-'*60)
-print(problem_dict)
+
+for i in problem_dict.keys():
+    print(i,problem_dict[i])
+    print('\n')
         
 
 
