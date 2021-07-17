@@ -76,7 +76,7 @@ print('\n')
 
 problem_result = problem.evaluate(X)
 feasible_X,infeasible_X, feasible_F,infeasible_F = split_X(X, problem_result[0], problem_result[1], lb , ub)  
-
+print(feasible_F)
 
 #join directory 
 path = os.path.join(os.getcwd(), 'Result','Problem', p )
@@ -97,6 +97,7 @@ infeasible_F_path = path + '/' + str(lb) + '~' + str(ub) + '_infesasible_F'
 print(feasible_X_path, infeasible_X_path, feasible_F_path, infeasible_F_path)
 
 
+'''
 
 #np.savetxt(feasible_X_path, feasible_X)
 #np.savetxt(infeasible_X_path, infeasible_X)
@@ -116,3 +117,4 @@ with open(feasible_F_path, 'a') as f:  # infeasible point, outside feasible doma
 with open(infeasible_F_path, 'a') as f:  # infeasible point, outside feasible domain
         print(infeasible_F, sep=' ', file=f)
 
+'''

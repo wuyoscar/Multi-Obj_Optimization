@@ -6,9 +6,9 @@
 #PBS -l walltime=01:00:00
 
 # Load modules
-module unload intel-compiler python python3 pymoo
-module load python3/3.8.5
+module load intel-mkl/2020.3.304
+module load python3/3.9.2
 
 
 # Run Python applications
-python3 /home/582/ow6835/Loopfiles/algorithmns/NSGA-II/NSGA-II_crossover.py > $PBS_JOBID.log
+python3 /scratch/lk32/ow6835/NSGA-II/NSGA-II_crossover.py > $PBS_JOBID.log
