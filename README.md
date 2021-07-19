@@ -38,5 +38,5 @@ updating........
 ```
 
 ## [Example.pdf](https://github.com/wuyoscar/MOOP/blob/master/examples.ipynb)
-<img src="others/images">
+<img src="others/images/example_fig.jpg">
 
