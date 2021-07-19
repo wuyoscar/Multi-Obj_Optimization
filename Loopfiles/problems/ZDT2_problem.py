@@ -61,6 +61,7 @@ print('\n')
 
 problem_result = problem.evaluate(X)
 
+
 '''
 feasible_X,infeasible_X, feasible_F,infeasible_F = split_X(X, problem_result[0], problem_result[1], lb , ub)  
 
