@@ -17,6 +17,12 @@
   
       - Problem list : **problem_list = ['BNH', 'OSY', 'TNK', 'Truss2D', 'Welded_Beam', 'zdt1','ZDT2','ZDT3','ZDT4','ZDT5','ZDT6']**
 
+
+| Probelm | Function | Constarints |
+| --- | --- | ---|
+| `Binh and Korn function` | List all *new or modified* files | |
+| `Chankong and Haimes function` | Show file differences that **haven't been** staged | |
+
 ----
 
 ### Click here to use [Problems files](https://github.com/wuyoscar/MOOP/tree/master/Loop%20files/problems)
