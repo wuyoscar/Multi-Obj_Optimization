@@ -1,0 +1,130 @@
+1. I cannot understand your problem files. I see that for some problems 
+you coded the formulas, for others you just use pyMOO's implementation. 
+Fine. But a) you do not have control of the problem statement (the 
+_evaluate function) (what if I ask you to modify slightly the problem?)  
+b) you seem to generate random set of inputs X and then select 
+feafible/infeasible  from the array. Where these values are produced by 
+the pyMOO algorithms (rather than random points)? My original though was 
+that you have a function (like _evaluate), which processes the inputs, 
+prints them into the output files, evaluates th objectives (explicitly 
+OR calling _evaluate method of the already coded problem from pyMOO), 
+potentially aggregates objectives into one or a few grouped objectives 
+(this is to reduce the number of objectives, aggregating 2,3,5 of them 
+into one value)
+
+2. test.sh
+
+I think it is better to run one script with the specific files 
+(input/output) and parameters for MOO method rather than your script .py 
+which has a loop , because you will run mutiple script in parallel, and 
+your loop is sequential
+
+Here you can add other commands to process the output , namely 
+paretofront and hypervolume
+
+
+3. your scripts like NSGA-II_evale.py, etc are all sequential. I need 
+the parallel. Which means that each script should have just one job
+
+(one problem, one set of bounds and dimensions, one set of output file 
+names,one set of algorithm parameters).
+
+These values must be passed to the script as parameters. ten you can 
+call the script from the PBS file like this:
+
+NSGA-IIscript.py problem dimension filename parameters....
+
+Then you generate with a .sh script many PBS files which differ by these 
+parameters, and then submit them to PBS queue, as was in my example.
+
+
+So what it means that all the loops (by problem name) but also by their 
+dimensions (ZDT5 I think allows up to 30 variables to you need 
+10,15,20,25 30 variables and /or objectives) in your bash script. This 
+script will produce and submit many PBS files, and they are now all in 
+parallel.
+
+
+
+So now I would like to have one example of a PBS script which
+
+executes
+
+NSGA-II    function name, parameters,...
+
+paretofront   output  secondoutput
+
+hypervolume  secondoutput
+
+lc (counts lines in the feasible/infeasible output files)
+
+
+Once this is done, it is just replicating it with the different 
+parameters (automatically from within a bash loop)
+
+
+
+
+
+------------------------------------------------------------------
+This is an example of the script I want:
+
+===========================================
+
+#! /bin/bash
+
+# to run this script use parameters
+# script directory_prefix size  accuracy mod character  (must be like 
+001 as in the file name)
+# example
+# ./scriptloop1 ~/Short/determinant/eigen/ 256 32768 001 001
+
+for i in {0..4}; do
+# Create the batch scripts
+cat <<EnD > ${i%.*}.job$2_$4_$5
+#!/bin/bash
+#PBS -N job"$i"
+#PBS -l ncpus=1,mem=20GB
+
+#Set max wallclock time to one minute
+#PBS -l walltime=03:22:00
+
+#PBS -P er6
+#PBS -q normal
+#PBS -l wd
+
+#Use submission environment
+#PBS -V
+#PBS -mabe
+
+#Start job from the directory it was submitted
+# cd $PBS_O_WORKDIR
+
+
+#If you need to load the environment
+module load gmp/5.1.3
+module load mpfr/3.1.2
+module load gcc/4.7.3
+module load python
+
+#Run a commmand that shows where the job ran
+# inputfile  mod char ntheta to read, level_start size bits level
+
+python script1.py $1thetas/$4_$5/theta_$4_$5.arb $4 $5 1100 1 $(($2-$i)) 
+$3 $i $1
+
+EnD
+
+# submit them to NQE
+qsub ${i%.*}.job$2_$4_$5
+#echo qsub ${i%.*}.job
+#echo $((256-$i))
+sleep 1
+
+done
+
+==============================
+
+Note how script1.py is executed with a list of parameters script1 reads 
+these parameters , sets up the problem and calls NSGA methods
+
