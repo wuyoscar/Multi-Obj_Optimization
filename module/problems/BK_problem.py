@@ -1,4 +1,4 @@
-from pymoo.model.problem import Problem
+afrom pymoo.model.problem import Problem
 import numpy as np
 import os
 
@@ -41,7 +41,7 @@ def random_pick_X(n_var = None, bound = None, datasize=None):
     X = (b-a)*np.random.random((datasize, n_var)) +a
     return X
 
-def split_X(X,problem_F,problem_CV, lb, lp):
+def split_X(X,problem_F,problem_CV):
     
     #filter infeasible and feasible index
     infeasible_index = np.where(problem_CV > 0)[0]
@@ -54,7 +54,6 @@ def split_X(X,problem_F,problem_CV, lb, lp):
     infeasible_F = problem_F[infeasible_index]
 
     print('------problem evaluation-----')
-    print('Give search domain {} ~ {}  with {} data points'.format(lb, lp, X.shape[0]))
     print('{} is feasible and {} is infeasiebl'.format(len(feasible_index), len(infeasible_index)))
 
     return feasible_X,infeasible_X, feasible_F,infeasible_F

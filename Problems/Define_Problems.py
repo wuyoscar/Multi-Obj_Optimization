@@ -12,15 +12,46 @@ def lsp(objective_function):
     return lsp
 
 
+def random_pick_X(sd, size = 100):
+    # you have data size and a set of bound
+    # based on this generating random data points(
+    #sd is np.columnstack([lb,ub])
+    lst = []
+    for i in sd:
+        aryl = np.random.uniform(low=i[0], high=i[1], size =size).reshape(-1,1)
+        lst.append(aryl)
+    return np.column_stack(lst)
+
+def split_X(X,problem_F,problem_CV):
+    
+    #filter infeasible and feasible index
+    infeasible_index = np.where(problem_CV > 0)[0]
+    feasible_index = [i for i in range(X.shape[0]) if i not in infeasible_index ]
+    #get feasible and infeasible input
+    feasible_X = X[feasible_index]         
+
+    infeasible_X = X[infeasible_index]
+    feasible_F = problem_F[feasible_index]
+    infeasible_F = problem_F[infeasible_index]
+
+    print('------problem evaluation-----')
+    print('{} is feasible and {} is infeasible among {} data points'.format(len(feasible_index), len(infeasible_index), len(X)))
+
+    return feasible_X,infeasible_X, feasible_F,infeasible_F
+
+
+
 
 class p1(Problem):
 #clarify the problem
-    def __init__(self):
+    def __init__(self,lb, up):
+        xl = np.array(lb)
+        xu = np.array(up)
         super().__init__(n_var=2,
                         n_obj=2,
-                        n_constr=2
-                    #  xl=np.array([0,0]),  
-                    # xu=np.array([5,3])
+                        n_constr=2,
+                   xl=xl ,  
+                    xu= xu
                         )
 
     def _evaluate(self, X, out,*args, **kwargs):  #return_values_of = ['F','G']
@@ -41,12 +72,14 @@ class p1(Problem):
 class p2(Problem):
 
 #clarify the problem
-    def __init__(self):
+    def __init__(self,lb, up):
+        xl = np.array(lb)
+        xu = np.array(up)
         super().__init__(n_var=2,
                         n_obj=2,
-                        n_constr=2
-                    # xl=np.array([-20,-20]), 
-                    # xu=np.array([20,20])
+                        n_constr=2,
+                        xl=xl,
+                        xu = xu
                     )
                         #elementwise_evaluation=True)
 
@@ -54,7 +87,7 @@ class p2(Problem):
 #objetive and constraint formula
 #Note: for constraint formula, convert them <= 0
 ###    for objective formula, convert them into minimize
-    def _evaluate(self, X, *args, **kwargs):
+    def _evaluate(self, X, out,*args, **kwargs):
         f1 = 2 + (X[:,0]-2)**2 + (X[:,1]-1)**2
         f2 = 9*X[:,0] - (X[:,1]-1)**2
 
@@ -73,10 +106,14 @@ class p2(Problem):
 class p3(Problem):
 
 #clarify the problem
-    def __init__(self):
+    def __init__(self,lb, up):
+        xl = np.array(lb)
+        xu = np.array(up)
         super().__init__(n_var=2,
                         n_obj=2,
                         n_constr=3,
+                        xl=xl,
+                        xu = xu
         )
     def _evaluate(self, X, out,*args, **kwargs):
         f1 = X[:,0]**2 - X[:,1]
@@ -95,9 +132,14 @@ class p3(Problem):
 #################Osyczka and kundu fucntion###########
 
 class p4(Problem):
-    def __init__(Problem):
+    def __init__(self,lb, up):
+        xl = np.array(lb)
+        xu = np.array(up)
         super().__init__(n_var=2,
-                        n_constr=2
+                        n_obj=2,
+                        n_constr=2,
+                        xl =xl,
+                        xu=xu
         )
     
     def _evaluate(self, X, out, *args, **kwargs):
@@ -113,9 +155,15 @@ class p4(Problem):
 #################################################################
 #################problem_1###########
 class p5(Problem):
-    def __init__(self):
+    def __init__(self,lb, up):
+        xl = np.array(lb)
+        xu = np.array(up)
+
         super().__init__(n_var=3,
-                        n_constr=3
+                        n_constr=3,
+                        n_obj=3,
+                        xl=xl,
+                        xu=xu
                         )
 
     def _evaluate(self, X,out, *args, **kwargs):
@@ -133,23 +181,6 @@ class p5(Problem):
 
 
 
-#################################################################
-#################problem_2###########
-class p5(Problem):
-    def __init__(self):
-        super().__init__(n_var=2,
-                        n_constr=3
-                        )
-
-    def _evaluate(self, X, out,*args,  **kwargs):
-        f1 = (X[:,0]-2**2) + (X[:,1]-1)**2 + 2 
-        f2 =  9*X[:,0] - (X[:,1]-1)**2
-        
-        g1 = (X[:,0])**2 +(X[:,1])**2 -225
-        g2 = X[:,0] - 3*X[:,1] +10
-
-        out["F"] = np.column_stack([f1, f2]) 
-        out["G"] = np.column_stack([g1, g2]) 
 
 
 
