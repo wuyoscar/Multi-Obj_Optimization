@@ -28,15 +28,15 @@ $ -->
 # Problem from Pacages 
 | Probelm | Function  | Variables | Objectives | Description|
 | --- | --- | ---|---|--- |
-|   BNH   |<img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/bnh.jpg" alt="drawing" width="400" height="130"/> |   2  |  2  | 2 | 
-|   OSY   |  <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/osy.png" alt="drawing" width="400" height="130"/> |   6  | 2   |6 |
-|   TNK    | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/tnk.png" alt="drawing" width="400" height="130"/> |  2   | 2   |2 |
-|   ZDT1   | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/zdt1.png" alt="drawing" width="400" height="130"/> | 30    |  2  | |
-|   ZDT2   | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/zdt2.png" alt="drawing" width="400" height="130"/> | 30    |  2 | |
-|   ZDT3   | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/zdt3.png" alt="drawing" width="400" height="130"/> | 30    |  2| |
-|   ZDT4   | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/zdt4.png" alt="drawing" width="400" height="130"/> | 10    |  2  | |
-|   ZDT5   | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/zdt5.png" alt="drawing" width="400" height="130"/> | 80    |  2  | |
-|   ZDT6   | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/zdt6.png" alt="drawing" width="400" height="130"/> | 10    |  2  | |
+|   BNH   |<img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/bnh.jpg"  width="400" height="130"/> |   2  |  2  | 2 | 
+|   OSY   |  <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/osy.png"  width="400" height="130"/> |   6  | 2   |6 |
+|   TNK    | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/tnk.png"  width="400" height="130"/> |  2   | 2   |2 |
+|   ZDT1   | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/zdt1.png"  width="400" height="130"/> | 30    |  2  | |
+|   ZDT2   | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/zdt2.png"  width="400" height="130"/> | 30    |  2 | |
+|   ZDT3   | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/zdt3.png"  width="400" height="130"/> | 30    |  2| |
+|   ZDT4   | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/zdt4.png"  width="400" height="130"/> | 10    |  2  | |
+|   ZDT5   | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/zdt5.png"  width="400" height="130"/> | 80    |  2  | |
+|   ZDT6   | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/zdt6.png"  width="400" height="130"/> | 10    |  2  | |
 
 
 
