@@ -28,7 +28,7 @@ $ -->
 # Problem from Pacages 
 | Probelm | Function  | Variables | Objectives | Description|
 | --- | --- | ---|---|--- |
-|   BNH   |<img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/bnh.jpg"  width="400" height="130"/> |   2  |  2  | 2 | 
+|   BNH   |<img style="transform: translateY(0.1em); background: white;" src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/bnh.jpg"  width="400" height="130"/> |   2  |  2  | 2 | 
 |   OSY   |  <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/osy.png"  width="400" height="130"/> |   6  | 2   |6 |
 |   TNK    | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/tnk.png"  width="400" height="130"/> |  2   | 2   |2 |
 |   ZDT1   | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/zdt1.png"  width="400" height="130"/> | 30    |  2  | |
