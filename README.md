@@ -24,19 +24,20 @@ $ -->
 |p5|<img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=%5Ctext%7BMinimize%3D%7D%0A%5Cbegin%7Bcases%7D%0Af_%7B1%7D%5Cleft(x%2Cy%2Cz%5Cright)%3D%7Bx%5E3%2By%2Bz%7D%5C%5C%0Af_%7B2%7D%5Cleft(x%2Cy%2Cz%5Cright)%3D%7B%5Cfrac%7Bx%5E2-y%7D%7B4%7D%2B5z%7D%5C%5C%0Af_%7B3%7D%5Cleft(x%2Cy%2Cz%5Cright)%3D%7B9%2B%5Cleft(x%2By%5Cright)%5E2%2B%5Cleft(y-z%5Cright)%5E2%7D%5C%5C%0A%5Cend%7Bcases%7D">|<img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=%5Ctext%7Bs.t.%3D%7D%0A%5Cbegin%7Bcases%7D%0Ag_%7B1%7D%5Cleft(x%2Cy%2Cz%5Cright)%3D%7Bx-3%2By%5E2%2Bz%7D%5Cleq0%5C%5C%0Ag_%7B2%7D%5Cleft(x%2Cy%2Cz%5Cright)%3D%7By%5E2%2Bz-x%5E4%7D%5Cleq5%5C%5C%0Ag_%7B3%7D%5Cleft(x%2Cy%2Cz%5Cright)%3D%7Bz%5E3%2B%5Cfrac%7By%5E2%7D%7B2%7D%7D%5Cleq0%5C%5C%0A%5Cend%7Bcases%7D">|
 |p6|<img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=%5Ctext%7BMinimize%3D%7D%0A%5Cbegin%7Bcases%7D%0Af_%7B1%7D%5Cleft(x%2Cy%5Cright)%3D%7B%5Cleft(x-2%5Cright)%5E2%2B%5Cleft(y-1%5Cright)%5E2%2B2%7D%5C%5C%0Af_%7B2%7D%5Cleft(x%2Cy%5Cright)%20%3D%209x-%5Cleft(y-1%5Cright)%5E2%20%5C%5C%0A%5Cend%7Bcases%7D">|<img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=%5Ctext%7Bs.t.%3D%7D%0A%5Cbegin%7Bcases%7D%0Ag_%7B1%7D%5Cleft(x%2Cy%2Cz%5Cright)%3D%7Bx%5E2%2By%5E2-255%7D%5Cleq0%5C%5C%0Ag_%7B2%7D%5Cleft(x%2Cy%2Cz%5Cright)%3D%7Bx-3y%2B10%7D%5Cleq0%5C%5C%0A%5Cend%7Bcases%7D">|
 
+
 ---
 # Problem from Pacages 
 | Probelm | Function  | Variables | Objectives | Description|
 | --- | --- | ---|---|--- |
-|   BNH   |<img style="transform: translateY(0.1em); background: white;" src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/bnh.jpg"  width="400" height="130"/> |   2  |  2  | 2 | 
-|   OSY   |  <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/osy.png"  width="400" height="130"/> |   6  | 2   |6 |
-|   TNK    | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/tnk.png"  width="400" height="130"/> |  2   | 2   |2 |
-|   ZDT1   | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/zdt1.png"  width="400" height="130"/> | 30    |  2  | |
-|   ZDT2   | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/zdt2.png"  width="400" height="130"/> | 30    |  2 | |
-|   ZDT3   | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/zdt3.png"  width="400" height="130"/> | 30    |  2| |
-|   ZDT4   | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/zdt4.png"  width="400" height="130"/> | 10    |  2  | |
-|   ZDT5   | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/zdt5.png"  width="400" height="130"/> | 80    |  2  | |
-|   ZDT6   | <img src="/Users/wuyoscar/Documents/Project/MOOP/Problems/images/zdt6.png"  width="400" height="130"/> | 10    |  2  | |
+|   BNH   |<img style="transform: translateY(0.1em); background: white;" src="Problems/images/bnh.jpg"  width="400" height="130"/> |   2  |  2  | 2 | 
+|   OSY   |  <img src="Problems/images/osy.png"  width="400" height="130"/> |   6  | 2   |6 |
+|   TNK    | <img src="Problems/images/tnk.png"  width="400" height="130"/> |  2   | 2   |2 |
+|   ZDT1   | <img src="Problems/images/zdt1.png"  width="400" height="130"/> | 30    |  2  | |
+|   ZDT2   | <img src="Problems/images/zdt2.png"  width="400" height="130"/> | 30    |  2 | |
+|   ZDT3   | <img src="Problems/images/zdt3.png"  width="400" height="130"/> | 30    |  2| |
+|   ZDT4   | <img src="Problems/images/zdt4.png"  width="400" height="130"/> | 10    |  2  | |
+|   ZDT5   | <img src="Problems/images/zdt5.png"  width="400" height="130"/> | 80    |  2  | |
+|   ZDT6   | <img src="Problems/images/zdt6.png"  width="400" height="130"/> | 10    |  2  | |
 
 
 
