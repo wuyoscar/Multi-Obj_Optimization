@@ -4,21 +4,15 @@
 
 
 
-<!-- $
-\text{}
-\begin{cases}
-0\leq{x_1,x_2}\leq 1\\
-\end{cases}
-$ --> 
 
 
 
 | Probelm | Function | Constarints | Variables|  Search domian |
 | --- | --- | ---|  ---|  ---| 
-|BNH| <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9aa4f87d1b4fc51d737a1b704b439c21524880b3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:45.023ex; height:6.176ex;">  |   <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dcf4d0ed143bf25faa633f16bb8b7e12b9c46456" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.671ex; width:44.813ex; height:6.509ex;">| 2| <img style="transform: translateY(0.1em); background: white;" src="svg/nHXb7yGszf.svg">|
+|BNH| <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9aa4f87d1b4fc51d737a1b704b439c21524880b3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:45.023ex; height:6.176ex;">  |   <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dcf4d0ed143bf25faa633f16bb8b7e12b9c46456" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.671ex; width:44.813ex; height:6.509ex;">| 2| <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=%5Ctext%7B%7D%0A%5Cbegin%7Bcases%7D%0A0%5Cleq%7Bx_1%7D%5Cleq%205%5C%5C%0A0%5Cleq%7Bx_2%7D%5Cleq%203%5C%5C%0A%5Cend%7Bcases%7D">|
 |Carside| 3|   10| 7| <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=%5Ctext%7B%7D%0A%5Cbegin%7Bcases%7D%0A0.5%5Cleq%7Bx_1%7D%5Cleq1.5%5C%5C%0A0.45%5Cleq%7Bx_1%7D%5Cleq1.35%5C%5C%0A0.5%5Cleq%7Bx_1%7D%5Cleq1.5%5C%5C%0A0.5%5Cleq%7Bx_1%7D%5Cleq1.5%5C%5C%0A0.875%5Cleq%7Bx_1%7D%5Cleq2.625%5C%5C%0A0.4%5Cleq%7Bx_1%7D%5Cleq1.2%5C%5C%0A0.4%5Cleq%7Bx_1%7D%5Cleq1.2%5C%5C%0A%5Cend%7Bcases%7D">|
 |Clutch | 2 (input X should be int)|   19| 5|<img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=%5Ctext%7B%7D%0A%5Cbegin%7Bcases%7D%0A0%5Cleq%7Bx_1%7D%5Cleq20%5C%5C%0A0%5Cleq%7Bx_2%7D%5Cleq20%5C%5C%0A0%5Cleq%7Bx_3%7D%5Cleq4%5C%5C%0A0%5Cleq%7Bx_4%7D%5Cleq400%5C%5C%0A0%5Cleq%7Bx_4%7D%5Cleq7%5C%5C%0A%5Cend%7Bcases%7D">|
-|Kursawe | <img src="Problems/images/kursawe.jpg"  width="400" height="130"/> | 3| 1| <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=%5Ctext%7B%7D%0A%5Cbegin%7Bcases%7D%0A-5%5Cleq%7Bx_1%7D%5Cleq5%5C%5C%0A%5Cend%7Bcases%7D">
+|Kursawe | <img src="Problems/images/kursawe.png"  /> | 3| 1| <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=%5Ctext%7B%7D%0A%5Cbegin%7Bcases%7D%0A-5%5Cleq%7Bx_1%7D%5Cleq5%5C%5C%0A%5Cend%7Bcases%7D">
 |WeldedBeam | 2 |4|  4|<img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=%5Ctext%7B%7D%0A%5Cbegin%7Bcases%7D%0A-0.125%5Cleq%7Bx_1%7D%5Cleq5.0%5C%5C%0A-0.1%5Cleq%7Bx_2%7D%5Cleq10.0%5C%5C%0A-0.1%5Cleq%7Bx_3%7D%5Cleq10.0%5C%5C%0A-0.125%5Cleq%7Bx_4%7D%5Cleq5.0%5C%5C%0A%5Cend%7Bcases%7D">|
 |Truss2D | 2 |1| 3| <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=%5Ctext%7B%7D%0A%5Cbegin%7Bcases%7D%0A0.0%5Cleq%7Bx_1%7D%5C%5C%0A0.0%5Cleq%7Bx_2%7D%5C%5C%0A0.0%5Cleq%7Bx_3%7D%5Cleq3%5C%5C%0A%5Cend%7Bcases%7D">|
 |TNK|<img src="Problems/images/tnk.png"  width="400" height="130"/>|2|2| <img style="transform: translateY(0.1em); background: white;" src="https://render.githubusercontent.com/render/math?math=%5Ctext%7B%7D%0A%5Cbegin%7Bcases%7D%0A0.0%5Cleq%7Bx_1%7D%5Cleq%20pi%5C%5C%0A0.0%5Cleq%7Bx_2%7D%5Cleq%20pi%5C%5C%0A%5Cend%7Bcases%7D">|
