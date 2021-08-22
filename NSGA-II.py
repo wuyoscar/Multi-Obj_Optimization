@@ -1,5 +1,5 @@
 from pymoo.algorithms.nsga2 import NSGA2
-from pymoo.factory import get_sampling, get_crossover, get_mutation, get_termination, get_problem
+from pymoo.factory import get_sampling, get_crossover, get_mutation, get_termination
 from pymoo.optimize import minimize
 from pymoo.util.termination.default import MultiObjectiveDefaultTermination
 from pymoo.factory import get_performance_indicator
@@ -13,7 +13,7 @@ import argparse
 
 module_path = os.getcwd()+'/Problems/'
 sys.path.append(module_path)
-from Define_Problems import *
+from Problems.Define_Problems import *  # python file in Problems/Define_Problems
 
 # add parameters
 parser = argparse.ArgumentParser(description='''parameters description''')
@@ -40,45 +40,13 @@ xl =np.array(args.lb)
 xu =np.array(args.ub)
 if args.dimension is not None:
     n_var = args.dimension
+else:
+    print('plz input dimension')
 
 # select problem from parameter
 if __name__ == "__main__":
 
-    problems_set_1 = ['bnh','carside','clutch','kursawe','weldebeam',"truss2d","tnk",'osy',  "chankong",'test','ctp1','pro1']
-    if args.problem.lower() in problems_set_1:
-        p_dict = {'bnh':BNH(), 
-            'carside':Carside(), 
-            'clutch':Clutch(), 
-            'kursawe':Kursawe(), 
-            'weldebeam':WeldedBeam(),
-            "truss2d":Truss2D(),
-            "tnk": TNK(), 
-            'osy':OSY(),
-            "chankong":Chankong(),
-            'test':Test(),
-            'ctp1':CTP1(), 
-            'pro1':PRO1()}
-        problem = p_dict[args.problem.lower()]
-        print('\n\n***********')
-        print('probelm is :')
-        print(problem)
-    
-    elif args.problem.lower() in ['zdt1','zdt2','zdt3','zdt4','zdt5','zdt6']:
-        p_dict  = {'zdt1':ZDT1(n_var=n_var),
-            'zdt2':ZDT2(n_var=n_var),
-            'zdt3':ZDT3(n_var=n_var),
-            'zdt4':ZDT4(n_var=n_var),
-            'zdt5':ZDT5(),
-            'zdt6':ZDT6(n_var=n_var) }
-        problem = p_dict[args.problem.lower()]
-        print('\n\n***********')
-        print('probelm is :')
-        print(problem)
-    
-    else:
-        print('Plz select correct problem')
-
-
+    problem = input_problem(args.problem, n_var)
     search_domain = np.column_stack([np.array(args.lb),np.array(args.ub)])
     
     if args.size is None:
