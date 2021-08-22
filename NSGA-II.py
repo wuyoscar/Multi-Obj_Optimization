@@ -17,14 +17,16 @@ from Define_Problems import *
 
 # add parameters
 parser = argparse.ArgumentParser(description='''parameters description''')
-parser.add_argument('-p','--problem', type=str, required=True,choices=['p1','p2','p3','p4','p5'],help="This is specific problem")
+parser.add_argument('-p','--problem', type=str, required=True,choices=['bnh','carside',
+                            'clutch','kursawe','weldebeam',
+                            'truss2d', 'tnk', 'osy', 'chankong','test', 
+                            'ctp1', 'pro1','zdt1','zdt2','zdt3','zdt3',
+                            'zdt4','zdt5','zdt6'],help="This is specific problem")
 parser.add_argument('-d','--dimension', type=int,help="This is dimension of input")
-parser.add_argument('-lb','--lb', type=float, nargs= '+', help='Integer or np.ndarray of length n_var representing the lower bounds of the design variables.')
-parser.add_argument('-ub','--ub', type=float,nargs= '+', help ='Integer or np.ndarray of length n_var representing the upper bounds of the design variables.')
+parser.add_argument('-lb', '--lb',type=float, nargs= '+', help='Integer or np.ndarray of length n_var representing the lower bounds of the design variables.')
+parser.add_argument('-ub', '--ub',type=float,nargs= '+', help ='Integer or np.ndarray of length n_var representing the upper bounds of the design variables.')
 parser.add_argument('-s', '--size', type=int,help='# of data points' )
-parser.add_argument('-f', '--filename', type=str,help='this is filename' )
-
-#algorithms paramters 
+parser.add_argument('-f', '--filename', type=str,help='this is filename' ) #construct filename base on above parameters
 parser.add_argument('-eval', '--evaluation', type=int,help='# of evaluation NSGAII' )
 #parser.add_argument('-gen', '--generation', type=int,help='# of generation NSGAII' )
 
@@ -32,40 +34,67 @@ parser.add_argument('-eval', '--evaluation', type=int,help='# of evaluation NSGA
 args = parser.parse_args()
 
 current_path = os.getcwd()
-'''
 
-
-nsga2_algorithmn_X
-nsga2_algorithmn_objective_X
-
-'''
 
 xl =np.array(args.lb)
 xu =np.array(args.ub)
+if args.dimension is not None:
+    n_var = args.dimension
 
 # select problem from parameter
 if __name__ == "__main__":
-    p_dict = {'p1':p1(xl,xu), 'p2':p2(xl,xu), 'p3':p3(xl,xu), 'p4':p4(xl,xu), 'p5':p5(xl,xu)}
+    p_dict = {'bnh':BNH(lb=args.lb, up=args.ub), 
+            'carside':Carside(lb=args.lb, up=args.ub), 
+            'clutch':Clutch(lb=args.lb, up=args.ub), 
+            'kursawe':Kursawe(lb=args.lb, up=args.ub), 
+            'weldebeam':WeldedBeam(lb=args.lb, up=args.ub),
+            "truss2d":Truss2D(lb=args.lb, up=args.ub),
+            "tnk": TNK(lb=args.lb, up=args.ub), 
+            'osy':OSY(lb=args.lb, up=args.ub),
+            "chankong":Chankong(lb=args.lb, up=args.ub),
+            'test':Test(lb=args.lb, up=args.ub),
+            'ctp1':CTP1(lb=args.lb, up=args.ub), 
+            'pro1':PRO1(lb=args.lb, up=args.ub),
+            'zdt1':ZDT1(lb=args.lb, up=args.ub,n_var=n_var),
+            'zdt2':ZDT2(lb=args.lb, up=args.ub,n_var=n_var),
+            'zdt3':ZDT3(lb=args.lb, up=args.ub,n_var=n_var),
+            'zdt4':ZDT4(lb=args.lb, up=args.ub,n_var=n_var),
+            'zdt5':ZDT5(lb=args.lb, up=args.ub,n_var=n_var),
+            'zdt6':ZDT6(lb=args.lb, up=args.ub,n_var=n_var) }
     
-    if args.problem in p_dict.keys():
 
-        problem = p_dict[args.problem]
+
+    #codes problems
+    if args.problem.lower() in p_dict.keys():
+
+        problem = p_dict[args.problem.lower() ]
         print('\n\n***********')
         print('probelm is :')
         print(problem)
+    #packages probelms
+    elif args.problem in package_problems:
+        problem = get_problem(args.problem)
+        print('\n\n***********')
+        print('probelm is :')
+        print(problem)
+
+
     else:
         print('Plz select correct problem')
 
     #sd: search domain
     search_domain = np.column_stack([np.array(args.lb),np.array(args.ub)])
-    input_X = random_pick_X(sd= search_domain, size = args.size)    
-
-    print('\n\n********************')
-
+    
+    if args.size is None:
+        input_X = random_pick_X(sd= search_domain, size = 50) 
+        print('\n\n********************')
+        print('*user did not input require data size,using default data point size 50*')
+    else:
+        input_X = random_pick_X(sd= search_domain, size = args.size)
+        print('\n\n********************')
     print('According input, design variable bound is as below')
+    print('\nfrom bound given below, generating  data points {} successfully'.format(input_X.shape))
     print(search_domain)
-    print('\n')
-    print('from bound give above, generating  data points {} successfully'.format(input_X.shape))
     print('\n********************\n')
     #!!!! evaluateing input_X data by _valuate, filtering datasets
     ## based on codes constraints
@@ -86,11 +115,13 @@ if __name__ == "__main__":
         print ("Successfully created the directory %s" % path)
     pref_path = args.filename
 
-
-    feasible_X_path= os.path.join(path, pref_path + 'feasible_X.txt')
-    infeasible_X_path =os.path.join(path,  pref_path + 'infeasible_X.txt')
-    feasible_objective_path =os.path.join(path, pref_path + 'feasible_F.txt')
-    infeasible_objective_path = os.path.join(path,  pref_path + 'infeasible_F.txt')
+    try:
+        feasible_X_path= os.path.join(path, pref_path + 'feasible_X.txt')
+        infeasible_X_path =os.path.join(path,  pref_path + 'infeasible_X.txt')
+        feasible_objective_path =os.path.join(path, pref_path + 'feasible_F.txt')
+        infeasible_objective_path = os.path.join(path,  pref_path + 'infeasible_F.txt')
+    except Exception:
+        print('\n****plz input a filename argument***')
 
     with open( feasible_X_path, 'a') as f:  # infeasible point, outside feasible domain
             np.savetxt(f,feasible_X, delimiter=",")
@@ -104,22 +135,19 @@ if __name__ == "__main__":
     with open(infeasible_objective_path, 'a') as f:  # infeasible point, outside feasible domain
             np.savetxt(f,infeasible_F, delimiter=",")
 
-    print('\n\n---------')
-    print('feasible_X path is: ',feasible_X_path)
-    print('------------')
-    print('infeasible_X path is: ',infeasible_X_path)
-    print('------------')
-    print('feasible_F path is: ',feasible_objective_path)
-    print('------------')
-    print('infeasible_F path is: ',infeasible_objective_path)
+
 
     algorithm = NSGA2(pop_size=100)
 
 
     start = time.time()
 
+    if args.evaluation is None:
 
-    termination = get_termination("n_eval", args.evaluation)
+        termination = get_termination("n_eval", 2000)
+        print('\n\n***user did not inputing number of evaluation, using default value 2000***')
+    else:
+        termination = get_termination("n_eval", args.evaluation)
 
     res = minimize(problem= problem,
             algorithm = algorithm,
@@ -128,4 +156,24 @@ if __name__ == "__main__":
             verbose=True)
     print('\nTime elapsed for solving problem: ', time.time() - start, ' seconds\n')
 
+    algorithm_X_path = os.path.join(path, pref_path + 'NSGA-II_X.txt')
+    algorithm_F_path = os.path.join(path, pref_path + 'NSGA-II_F.txt')
+
+    with open(algorithm_X_path, 'a') as f:  
+            np.savetxt(f,res.X, delimiter=",")
+
+    with open(algorithm_F_path, 'a') as f:  
+            np.savetxt(f,res.F, delimiter=",")
     
+    print('\n\n---------')
+    print('feasible_X path is: ',feasible_X_path)
+    print('------------')
+    print('infeasible_X path is: ',infeasible_X_path)
+    print('------------')
+    print('feasible_F path is: ',feasible_objective_path)
+    print('------------')
+    print('infeasible_F path is: ',infeasible_objective_path)
+    print('------------')
+    print('NSGAII optimal X path is : ',algorithm_X_path)
+    print('------------')
+    print('NSGAII optimal objective value path is: ',algorithm_F_path)
