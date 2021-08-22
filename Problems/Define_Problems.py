@@ -46,10 +46,10 @@ def split_X(X,problem_F,problem_CV):
 ## multi problems 
 class BNH(Problem):
 
-    def __init__(self,lb, up):
-        xl = np.array(lb)
-        xu = np.array(up)
-        super().__init__(n_var=2, n_obj=2,  xl =xl, xu=xu, n_constr=2, type_var=np.double)
+    def __init__(self):
+        super().__init__(n_var=2, n_obj=2, n_constr=2, type_var=np.double)
+        self.xl = anp.zeros(self.n_var)
+        self.xu = anp.array([5.0, 3.0])
         
     def _evaluate(self, x, out, *args, **kwargs):
         f1 = 4 * x[:, 0] ** 2 + 4 * x[:, 1] ** 2
@@ -70,12 +70,11 @@ class BNH(Problem):
 
 ###Carside
 class Carside(Problem):
-    def __init__(self,lb, up):
-        xl = np.array(lb)
-        xu = np.array(up)
-        super().__init__(n_var=7, n_obj=3, xl=xl, xu=xu,n_constr=10, type_var=np.double)
-        self.xl = anp.array(lb)
-        self.xu = anp.array(up)
+    def __init__(self):
+        self.xl = anp.array([0.5, 0.45, 0.5, 0.5, 0.875, 0.4, 0.4])
+        self.xu = anp.array([1.5, 1.35, 1.5, 1.5, 2.625, 1.2, 1.2])
+        super().__init__(n_var=7, n_obj=3,n_constr=10, type_var=np.double)
+        
 
     def _evaluate(self, x, out, *args, **kwargs):
         g1 = 1.16 - 0.3717 * x[:,1] * x[:,3] - 0.0092928 * x[:,2]
@@ -110,12 +109,13 @@ class Carside(Problem):
 
 
 class Clutch(Problem):
-    def __init__(self,lb, up):
-        xl = anp.array(lb)
-        xu = anp.array(up)
-        super().__init__(n_var=5, n_obj=2, xl=xl,xu=xu,n_constr=19, type_var=np.int32)
+    def __init__(self):
+        
+        super().__init__(n_var=5, n_obj=2, n_constr=19, type_var=np.int32)
         # ri, ro, t, F, Z
         # self.xl = anp.array([60, 90, 1, 600, 2]
+        self.xl = anp.array([0, 0, 0, 0, 0])
+        self.xu = anp.array([20, 20, 4, 400, 7])
         self.x1 = anp.arange(60, 81)
         self.x2 = anp.arange(90, 111)
         self.x3 = anp.arange(1, 3.5, 0.5)
@@ -198,11 +198,8 @@ class Clutch(Problem):
 
 
 class Kursawe(Problem):
-    def __init__(self, lb, up):
-        xl = anp.array(lb)
-        xu = anp.array(up)
-        
-        super().__init__(n_var=3, n_obj=2, xl=xl,xu=xu,n_constr=0, type_var=anp.double)
+    def __init__(self):
+        super().__init__(n_var=3, n_obj=2, xl=-5,xu=5,n_constr=0, type_var=anp.double)
 
     def _evaluate(self, x, out, *args, **kwargs):
         l = []
@@ -213,6 +210,164 @@ class Kursawe(Problem):
         f2 = anp.sum(anp.power(anp.abs(x), 0.8) + 5 * anp.sin(anp.power(x, 3)), axis=1)
 
         out["F"] = anp.column_stack([f1, f2])
+
+
+
+class WeldedBeam(Problem):
+    def __init__(self):
+        super().__init__(n_var=4, n_obj=2, n_constr=4, type_var=anp.double)
+        self.xl = anp.array([0.125, 0.1, 0.1, 0.125])
+        self.xu = anp.array([5.0, 10.0, 10.0, 5.0])
+        
+    def _evaluate(self, x, out, *args, **kwargs):
+        f1 = 1.10471 * x[:, 0] ** 2 * x[:, 1] + 0.04811 * x[:, 2] * x[:, 3] * (14.0 + x[:, 1])
+        f2 = 2.1952 / (x[:, 3] * x[:, 2] ** 3)
+
+        P = 6000
+        L = 14
+        t_max = 13600
+        s_max = 30000
+
+        R = anp.sqrt(0.25 * (x[:, 1] ** 2 + (x[:, 0] + x[:, 2]) ** 2))
+        M = P * (L + x[:, 1] / 2)
+        J = 2 * anp.sqrt(0.5) * x[:, 0] * x[:, 1] * (x[:, 1] ** 2 / 12 + 0.25 * (x[:, 0] + x[:, 2]) ** 2)
+        t1 = P / (anp.sqrt(2) * x[:, 0] * x[:, 1])
+        t2 = M * R / J
+        t = anp.sqrt(t1 ** 2 + t2 ** 2 + t1 * t2 * x[:, 1] / R)
+        s = 6 * P * L / (x[:, 3] * x[:, 2] ** 2)
+        P_c = 64746.022 * (1 - 0.0282346 * x[:, 2]) * x[:, 2] * x[:, 3] ** 3
+
+        g1 = (1 / t_max) * (t - t_max)
+        g2 = (1 / s_max) * (s - s_max)
+        g3 = (1 / (5 - 0.125)) * (x[:, 0] - x[:, 3])
+        g4 = (1 / P) * (P - P_c)
+
+        out["F"] = anp.column_stack([f1, f2])
+        out["G"] = anp.column_stack([g1, g2, g3, g4])
+
+
+class Truss2D(Problem):
+
+    def __init__(self):
+        super().__init__(n_var=3, n_obj=2, n_constr=1,type_var=anp.double)
+        self.Amax = 0.01
+        self.Smax = 1e5
+
+        self.xl = anp.array([0.0, 0.0, 1.0])
+        self.xu = anp.array([self.Amax, self.Amax, 3.0])
+
+    def _evaluate(self, x, out, *args, **kwargs):
+
+        # variable names for convenient access
+        x1 = x[:, 0]
+        x2 = x[:, 1]
+        y = x[:, 2]
+
+        # first objectives
+        f1 = x1 * anp.sqrt(16 + anp.square(y)) + x2 * anp.sqrt((1 + anp.square(y)))
+
+        # measure which are needed for the second objective
+        sigma_ac = 20 * anp.sqrt(16 + anp.square(y)) / (y * x1)
+        sigma_bc = 80 * anp.sqrt(1 + anp.square(y)) / (y * x2)
+
+        # take the max
+        f2 = anp.max(anp.column_stack((sigma_ac, sigma_bc)), axis=1)
+
+        # define a constraint
+        g1 = f2 - xu
+
+        out["F"] = anp.column_stack([f1, f2])
+        out["G"] = g1
+
+
+class TNK(Problem):
+    def __init__(self):
+        super().__init__(n_var=2, n_obj=2, n_constr=2, type_var=anp.double)
+        self.xl = anp.array([0, 1e-30])
+        self.xu = anp.array([anp.pi, anp.pi])
+
+    def _evaluate(self, x, out, *args, **kwargs):
+        f1 = x[:, 0]
+        f2 = x[:, 1]
+        g1 = -(anp.square(x[:, 0]) + anp.square(x[:, 1]) - 1.0 - 0.1 * anp.cos(16.0 * anp.arctan(x[:, 0] / x[:, 1])))
+        g2 = 2 * (anp.square(x[:, 0] - 0.5) + anp.square(x[:, 1] - 0.5)) - 1
+
+        out["F"] = anp.column_stack([f1, f2])
+        out["G"] = anp.column_stack([g1, g2])
+
+
+
+class OSY(Problem):
+    def __init__(self):
+        super().__init__(n_var=6, n_obj=2,n_constr=6, type_var=anp.double)
+        self.xl = anp.array([0.0, 0.0, 1.0, 0.0, 1.0, 0.0])
+        self.xu = anp.array([10.0, 10.0, 5.0, 6.0, 5.0, 10.0])
+
+    def _evaluate(self, x, out, *args, **kwargs):
+        f1 = - (25 * (x[:, 0] - 2) ** 2 + (x[:, 1] - 2) ** 2 + (x[:, 2] - 1) ** 2 + (x[:, 3] - 4) ** 2 + (
+                    x[:, 4] - 1) ** 2)
+        f2 = anp.sum(anp.square(x), axis=1)
+
+        g1 = (x[:, 0] + x[:, 1] - 2.0) / 2.0
+        g2 = (6.0 - x[:, 0] - x[:, 1]) / 6.0
+        g3 = (2.0 - x[:, 1] + x[:, 0]) / 2.0
+        g4 = (2.0 - x[:, 0] + 3.0 * x[:, 1]) / 2.0
+        g5 = (4.0 - (x[:, 2] - 3.0) ** 2 - x[:, 3]) / 4.0
+        g6 = ((x[:, 4] - 3.0) ** 2 + x[:, 5] - 4.0) / 4.0
+
+        out["F"] = anp.column_stack([f1, f2])
+
+        out["G"] = anp.column_stack([g1, g2, g3, g4, g5, g6])
+        out["G"] = - out["G"]
+
+
+
+
+#################################################################
+#################problem_2#######################################
+class Chankong(Problem):
+
+#clarify the problem
+    def __init__(self):
+
+        super().__init__(n_var=2, n_obj=2,n_constr=2)
+        self.xl = anp.array([-20,-20])
+        self.xu = anp.array([20,20])
+    def _evaluate(self, X, out,*args, **kwargs):
+        f1 = 2 + (X[:,0]-2)**2 + (X[:,1]-1)**2
+        f2 = 9*X[:,0] - (X[:,1]-1)**2
+
+
+    #constraints need to be formulated as g(xi)<=0
+        g1 =  1/225*(X[:,0]**2 + X[:,1]**2 -225)
+        g2 =  X[:,0] - 3*X[:,1] + 10
+
+        out["F"] = np.column_stack([f1, f2]) 
+        out["G"] = np.column_stack([g1, g2]) 
+
+#################################################################
+#################problem_3#######################################
+class Test(Problem):
+
+#clarify the problem
+    def __init__(self):
+
+        super().__init__(n_var=2,
+                        n_obj=2,
+                        n_constr=3)
+        self.xl = anp.array([-7,-7])
+        self.xu = anp.array([4,4])
+
+    def _evaluate(self, X, out,*args, **kwargs):
+        f1 = X[:,0]**2 - X[:,1]
+        f2 = -0.5*X[:,0] - X[:,1] -1
+        g1 =  -(6.5 - X[:,0]/6 - X[:,1])
+        g2 =  -(7.5 - 0.5*X[:,0] - X[:,1])
+        g3 = -(30 - 5*X[:,0] - X[:,1])
+
+        out["F"] = np.column_stack([f1, f2]) 
+        out["G"] = np.column_stack([g1, g2, g3]) 
+
 
 class CTP(Problem):
 
@@ -249,12 +404,8 @@ class CTP(Problem):
 
 class CTP1(CTP):
 
-    def __init__(self,lb,up,n_var=2, n_constr=2,**kwargs):
-        xl = anp.array(lb)
-        xu = anp.array(up)
-        self.n_var=2
-        self.n_constr=2
-        super().__init__(xl=xl,xu=xu)
+    def __init__(self,n_var=2, n_constr=2,**kwargs):
+        super().__init__()
 
         a, b = anp.zeros(n_constr + 1), anp.zeros(n_constr + 1)
         a[0], b[0] = 1, 1
@@ -285,194 +436,16 @@ class CTP1(CTP):
             g.append(_g)
         out["G"] = anp.column_stack(g)
 
-
-class WeldedBeam(Problem):
-    def __init__(self, lb , up):
-        xl = np.array(lb)
-        xu = np.array(up)
-        super().__init__(n_var=4, n_obj=2, xl=xl, xu=xu,n_constr=4, type_var=anp.double)
-        
-
-    def _evaluate(self, x, out, *args, **kwargs):
-        f1 = 1.10471 * x[:, 0] ** 2 * x[:, 1] + 0.04811 * x[:, 2] * x[:, 3] * (14.0 + x[:, 1])
-        f2 = 2.1952 / (x[:, 3] * x[:, 2] ** 3)
-
-        P = 6000
-        L = 14
-        t_max = 13600
-        s_max = 30000
-
-        R = anp.sqrt(0.25 * (x[:, 1] ** 2 + (x[:, 0] + x[:, 2]) ** 2))
-        M = P * (L + x[:, 1] / 2)
-        J = 2 * anp.sqrt(0.5) * x[:, 0] * x[:, 1] * (x[:, 1] ** 2 / 12 + 0.25 * (x[:, 0] + x[:, 2]) ** 2)
-        t1 = P / (anp.sqrt(2) * x[:, 0] * x[:, 1])
-        t2 = M * R / J
-        t = anp.sqrt(t1 ** 2 + t2 ** 2 + t1 * t2 * x[:, 1] / R)
-        s = 6 * P * L / (x[:, 3] * x[:, 2] ** 2)
-        P_c = 64746.022 * (1 - 0.0282346 * x[:, 2]) * x[:, 2] * x[:, 3] ** 3
-
-        g1 = (1 / t_max) * (t - t_max)
-        g2 = (1 / s_max) * (s - s_max)
-        g3 = (1 / (5 - 0.125)) * (x[:, 0] - x[:, 3])
-        g4 = (1 / P) * (P - P_c)
-
-        out["F"] = anp.column_stack([f1, f2])
-        out["G"] = anp.column_stack([g1, g2, g3, g4])
-
-
-class Truss2D(Problem):
-
-    def __init__(self, lb , up):
-        xl = np.array(lb)
-        xu = np.array(up)
-        super().__init__(n_var=3, n_obj=2, n_constr=1, xl=xl,xu=xu,type_var=anp.double)
-
-    def _evaluate(self, x, out, *args, **kwargs):
-
-        # variable names for convenient access
-        x1 = x[:, 0]
-        x2 = x[:, 1]
-        y = x[:, 2]
-
-        # first objectives
-        f1 = x1 * anp.sqrt(16 + anp.square(y)) + x2 * anp.sqrt((1 + anp.square(y)))
-
-        # measure which are needed for the second objective
-        sigma_ac = 20 * anp.sqrt(16 + anp.square(y)) / (y * x1)
-        sigma_bc = 80 * anp.sqrt(1 + anp.square(y)) / (y * x2)
-
-        # take the max
-        f2 = anp.max(anp.column_stack((sigma_ac, sigma_bc)), axis=1)
-
-        # define a constraint
-        g1 = f2 - xu
-
-        out["F"] = anp.column_stack([f1, f2])
-        out["G"] = g1
-
-
-class TNK(Problem):
-    def __init__(self, lb, up):
-        xl = np.array(lb)
-        xu = np.array(up)
-        super().__init__(n_var=2, n_obj=2, xl=xl, xu=xu,n_constr=2, type_var=anp.double)
-
-
-    def _evaluate(self, x, out, *args, **kwargs):
-        f1 = x[:, 0]
-        f2 = x[:, 1]
-        g1 = -(anp.square(x[:, 0]) + anp.square(x[:, 1]) - 1.0 - 0.1 * anp.cos(16.0 * anp.arctan(x[:, 0] / x[:, 1])))
-        g2 = 2 * (anp.square(x[:, 0] - 0.5) + anp.square(x[:, 1] - 0.5)) - 1
-
-        out["F"] = anp.column_stack([f1, f2])
-        out["G"] = anp.column_stack([g1, g2])
-
-
-
-class OSY(Problem):
-    def __init__(self,lb,up):
-        xl = np.array(lb)
-        xu = np.array(up)
-        super().__init__(n_var=6, n_obj=2, xl=xl, xu=xu,n_constr=6, type_var=anp.double)
-
-    def _evaluate(self, x, out, *args, **kwargs):
-        f1 = - (25 * (x[:, 0] - 2) ** 2 + (x[:, 1] - 2) ** 2 + (x[:, 2] - 1) ** 2 + (x[:, 3] - 4) ** 2 + (
-                    x[:, 4] - 1) ** 2)
-        f2 = anp.sum(anp.square(x), axis=1)
-
-        g1 = (x[:, 0] + x[:, 1] - 2.0) / 2.0
-        g2 = (6.0 - x[:, 0] - x[:, 1]) / 6.0
-        g3 = (2.0 - x[:, 1] + x[:, 0]) / 2.0
-        g4 = (2.0 - x[:, 0] + 3.0 * x[:, 1]) / 2.0
-        g5 = (4.0 - (x[:, 2] - 3.0) ** 2 - x[:, 3]) / 4.0
-        g6 = ((x[:, 4] - 3.0) ** 2 + x[:, 5] - 4.0) / 4.0
-
-        out["F"] = anp.column_stack([f1, f2])
-
-        out["G"] = anp.column_stack([g1, g2, g3, g4, g5, g6])
-        out["G"] = - out["G"]
-
-
-
-
-#################################################################
-#################problem_2#######################################
-class Chankong(Problem):
-
-#clarify the problem
-    def __init__(self,lb, up):
-        xl = np.array(lb)
-        xu = np.array(up)
-        super().__init__(n_var=2,
-                        n_obj=2,
-                        n_constr=2,
-                        xl=xl,
-                        xu = xu
-                    )
-                        #elementwise_evaluation=True)
-
-#var_1 = X[:,0] ; var_2 = X[:,1], var_3 = X[:2]
-#objetive and constraint formula
-#Note: for constraint formula, convert them <= 0
-###    for objective formula, convert them into minimize
-    def _evaluate(self, X, out,*args, **kwargs):
-        f1 = 2 + (X[:,0]-2)**2 + (X[:,1]-1)**2
-        f2 = 9*X[:,0] - (X[:,1]-1)**2
-
-
-    #constraints need to be formulated as g(xi)<=0
-        g1 =  1/225*(X[:,0]**2 + X[:,1]**2 -225)
-        g2 =  X[:,0] - 3*X[:,1] + 10
-
-        out["F"] = np.column_stack([f1, f2]) 
-        out["G"] = np.column_stack([g1, g2]) 
-
-
-
-
-
-
-#################################################################
-#################problem_3#######################################
-class Test(Problem):
-
-#clarify the problem
-    def __init__(self,lb, up):
-        xl = np.array(lb)
-        xu = np.array(up)
-        super().__init__(n_var=2,
-                        n_obj=2,
-                        n_constr=3,
-                        xl=xl,
-                        xu = xu
-        )
-    def _evaluate(self, X, out,*args, **kwargs):
-        f1 = X[:,0]**2 - X[:,1]
-        f2 = -0.5*X[:,0] - X[:,1] -1
-
-
-    #constraints need to be formulated as g(xi)<=0
-        g1 =  -(6.5 - X[:,0]/6 - X[:,1])
-        g2 =  -(7.5 - 0.5*X[:,0] - X[:,1])
-        g3 = -(30 - 5*X[:,0] - X[:,1])
-
-        out["F"] = np.column_stack([f1, f2]) 
-        out["G"] = np.column_stack([g1, g2, g3]) 
-
-
-
 #################################################################
 #################problem_5###########
 class PRO1(Problem):
-    def __init__(self,lb, up):
-        xl = np.array(lb)
-        xu = np.array(up)
+    def __init__(self):
+        self.xl = np.array([0,0,0])
+        self.xu = np.array([4,4,4])
 
         super().__init__(n_var=3,
                         n_constr=3,
-                        n_obj=3,
-                        xl=xl,
-                        xu=xu
+                        n_obj=3
                         )
 
     def _evaluate(self, X,out, *args, **kwargs):
@@ -491,23 +464,19 @@ class PRO1(Problem):
 
 
 ##### zdt
-
 class ZDT(Problem):
 
-    def __init__(self,n_var=30, **kwargs):
-        xl = np.array(lb)
-        xu = np.array(up)
+    def __init__(self, n_var=30, **kwargs):
         super().__init__(n_var=n_var, n_obj=2, n_constr=0, xl=0, xu=1, type_var=anp.double, **kwargs)
 
 
 class ZDT1(ZDT):
-    # max variable = 30 
-    def __init__(self, lb, up, n_var):
-        xl = np.array(lb)
-        xu = np.array(up)
-        self.n_var=n_var
-        super().__init__(xl=xl, xu=xu, n_var=self.n_var)
+    def __init__(self, n_var=30):
+        super().__init__(n_var=n_var)
 
+    def _calc_pareto_front(self, n_pareto_points=100):
+        x = anp.linspace(0, 1, n_pareto_points)
+        return anp.array([x, 1 - anp.sqrt(x)]).T
 
     def _evaluate(self, x, out, *args, **kwargs):
         f1 = x[:, 0]
@@ -518,10 +487,12 @@ class ZDT1(ZDT):
 
 
 class ZDT2(ZDT):
-    def __init__(self, lb, up, n_var,**kwargs):
-        xl = np.array(lb)
-        xu = np.array(up)
-        super().__init__(xl=xl, xu=xu, n_var=n_var)
+    def __init__(self, n_var=30):
+        super().__init__(n_var=n_var)
+
+    def _calc_pareto_front(self, n_pareto_points=100):
+        x = anp.linspace(0, 1, n_pareto_points)
+        return anp.array([x, 1 - anp.power(x, 2)]).T
 
     def _evaluate(self, x, out, *args, **kwargs):
         f1 = x[:, 0]
@@ -531,11 +502,31 @@ class ZDT2(ZDT):
 
         out["F"] = anp.column_stack([f1, f2])
 
+
 class ZDT3(ZDT):
-    def __init__(self, lb, up, n_var,**kwargs):
-        xl = np.array(lb)
-        xu = np.array(up)
-        super().__init__(xl=xl, xu=xu, n_var=n_var)
+    def __init__(self, n_var=30):
+        super().__init__(n_var=n_var)
+
+    def _calc_pareto_front(self, n_points=100, flatten=True):
+        regions = [[0, 0.0830015349],
+                   [0.182228780, 0.2577623634],
+                   [0.4093136748, 0.4538821041],
+                   [0.6183967944, 0.6525117038],
+                   [0.8233317983, 0.8518328654]]
+
+        pf = []
+
+        for r in regions:
+            x1 = anp.linspace(r[0], r[1], int(n_points / len(regions)))
+            x2 = 1 - anp.sqrt(x1) - x1 * anp.sin(10 * anp.pi * x1)
+            pf.append(anp.array([x1, x2]).T)
+
+        if not flatten:
+            pf = anp.concatenate([pf[None,...] for pf in pf])
+        else:
+            pf = anp.row_stack(pf)
+
+        return pf
 
     def _evaluate(self, x, out, *args, **kwargs):
         f1 = x[:, 0]
@@ -545,12 +536,19 @@ class ZDT3(ZDT):
 
         out["F"] = anp.column_stack([f1, f2])
 
-class ZDT4(ZDT):
-    def __init__(self, lb, up, n_var,**kwargs):
-        xl = np.array(lb)
-        xu = np.array(up)
-        super().__init__(xl=xl, xu=xu, n_var=n_var)
 
+class ZDT4(ZDT):
+    def __init__(self, n_var=10):
+        super().__init__(n_var)
+        self.xl = -5 * anp.ones(self.n_var)
+        self.xl[0] = 0.0
+        self.xu = 5 * anp.ones(self.n_var)
+        self.xu[0] = 1.0
+        self.func = self._evaluate
+
+    def _calc_pareto_front(self, n_pareto_points=100):
+        x = anp.linspace(0, 1, n_pareto_points)
+        return anp.array([x, 1 - anp.sqrt(x)]).T
 
     def _evaluate(self, x, out, *args, **kwargs):
         f1 = x[:, 0]
@@ -601,12 +599,12 @@ class ZDT5(ZDT):
 
 class ZDT6(ZDT):
 
-    def __init__(self, lb, up, n_var,**kwargs):
-        xl = np.array(lb)
-        xu = np.array(up)
-        super().__init__(xl=xl, xu=xu, n_var=n_var)
+    def __init__(self, n_var=10, **kwargs):
+        super().__init__(n_var=n_var, **kwargs)
 
-
+    def _calc_pareto_front(self, n_pareto_points=100):
+        x = anp.linspace(0.2807753191, 1, n_pareto_points)
+        return anp.array([x, 1 - anp.power(x, 2)]).T
 
     def _evaluate(self, x, out, *args, **kwargs):
         f1 = 1 - anp.exp(-4 * x[:, 0]) * anp.power(anp.sin(6 * anp.pi * x[:, 0]), 6)

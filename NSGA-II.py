@@ -43,46 +43,42 @@ if args.dimension is not None:
 
 # select problem from parameter
 if __name__ == "__main__":
-    p_dict = {'bnh':BNH(lb=args.lb, up=args.ub), 
-            'carside':Carside(lb=args.lb, up=args.ub), 
-            'clutch':Clutch(lb=args.lb, up=args.ub), 
-            'kursawe':Kursawe(lb=args.lb, up=args.ub), 
-            'weldebeam':WeldedBeam(lb=args.lb, up=args.ub),
-            "truss2d":Truss2D(lb=args.lb, up=args.ub),
-            "tnk": TNK(lb=args.lb, up=args.ub), 
-            'osy':OSY(lb=args.lb, up=args.ub),
-            "chankong":Chankong(lb=args.lb, up=args.ub),
-            'test':Test(lb=args.lb, up=args.ub),
-            'ctp1':CTP1(lb=args.lb, up=args.ub), 
-            'pro1':PRO1(lb=args.lb, up=args.ub),
-            'zdt1':ZDT1(lb=args.lb, up=args.ub,n_var=n_var),
-            'zdt2':ZDT2(lb=args.lb, up=args.ub,n_var=n_var),
-            'zdt3':ZDT3(lb=args.lb, up=args.ub,n_var=n_var),
-            'zdt4':ZDT4(lb=args.lb, up=args.ub,n_var=n_var),
-            'zdt5':ZDT5(lb=args.lb, up=args.ub,n_var=n_var),
-            'zdt6':ZDT6(lb=args.lb, up=args.ub,n_var=n_var) }
+
+    problems_set_1 = ['bnh','carside','clutch','kursawe','weldebeam',"truss2d","tnk",'osy',  "chankong",'test','ctp1','pro1']
+    if args.problem.lower() in problems_set_1:
+        p_dict = {'bnh':BNH(), 
+            'carside':Carside(), 
+            'clutch':Clutch(), 
+            'kursawe':Kursawe(), 
+            'weldebeam':WeldedBeam(),
+            "truss2d":Truss2D(),
+            "tnk": TNK(), 
+            'osy':OSY(),
+            "chankong":Chankong(),
+            'test':Test(),
+            'ctp1':CTP1(), 
+            'pro1':PRO1()}
+        problem = p_dict[args.problem.lower()]
+        print('\n\n***********')
+        print('probelm is :')
+        print(problem)
     
-
-
-    #codes problems
-    if args.problem.lower() in p_dict.keys():
-
-        problem = p_dict[args.problem.lower() ]
+    elif args.problem.lower() in ['zdt1','zdt2','zdt3','zdt4','zdt5','zdt6']:
+        p_dict  = {'zdt1':ZDT1(n_var=n_var),
+            'zdt2':ZDT2(n_var=n_var),
+            'zdt3':ZDT3(n_var=n_var),
+            'zdt4':ZDT4(n_var=n_var),
+            'zdt5':ZDT5(),
+            'zdt6':ZDT6(n_var=n_var) }
+        problem = p_dict[args.problem.lower()]
         print('\n\n***********')
         print('probelm is :')
         print(problem)
-    #packages probelms
-    elif args.problem in package_problems:
-        problem = get_problem(args.problem)
-        print('\n\n***********')
-        print('probelm is :')
-        print(problem)
-
-
+    
     else:
         print('Plz select correct problem')
 
-    #sd: search domain
+
     search_domain = np.column_stack([np.array(args.lb),np.array(args.ub)])
     
     if args.size is None:
@@ -114,12 +110,12 @@ if __name__ == "__main__":
     else:
         print ("Successfully created the directory %s" % path)
     pref_path = args.filename
-
+    pref_path = "NSGAII_" + pref_path
     try:
-        feasible_X_path= os.path.join(path, pref_path + 'feasible_X.txt')
-        infeasible_X_path =os.path.join(path,  pref_path + 'infeasible_X.txt')
-        feasible_objective_path =os.path.join(path, pref_path + 'feasible_F.txt')
-        infeasible_objective_path = os.path.join(path,  pref_path + 'infeasible_F.txt')
+        feasible_X_path= os.path.join(path, pref_path + '_feasible_X.txt')
+        infeasible_X_path =os.path.join(path,  pref_path + '_infeasible_X.txt')
+        feasible_objective_path =os.path.join(path, pref_path + '_feasible_F.txt')
+        infeasible_objective_path = os.path.join(path,  pref_path + '_infeasible_F.txt')
     except Exception:
         print('\n****plz input a filename argument***')
 
@@ -156,8 +152,9 @@ if __name__ == "__main__":
             verbose=True)
     print('\nTime elapsed for solving problem: ', time.time() - start, ' seconds\n')
 
-    algorithm_X_path = os.path.join(path, pref_path + 'NSGA-II_X.txt')
-    algorithm_F_path = os.path.join(path, pref_path + 'NSGA-II_F.txt')
+    algorithm_X_path = os.path.join(path, pref_path + '_NSGA-II_X.txt')
+    algorithm_F_path = os.path.join(path, pref_path + '_NSGA-II_F.txt')
+
 
     with open(algorithm_X_path, 'a') as f:  
             np.savetxt(f,res.X, delimiter=",")
