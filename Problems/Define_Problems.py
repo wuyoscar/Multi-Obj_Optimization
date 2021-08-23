@@ -6,7 +6,7 @@ import sys
 module_path = os.path.abspath(os.path.join(os.getcwd(), ".."))
 path = os.path.join(module_path, 'Problems')
 
-sys.path.append(module_path)
+sys.path.append(path)
 
 from carside    import *
 from ctp        import *
