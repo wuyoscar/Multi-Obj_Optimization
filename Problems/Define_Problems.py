@@ -1,11 +1,11 @@
 from pymoo.model.problem import Problem
+import numpy as np
+import autograd.numpy as anp
 import os 
 import sys
 module_path = os.getcwd()+'/Problems/'
 sys.path.append(module_path)
 
-import numpy as np
-import autograd.numpy as anp
 from carside    import *
 from ctp        import *
 from kursawe    import *
