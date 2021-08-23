@@ -5,7 +5,7 @@ do for n_eval in  3000 5000
 do for lb in {-3..1}
 do for ub in {1..4}
 do
-cat <<EnD>"jobs/$p-2-[$lb-$ub]-$s-$n_eval".sh
+cat <<EnD>"/scratch/lk32/ow6835/MOOP/Bash_Loop/jobs/$p-2-[$lb-$ub]-$s-$n_eval".sh
 #!/bin/bash
 #PBS -N job"$i"
 #PBS -l ncpus=1,mem=20GB
@@ -26,7 +26,7 @@ cat <<EnD>"jobs/$p-2-[$lb-$ub]-$s-$n_eval".sh
 python3 NSGA-II.py -p $p -s $s -n_eval $n_eval -lb $lb $lb -ub  $ub $ub -d 2 -f "$p_2_$lb_$ub_$n_eval_$s">$PBS_JOBID.log
 EnD
 
-qsub "/home/582/ow6835/MOOP/Bash_Loop/jobs/$p-2-[$lb-$ub]-$s-$n_eval".sh
+qsub "/scratch/lk32/ow6835/MOOP/Bash_Loop/jobs/$p-2-[$lb-$ub]-$s-$n_eval".sh
 
 sleep 1
 done
@@ -36,3 +36,4 @@ done
 done
 
 
+27221279
