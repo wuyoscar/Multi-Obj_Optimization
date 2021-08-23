@@ -70,7 +70,7 @@ if __name__ == "__main__":
     #print(feasible_X,infeasible_X, feasible_F,infeasible_F )
 
     # construct filename 
-    path = os.path.join(os.getcwd(), 'Result')
+    path = '/scratch/lk32/ow6835/Result'
     try:
         os.makedirs(path)
     except OSError:

@@ -4,19 +4,19 @@ sys.path.append('Problems/')
 
 import numpy as np
 import autograd.numpy as anp
-from carside import *
-from ctp import *
-from kursawe import *
-from bnh import *
-from chankong import *
-from clutch import *
-from osy import *
-from pro1 import *
-from test_ import *
-from tnk import *
-from truss2d import *
-from weldebeam import *
-from zdt import *
+from carside    import *
+from ctp        import *
+from kursawe    import *
+from bnh        import *
+from chankong   import *
+from clutch     import *
+from osy        import *
+from pro1       import *
+from test_      import *
+from tnk        import *
+from truss2d    import *
+from weldebeam  import *
+from zdt        import *
 
 
 def lsp(objective_function):

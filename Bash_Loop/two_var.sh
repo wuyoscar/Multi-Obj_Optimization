@@ -1,0 +1,34 @@
+#! /bin/bash
+for p in $(cat problem_txt/two_var_problems.txt)
+do for s in 50 100 150
+do for n_eval in  3000 5000 
+do for lb in {-3..1}
+do for ub in {1..4}
+do
+cat <<EnD>"jobs/$p-2-$lb-$ub-$n_eval-$s".sh
+#!/bin/bash
+#PBS -N job"$i"
+#PBS -l ncpus=1,mem=20GB
+#PBS -l walltime=24:00:00
+#PBS -P lk32
+#PBS -q normal
+#PBS -l wd
+#Use submission environment
+#PBS -V
+#PBS -mabe
+#Start job from the directory it was submitted
+# cd $PBS_O_WORKDIR
+#module load gcc/11.1.0
+#module load intel-mkl/2020.3.304  python3/3.9.2
+
+echo python3 NSGA-II.py -p $p -s $s -n_eval $n_eval -lb $lb $lb -ub  $ub $ub -d 2 -f "_$p_$d_$lb_$ub_$n_eval_$s" 
+EnD
+
+qsub "jobs/$p-2-$lb-$ub-$n_eval-$s".sh
+echo 
+sleep 1
+done
+done
+done
+done 
+done
