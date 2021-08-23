@@ -1,5 +1,5 @@
 #! /bin/bash
-for p in $(cat problem_txt/two_var_problems.txt)
+for p in $(cat Bash_Loop/problem_txt/two_var_problems.txt)
 do for s in 50 100 150
 do for n_eval in  3000 5000 
 do for lb in {-3..1}
@@ -25,7 +25,7 @@ echo python3 NSGA-II.py -p $p -s $s -n_eval $n_eval -lb $lb $lb -ub  $ub $ub -d 
 EnD
 
 qsub "jobs/$p-2-$lb-$ub-$n_eval-$s".sh
-echo 
+echo $PBS_JOBID
 sleep 1
 done
 done
