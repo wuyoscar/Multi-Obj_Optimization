@@ -9,8 +9,6 @@ import sys
 import os 
 import argparse
 
-
-
 module_path = os.getcwd()+'/Problems/'
 sys.path.append(module_path)
 from Problems.Define_Problems import *  # python file in Problems/Define_Problems

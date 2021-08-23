@@ -21,8 +21,8 @@ cat <<EnD>/scratch/lk32/ow6835/MOOP/Bash_Loop/jobs/$p-2-[$lb-$ub]-$s-$n_eval.sh
 #PBS -V
 #Start job from the directory it was submitted
 #cd $PBS_O_WORKDIR
-#module load gcc/11.1.0
-#module load intel-mkl/2020.3.304  python3/3.9.2
+module load gcc/11.1.0
+module load intel-mkl/2020.3.304  python3/3.9.2
 
 python3 /scratch/lk32/ow6835/MOOP/NSGA-II.py -p $p -s $s -n_eval $n_eval -lb $lb $lb -ub  $ub $ub -d 2 -f $p_2_$lb_$ub_$n_eval_$s>$PBS_JOBID.log
 EnD

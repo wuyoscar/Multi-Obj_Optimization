@@ -1,6 +1,8 @@
 from pymoo.model.problem import Problem
-import sys 
-sys.path.append('Problems/')
+import os 
+import sys
+module_path = os.getcwd()+'/Problems/'
+sys.path.append(module_path)
 
 import numpy as np
 import autograd.numpy as anp
