@@ -12,7 +12,6 @@ cat <<EnD>/scratch/lk32/ow6835/MOOP/Bash_Loop/jobs/$p-2-[$lb-$ub]-$s-$n_eval.sh
 #PBS -l walltime=24:00:00
 #PBS -P lk32
 #PBS -q normal
-#PBS -l storage=/scratch/lk32/ow6835
 #PBS -l wd
 #PBS -o /scratch/lk32/ow6835/JOBOUTS
 #PBS -e /scratch/lk32/ow6835/JOBOUTS
