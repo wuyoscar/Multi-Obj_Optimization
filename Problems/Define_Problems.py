@@ -3,7 +3,9 @@ import numpy as np
 import autograd.numpy as anp
 import os 
 import sys
-module_path = os.getcwd()+'/Problems/'
+module_path = os.path.abspath(os.path.join(os.getcwd(), ".."))
+path = os.path.join(module_path, 'Problems')
+
 sys.path.append(module_path)
 
 from carside    import *
