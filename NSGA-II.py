@@ -9,11 +9,12 @@ import sys
 import os 
 import argparse
 
-module_path = os.path.abspath(os.path.join(os.getcwd(), ".."))
-path = os.path.join(module_path, 'Problems/')
-sys.path.append(path)
-module_path = os.getcwd()+'/Problems/'
-sys.path.append(module_path)
+#module_path = os.path.abspath(os.path.join(os.getcwd(), ".."))
+#path = os.path.join(module_path, 'Problems/')
+#module_path = os.getcwd()+'/Problems/'
+#sys.path.append(module_path)
+#sys.path.append(path)
+sys.path.append('/scratch/lk32/ow6835/MOOP/Problems')
 from Problems.Define_Problems import *   # python file in Problems/Define_Problems
 
 # add parameters

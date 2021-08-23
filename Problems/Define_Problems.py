@@ -3,9 +3,8 @@ import numpy as np
 import autograd.numpy as anp
 import os 
 import sys
-module_path = os.path.abspath(os.path.join(os.getcwd(), ".."))
-path = os.path.join(module_path, 'Problems/')
-sys.path.append(path)
+
+sys.path.append('/scratch/lk32/ow6835/MOOP/Problems')
 
 from carside    import *
 from ctp        import *

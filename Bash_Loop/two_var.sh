@@ -19,7 +19,6 @@ cat <<EnD>/scratch/lk32/ow6835/MOOP/Bash_Loop/jobs/$p-2-[$lb-$ub]-$s-$n_eval.sh
 #Use submission environment
 #PBS -V
 #Start job from the directory it was submitted
-#cd $PBS_O_WORKDIR
 module load gcc/11.1.0
 module load intel-mkl/2020.3.304  python3/3.9.2
 
