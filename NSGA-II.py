@@ -14,6 +14,7 @@ import argparse
 #module_path = os.getcwd()+'/Problems/'
 #sys.path.append(module_path)
 #sys.path.append(path)
+sys.path.append('/scratch/lk32/ow6835/MOOP')
 sys.path.append('/scratch/lk32/ow6835/MOOP/Problems')
 from Problems.Define_Problems import *   # python file in Problems/Define_Problems
 
@@ -29,7 +30,7 @@ parser.add_argument('-lb', '--lb',type=float, nargs= '+', help='Integer or np.nd
 parser.add_argument('-ub', '--ub',type=float,nargs= '+', help ='Integer or np.ndarray of length n_var representing the upper bounds of the design variables.')
 parser.add_argument('-s', '--size', type=int,help='# of data points' )
 parser.add_argument('-f', '--filename', type=str,help='this is filename' ) #construct filename base on above parameters
-parser.add_argument('-eval', '--evaluation', type=int,help='# of evaluation NSGAII' )
+parser.add_argument('-n_eval', '--evaluation', type=int,help='# of evaluation NSGAII' )
 #parser.add_argument('-gen', '--generation', type=int,help='# of generation NSGAII' )
 
 
