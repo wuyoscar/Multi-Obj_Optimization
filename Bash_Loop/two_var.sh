@@ -7,7 +7,6 @@ do for ub in {1..4}
 do
 cat <<EnD>/scratch/lk32/ow6835/MOOP/Bash_Loop/jobs/$p-2-[$lb,$ub]-$s-$n_eval.sh
 #!/bin/bash
-#PBS -N job"$i"
 #PBS -l ncpus=1,mem=20GB
 #PBS -l walltime=24:00:00
 #PBS -P lk32
