@@ -5,7 +5,7 @@ do for n_eval in  3000 5000 7000 8000
 do for lb in {-3..-1}
 do for ub in {1..4}
 do
-cat <<EnD>/scratch/lk32/ow6835/jobs/${p-2-[lb,ub]-s-n_eval}.sh
+cat <<EnD>/scratch/lk32/ow6835/jobs/${p}-2-[${lb},${ub}]-${s}-${n_eval}.sh
 #!/bin/bash
 #PBS -l ncpus=1,mem=20GB
 #PBS -l walltime=24:00:00
@@ -21,11 +21,10 @@ cat <<EnD>/scratch/lk32/ow6835/jobs/${p-2-[lb,ub]-s-n_eval}.sh
 module load gcc/11.1.0
 module load intel-mkl/2020.3.304  python3/3.9.2
 
-python3 /scratch/lk32/ow6835/MOOP/NSGA-II.py -p $p -s $s -n_eval $n_eval -lb $lb $lb -ub  $ub $ub -d 2 -f $p-2-[$lb,$ub]-$n_eval-$s
+python3 /scratch/lk32/ow6835/MOOP/NSGA-II.py -p $p -s $s -n_eval $n_eval -lb $lb $lb -ub  $ub $ub -d 2 -f ${p}-2-[${lb},${ub}]-${s}-${n_eval}
 EnD
 
-
-sleep 1
+echo /scratch/lk32/ow6835/jobs/${p}-2-[${lb},${ub}]-${s}-${n_eval}.sh>>jobs.txt
 done
 done
 done
