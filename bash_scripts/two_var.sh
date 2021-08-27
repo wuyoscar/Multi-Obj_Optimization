@@ -5,7 +5,7 @@ do for n_eval in  3000 5000 7000 8000
 do for lb in {-3..-1}
 do for ub in {1..4}
 do
-cat <<EnD>/scratch/lk32/ow6835/jobs/${p}-2-[${lb},${ub}]-${s}-${n_eval}.sh
+cat <<EnD>/scratch/lk32/ow6835/BASH_SCRIPTS/${p}-2-[${lb},${ub}]-${s}-${n_eval}.sh
 #!/bin/bash
 #PBS -l ncpus=1,mem=20GB
 #PBS -l walltime=24:00:00
