@@ -1,11 +1,11 @@
 #! /bin/bash
-for p in $(cat /scratch/lk32/ow6835/MOOP/Bash_Loop/problem_txt/two_var_problems.txt)
+for p in $(cat /scratch/lk32/ow6835/MOOP/BASH/problem_txt/two_var_problems.txt)
 do for s in 50 100 150 200
 do for n_eval in  3000 5000 7000 8000
 do for lb in {-3..-1}
 do for ub in {1..4}
 do
-cat <<EnD>/scratch/lk32/ow6835/BASH_SCRIPTS/${p}.job_2_$s_$neval_$lb_$ub #write bash file
+cat <<EnD>/scratch/lk32/ow6835/BASH_SCRIPTS/${p}.job_2_${s}_${neval}_${lb}_${ub} #write bash file
 #!/bin/bash
 #PBS -l ncpus=1,mem=20GB
 #PBS -l walltime=24:00:00
@@ -21,10 +21,10 @@ cat <<EnD>/scratch/lk32/ow6835/BASH_SCRIPTS/${p}.job_2_$s_$neval_$lb_$ub #write 
 module load gcc/11.1.0
 module load intel-mkl/2020.3.304  python3/3.9.2
 
-python3 /scratch/lk32/ow6835/MOOP/NSGA-II.py -p $p -s $s -n_eval $n_eval -lb $lb $lb -ub  $ub $ub -d 2 -f ${p}.job_2_$s_$neval_$lb_$ub
+python3 /scratch/lk32/ow6835/MOOP/NSGA-II.py -p $p -s $s -n_eval $n_eval -lb $lb $lb -ub  $ub $ub -d 2 -f ${p}.job_2_${s}_${neval}_${lb}_${ub}
 EnD
 
-echo /scratch/lk32/ow6835/BASH_SCRIPTS/${p}.job_2_$s_$neval_$lb_$ub>>jobs.txt  #store job name 
+echo /scratch/lk32/ow6835/BASH_SCRIPTS/${p}.job_2_${s}_${neval}_${lb}_${ub}>>jobs.txt  #store job name 
 done
 done
 done
