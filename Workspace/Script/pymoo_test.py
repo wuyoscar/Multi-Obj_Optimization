@@ -9,24 +9,20 @@ import numpy as np
 import pandas as pd
 from numpy import empty
 import time
-import os
-os.getcwd()
 
-path='/Users/Desktop/result'
+
+path='C:/Users/LearningPython/'
 
 input_infeas_file=path+'thupymoo_input_infeasible.txt'
 input_feas_file=path+'thupymoo_input_feasible.txt'
 output_scalar_file=path+'thupymoo_output_scalar.txt'
 output_vector_file=path+'thupymoo_output_vector.txt'
-input_vector = [2,3]
 
 # define function to call later
-
 def my_function(input_vector):
 # this is where you implement your test functions
-    f1 = input_vector[0]+input_vector[1]
-    f2 = input_vector[0]-input_vector[1]
-    
+    f1=input_vector[0]+input_vector[1]
+	f2=input_vector[0]-input_vector[1]
     return [f1, f2]
 
 
@@ -44,12 +40,12 @@ class MyProblem(Problem):
 
     def __init__(self): #setting some init parameters, unsure what it does here
         super().__init__(n_var=2, #dimension
-                        n_obj=1, #how many objectives
-                        n_constr=0, # no otehr constraints
-                        xl=np.array([1]*16), # domain boundaries
-                        xu=np.array([4]*16),
-                        type_var=np.int,  # are variables integer or reals (i Guess you need reals)
-                        elementwise_evaluation=True) #???
+                         n_obj=1, #how many objectives
+                         n_constr=0, # no otehr constraints
+                         xl=np.array([1]*16), # domain boundaries
+                         xu=np.array([4]*16),
+                         type_var=np.int,  # are variables integer or reals (i Guess you need reals)
+                         elementwise_evaluation=True) #???
 
     def _evaluate(self, x, out, *args, **kwargs):
         fsr = my_function(x)
@@ -57,7 +53,7 @@ class MyProblem(Problem):
         out["F"] = fs  #I think this is the output, see pyMOO manual how to do multiobjective problems
 		
 		# now we write inputs and outputs into respective files. The below part may be implemented better, without opening files all he time
-        if sum(fsr[i] for i in range(2)) >= 0:
+        if sum(fsr[i] for i in range(n_var)) >= 0:
             with open(input_infeas_file, 'a') as f:  # infeasible point, outside feasible domain
                 print(x, sep=' ', file=f)
         else:
@@ -85,7 +81,7 @@ algorithm = NSGA2(x0=ref_starting,pop_size=100,sampling=get_sampling("int_random
 
 res = minimize(problem,
                algorithm,
-               ("n_gen", 15),
+               ("n_iter", 15),
                verbose=True,
                seed=1)
 

@@ -5,15 +5,15 @@ do for n_eval in  3000 5000 7000 8000
 do for lb in {-3..-1}
 do for ub in {1..4}
 do
-cat <<EnD>/scratch/lk32/ow6835/BASH_SCRIPTS/${p}.job_2_${s}_${n_eval}_${lb}_${ub} #write bash file
+cat <<EnD>/scratch/lk32/ow6835/MOOP_Result/bash_jobs/${p}.job_2_${s}_${lb}_${ub}_${n_eval} #write bash file
 #!/bin/bash
 #PBS -l ncpus=1,mem=2GB
 #PBS -l walltime=24:00:00
 #PBS -P lk32
 #PBS -q normal
 #PBS -l wd
-#PBS -o /scratch/lk32/ow6835/JOBOUTS
-#PBS -e /scratch/lk32/ow6835/JOBOUTS
+#PBS -o /scratch/lk32/ow6835/MOOP_Result/bash_jobs_output
+#PBS -e /scratch/lk32/ow6835/MOOP_Result/Others/bash_jobs_error_output
 
 #Use submission environment
 #PBS -V
@@ -21,11 +21,12 @@ cat <<EnD>/scratch/lk32/ow6835/BASH_SCRIPTS/${p}.job_2_${s}_${n_eval}_${lb}_${ub
 module load gcc/11.1.0
 module load intel-mkl/2020.3.304  python3/3.9.2
 
-python3 /scratch/lk32/ow6835/MOOP/NSGA-II.py -p $p -s $s -n_eval $n_eval -lb $lb $lb -ub  $ub $ub -d 2 -f ${p}.job_2_${s}_${neval}_${lb}_${ub}
+python3 /scratch/lk32/ow6835/MOOP/NSGA-II.py -p $p -s $s -n_eval $n_eval -lb $lb $lb -ub  $ub $ub -d 2 -f ${p}.job_2_${s}_${lb}_${ub}_${neval}
 EnD
 
-qsub /scratch/lk32/ow6835/BASH_SCRIPTS/${p}.job_2_${s}_${n_eval}_${lb}_${ub}
-echo /scratch/lk32/ow6835/BASH_SCRIPTS/${p}.job_2_${s}_${neval}_${lb}_${ub}>>jobs.txt  #store job name 
+echo /scratch/lk32/ow6835/MOOP_Result/bash_jobs/${p}.job_2_${s}_${lb}_${ub}_${neval}
+qsub /scratch/lk32/ow6835/MOOP_Result/bash_jobs/${p}.job_2_${s}_${lb}_${ub}_${n_eval}
+echo /scratch/lk32/ow6835/MOOP_Result/bash_jobs/${p}.job_2_${s}_${lb}_${ub}_${neval}>>jobs.txt  #store job name 
 done
 done
 done

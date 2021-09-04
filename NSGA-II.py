@@ -73,7 +73,12 @@ if __name__ == "__main__":
     #print(feasible_X,infeasible_X, feasible_F,infeasible_F )
 
     # construct filename 
-    path = '/scratch/lk32/ow6835/Result'
+    path = '/scratch/lk32/ow6835/MOOP_Result/Result/'
+
+    #create output subfolder based on dimension 
+    subfolder = str(parser.dimension) +'_dimension/'
+    path = path+subfolder
+
     try:
         os.makedirs(path)
     except OSError:
@@ -81,12 +86,14 @@ if __name__ == "__main__":
     else:
         print ("Successfully created the directory %s" % path)
     pref_path = args.filename
-    pref_path = "NSGAII_" + pref_path
+    
     try:
-        feasible_X_path= os.path.join(path, pref_path + '_feasible_X.txt')
-        infeasible_X_path =os.path.join(path,  pref_path + '_infeasible_X.txt')
-        feasible_objective_path =os.path.join(path, pref_path + '_feasible_F.txt')
-        infeasible_objective_path = os.path.join(path,  pref_path + '_infeasible_F.txt')
+        feasible_X_path= os.path.join(path, pref_path + '_feasible_X')
+        infeasible_X_path =os.path.join(path,  pref_path + '_infeasible_X')
+        feasible_objective_path =os.path.join(path, pref_path + '_feasible_F')
+        infeasible_objective_path = os.path.join(path,  pref_path + '_infeasible_F')
+        input_X_path= os.path.join(path,  pref_path + '_input_X')
+        output_X_path = os.path.join(path,  pref_path + '_Ooutput_X')
     except Exception:
         print('\n****plz input a filename argument***')
 
@@ -101,6 +108,14 @@ if __name__ == "__main__":
 
     with open(infeasible_objective_path, 'a') as f:  # infeasible point, outside feasible domain
             np.savetxt(f,infeasible_F, delimiter=",")
+    
+    with open(input_X_path, 'a') as f:  # infeasible point, outside feasible domain
+            np.savetxt(f,input_X, delimiter=",")
+    
+    with open(output_X_path, 'a') as f:  # infeasible point, outside feasible domain
+            np.savetxt(f,input_X_objective_value, delimiter=",")
+    
+    
 
 
 
@@ -123,8 +138,8 @@ if __name__ == "__main__":
             verbose=True)
     print('\nTime elapsed for solving problem: ', time.time() - start, ' seconds\n')
 
-    algorithm_X_path = os.path.join(path, pref_path + '_NSGA-II_X.txt')
-    algorithm_F_path = os.path.join(path, pref_path + '_NSGA-II_F.txt')
+    algorithm_X_path = os.path.join(path, pref_path + '_NSGA-II_X')
+    algorithm_F_path = os.path.join(path, pref_path + '_NSGA-II_F')
 
 
     with open(algorithm_X_path, 'a') as f:  
@@ -134,6 +149,9 @@ if __name__ == "__main__":
             np.savetxt(f,res.F, delimiter=",")
     
     print('\n\n---------')
+    print('input X path is ', input_X_path)
+    print('output X path is ', output_X_path)
+    print('------------')
     print('feasible_X path is: ',feasible_X_path)
     print('------------')
     print('infeasible_X path is: ',infeasible_X_path)
