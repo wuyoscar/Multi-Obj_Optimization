@@ -93,7 +93,7 @@ if __name__ == "__main__":
         feasible_objective_path =os.path.join(path, pref_path + '_feasible_F')
         infeasible_objective_path = os.path.join(path,  pref_path + '_infeasible_F')
         input_X_path= os.path.join(path,  pref_path + '_input_X')
-        output_X_path = os.path.join(path,  pref_path + '_Ooutput_X')
+        output_X_path = os.path.join(path,  pref_path + '_output_X')
     except Exception:
         print('\n****plz input a filename argument***')
 
