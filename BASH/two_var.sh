@@ -24,7 +24,7 @@ python3 /scratch/lk32/ow6835/MOOP/NSGA-II.py -p $p -s $s -n_eval $n_eval -lb $lb
 EnD
 
 qsub /scratch/lk32/ow6835/MOOP_Result/bash_jobs/${p}_nsga2.job_2_${s}_${lb}_${ub}_${n_eval}
-echo /scratch/lk32/ow6835/${p}.job_2_${s}_${lb}_${ub}_${neval}>>jobs.txt  #store job name 
+echo /scratch/lk32/ow6835/${p}.job_2_${s}_${lb}_${ub}_${n_eval}>>/scratch/lk32/ow6835/jobs.txt  #store job name 
 done
 done
 done
