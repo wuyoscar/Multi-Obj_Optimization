@@ -76,7 +76,7 @@ if __name__ == "__main__":
     path = '/scratch/lk32/ow6835/MOOP_Result/Result/'
 
     #create output subfolder based on dimension 
-    subfolder = str(parser.dimension) +'_dimension/'
+    subfolder = str(args.dimension) +'_dimension/'
     path = path+subfolder
 
     try:
