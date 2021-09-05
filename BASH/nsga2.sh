@@ -25,7 +25,7 @@ python3 /scratch/lk32/ow6835/MOOP/NSGA-II.py -p ${p[0]} -s $s -n_eval $n_eval -l
 EnD
 
 #submited jobs
-echo ${p[0]}_${p[1]}_${p[2]}_nsga2.job_${s}_${lb}_$(($lb+$ub))_${n_eval}
+echo -p ${p[0]} -s $s -n_eval $n_eval -lb $lb  -ub  $(($lb+$ub)) -d ${p[1]} -o ${p[2]} -f ${p[0]}_${p[1]}_${p[2]}_nsga2.job_${s}_${lb}_$(($lb+$ub))_${n_eval}
 qsub /scratch/lk32/ow6835/MOOP_Result/bash_jobs/${p[0]}_${p[1]}_${p[2]}_nsga2.job_${s}_${lb}_$(($lb+$ub))_${n_eval}
 done
 done
