@@ -195,7 +195,7 @@ if __name__ == "__main__":
         '#_objectives': args.objectives,
         'lb': args.lb,
         'ub': args.ub,
-        'input data size': args.s,
+        'input data size': args.size,
         '#_feasible': feasible_X.shape[0],
         '#_infeasible': infeasible_X.shape[0],
         'algorithmn': 'NSGA-II',
