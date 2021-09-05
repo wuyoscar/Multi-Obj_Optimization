@@ -182,26 +182,32 @@ if __name__ == "__main__":
                     'feasible_objective_path', 'infeasible_objective_path',
                     'algorihtmn_X_path',
                     'algorithmn_F_path']
-    rows = {'problem': args.problem,
-        'problem dimension': args.dimension,
-        '#_objectives': args.objectives,
-        'lb': args.lb,
-        'ub': args.ub,
-        'input data size': args.size,
-        '#_feasible': feasible_X.shape[0],
-        '#_infeasible': infeasible_X.shape[0],
-        'algorithmn': 'NSGA-II',
-        '#solutions algorithmns produce': res.X.shape[0],
-        '#_evaluations': args.evaluation,
-        'Time elapsed by algorithm':time.time() - start ,
-        'input X path':  input_X_path,
-        'obejctive value of input X path':output_X_path ,
-        'feasible_X_path': feasible_X_path,
-        'infeasible_X_path': infeasible_X_path ,
-        'feasible_objective_path': feasible_objective_path ,
-        'infeasible_objective_path':infeasible_objective_path,
-        'algorihtmn_X_path':algorithm_X_path ,
-        'algorithmn_F_path':algorithm_F_path}
+    
+
+    rows = {
+    'problem': args.problem,
+    'problem dimension': args.dimension,
+    '#_objectives': args.objectives,
+    'lb': args.lb[0], #! need to be updated, make it more flexible
+    'ub': args.ub[0], # need to be updated, make it more flexible
+    'input data size': args.size,
+    '#_feasible': feasible_X.shape[0],
+    '#_infeasible': infeasible_X.shape[0],
+    'algorithmn': 'NSGA-II',
+    '#solutions algorithmns produce': res.X.shape[0],
+    '#_evaluations': args.evaluation,
+    'Time elapsed by algorithm':time.time() - start,
+    'input X path':  input_X_path,
+    'obejctive value of input X path':output_X_path ,
+    'feasible_X_path': feasible_X_path,
+    'infeasible_X_path': infeasible_X_path ,
+    'feasible_objective_path': feasible_objective_path ,
+    'infeasible_objective_path':infeasible_objective_path,
+    'algorihtmn_X_path':algorithm_X_path ,
+    'algorithmn_F_path':algorithm_F_path,
+    'algorithmn_F_path':algorithm_F_path
+    }
+
     
     file_exists = os.path.isfile('/scratch/lk32/ow6835/MOOP_Result/Result/table.csv')
     with open('/scratch/lk32/ow6835/MOOP_Result/Result/table.csv', 'w', encoding='UTF8', newline='') as f:
