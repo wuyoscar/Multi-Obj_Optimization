@@ -92,12 +92,12 @@ if __name__ == "__main__":
     pref_path = args.filename
     
     try:
-        feasible_X_path= path+ '/feasible_X/'+pref_path
-        infeasible_X_path =path+  '/infeasible_X/'+pref_path
-        feasible_objective_path =path+  '/feasible/_F/'+pref_path
-        infeasible_objective_path = path+  '/infeasib/le_F/'+pref_path
-        input_X_path= path+ '/input_X/'+pref_path
-        output_X_path = path+ '/output_X/'+pref_path
+        feasible_X_path= path+ 'feasible_X/'+pref_path
+        infeasible_X_path =path+  'infeasible_X/'+pref_path
+        feasible_objective_path =path+  'feasible/_F/'+pref_path
+        infeasible_objective_path = path+  'infeasib/le_F/'+pref_path
+        input_X_path= path+ 'input_X/'+pref_path
+        output_X_path = path+ 'output_X/'+pref_path
     except Exception:
         print('\n****plz input a filename argument***')
 
@@ -142,8 +142,8 @@ if __name__ == "__main__":
             verbose=True)
     print('\nTime elapsed for solving problem: ', time.time() - start, ' seconds\n')
 
-    algorithm_X_path = path+ '/NSGA-II_X/'+ pref_path 
-    algorithm_F_path = path+ '/NSGA-II_F/'+ pref_path
+    algorithm_X_path = path+ 'NSGA-II_X/'+ pref_path 
+    algorithm_F_path = path+ 'NSGA-II_F/'+ pref_path
 
 
     with open(algorithm_X_path, 'a') as f:  
@@ -170,9 +170,7 @@ if __name__ == "__main__":
     print('------------')
     print('NSGAII optimal objective value path is: ',algorithm_F_path)
 
-# store result of each run into table 
     import csv 
-
     fieldnames = ['problem', 'problem dimension', '#_objectives', 
                     'lb', 'ub', 'input data size', 
                     '#_feasible', '#_infeasible','#_evaluations',
@@ -188,8 +186,8 @@ if __name__ == "__main__":
     'problem': args.problem,
     'problem dimension': args.dimension,
     '#_objectives': args.objectives,
-    'lb': args.lb[0], #! need to be updated, make it more flexible
-    'ub': args.ub[0], # need to be updated, make it more flexible
+    'lb': args.lb[0],
+    'ub': args.ub[0],
     'input data size': args.size,
     '#_feasible': feasible_X.shape[0],
     '#_infeasible': infeasible_X.shape[0],
@@ -209,10 +207,11 @@ if __name__ == "__main__":
     }
 
     
+
     file_exists = os.path.isfile('/scratch/lk32/ow6835/MOOP_Result/Result/table.csv')
-    with open('/scratch/lk32/ow6835/MOOP_Result/Result/table.csv', 'w', encoding='UTF8', newline='') as f:
+    with open('/scratch/lk32/ow6835/MOOP_Result/Result/table.csv', 'a+', encoding='UTF8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         if not file_exists:
                 writer.writeheader()
-        writer.writerows(rows)
+        writer.writerow(rows)
 
