@@ -5,9 +5,7 @@ chankong  2  2
 test  2  2
 ctp1  2  2
 truss2d  3  2
-pro1  3  3
-weldedbeam  2 4
-clutch  5  2
+weldebeam  2 4
 osy  6  2
 carside  7  3
 zdt1  2 6

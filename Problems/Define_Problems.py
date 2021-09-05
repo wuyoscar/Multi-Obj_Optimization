@@ -13,7 +13,6 @@ from bnh        import *
 from chankong   import *
 from clutch     import *
 from osy        import *
-from pro1       import *
 from test_      import *
 from tnk        import *
 from truss2d    import *
@@ -66,8 +65,8 @@ def input_problem(problem_name,n_var):
             'osy':OSY(),
             "chankong":Chankong(),
             'test':Test(),
-            'ctp1':CTP1(), 
-            'pro1':PRO1()}
+            'ctp1':CTP1()
+            }
         problem = p_dict[problem_name]
         print('\n\n***********')
         print('probelm is :')

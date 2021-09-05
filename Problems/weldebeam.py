@@ -1,7 +1,7 @@
+import autograd.numpy as anp
 
 from pymoo.model.problem import Problem
-import numpy as np
-import autograd.numpy as anp
+
 
 
 class WeldedBeam(Problem):
@@ -9,7 +9,7 @@ class WeldedBeam(Problem):
         super().__init__(n_var=4, n_obj=2, n_constr=4, type_var=anp.double)
         self.xl = anp.array([0.125, 0.1, 0.1, 0.125])
         self.xu = anp.array([5.0, 10.0, 10.0, 5.0])
-        
+
     def _evaluate(self, x, out, *args, **kwargs):
         f1 = 1.10471 * x[:, 0] ** 2 * x[:, 1] + 0.04811 * x[:, 2] * x[:, 3] * (14.0 + x[:, 1])
         f2 = 2.1952 / (x[:, 3] * x[:, 2] ** 3)
@@ -35,3 +35,4 @@ class WeldedBeam(Problem):
 
         out["F"] = anp.column_stack([f1, f2])
         out["G"] = anp.column_stack([g1, g2, g3, g4])
+

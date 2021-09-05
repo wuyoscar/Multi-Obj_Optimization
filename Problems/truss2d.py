@@ -31,7 +31,7 @@ class Truss2D(Problem):
         f2 = anp.max(anp.column_stack((sigma_ac, sigma_bc)), axis=1)
 
         # define a constraint
-        g1 = f2 - xu
+        g1 = f2 - self.Smax
 
         out["F"] = anp.column_stack([f1, f2])
         out["G"] = g1

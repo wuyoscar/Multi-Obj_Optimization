@@ -7,7 +7,7 @@ class Chankong(Problem):
 #clarify the problem
     def __init__(self):
 
-        super().__init__(n_var=2, n_obj=2,n_constr=2)
+        super().__init__(n_var=2, n_obj=2,n_constr=2,type_var=np.double)
         self.xl = anp.array([-20,-20])
         self.xu = anp.array([20,20])
     def _evaluate(self, X, out,*args, **kwargs):

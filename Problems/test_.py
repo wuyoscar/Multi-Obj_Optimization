@@ -10,7 +10,7 @@ class Test(Problem):
 
         super().__init__(n_var=2,
                         n_obj=2,
-                        n_constr=3)
+                        n_constr=3,type_var=np.double)
         self.xl = anp.array([-7,-7])
         self.xu = anp.array([4,4])
 
