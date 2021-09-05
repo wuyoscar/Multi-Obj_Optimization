@@ -199,7 +199,7 @@ if __name__ == "__main__":
         '#_feasible': feasible_X.shape[0],
         '#_infeasible': infeasible_X.shape[0],
         'algorithmn': 'NSGA-II',
-        '#solutions algorithmns produce': res.X.shape[0]
+        '#solutions algorithmns produce': res.X.shape[0],
         '#_evaluations': args.n_eval,
         'Time elapsed by algorithm':time.time() - start ,
         'input X path':  input_X_path,
