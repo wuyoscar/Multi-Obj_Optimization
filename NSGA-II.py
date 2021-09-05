@@ -80,14 +80,14 @@ if __name__ == "__main__":
     
 
     try:
-        os.makedirs(os.path.join(path, '/feasible_X/'))
-        os.makedirs(os.path.join(path, '/infeasible_X/'))
-        os.makedirs(os.path.join(path, '/feasible/_F/'))
-        os.makedirs(os.path.join(path, '/infeasib/le_F/'))
-        os.makedirs(os.path.join(path, '/input_X/'))
-        os.makedirs(os.path.join(path, '/output_X/'))
-        os.makedirs(os.path.join(path, '/NSGA-II_X/'))
-        os.makedirs(os.path.join(path, '/NSGA-II_F/'))
+        os.makedirs(path +'feasible_X/')
+        os.makedirs(path +'infeasible_X/')
+        os.makedirs(path +'feasible/_F/')
+        os.makedirs(path +'infeasib/le_F/')
+        os.makedirs(path +'input_X/')
+        os.makedirs(path +'output_X/')
+        os.makedirs(path +'NSGA-II_X/')
+        os.makedirs(path +'NSGA-II_F/')
 
     except OSError:
         pass
@@ -99,12 +99,12 @@ if __name__ == "__main__":
     pref_path = args.filename
     
     try:
-        feasible_X_path= os.path.join(path, '/feasible_X/',pref_path)
-        infeasible_X_path =os.path.join(path,  '/infeasible_X/',pref_path)
-        feasible_objective_path =os.path.join(path,  '/feasible/_F/',pref_path)
-        infeasible_objective_path = os.path.join(path,    '/infeasib/le_F/',pref_path)
-        input_X_path= os.path.join(path, '/input_X/',pref_path)
-        output_X_path = os.path.join(path, '/output_X/',pref_path)
+        feasible_X_path= path+ '/feasible_X/'+pref_path
+        infeasible_X_path =path+  '/infeasible_X/'+pref_path
+        feasible_objective_path =path+  '/feasible/_F/'+pref_path
+        infeasible_objective_path = path+  '/infeasib/le_F/'+pref_path
+        input_X_path= path+ '/input_X/'+pref_path
+        output_X_path = path+ '/output_X/'+pref_path
     except Exception:
         print('\n****plz input a filename argument***')
 
@@ -149,8 +149,8 @@ if __name__ == "__main__":
             verbose=True)
     print('\nTime elapsed for solving problem: ', time.time() - start, ' seconds\n')
 
-    algorithm_X_path = os.path.join(path, '/NSGA-II_X/', pref_path )
-    algorithm_F_path = os.path.join(path,'/NSGA-II_F/', pref_path)
+    algorithm_X_path = path+ '/NSGA-II_X/'+ pref_path 
+    algorithm_F_path = path+ '/NSGA-II_F/'+ pref_path
 
 
     with open(algorithm_X_path, 'a') as f:  
