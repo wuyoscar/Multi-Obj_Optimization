@@ -1,7 +1,7 @@
 #! /bin/bash
 while read -ra p
-do for s in 500,1000
-do for n_eval in  3000,5000,10000 
+do for s in 500 1000
+do for n_eval in 3000 5000 10000 
 do for lb in {-3..5}
 do for ub in {1..3}  
 do
