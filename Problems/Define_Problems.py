@@ -31,15 +31,7 @@ def lsp(objective_function):
     return lsp
 
 
-def random_pick_X(sd, size = 100):
-    # you have data size and a set of bound
-    # based on this generating random data points(
-    #sd is np.columnstack([lb,ub])
-    lst = []
-    for each_variable_domain in sd:
-        aryl = np.random.uniform(low=each_variable_domain[0], high=each_variable_domain[1], size =size).reshape(-1,1)
-        lst.append(aryl) 
-    return np.column_stack(lst) #stack all variables search domain
+
 
 def split_X(X,problem_F,problem_CV):
     

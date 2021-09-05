@@ -42,27 +42,20 @@ current_path = os.getcwd()
 
 xl =np.array(args.lb)
 xu =np.array(args.ub)
-if args.dimension is not None:
-    n_var = args.dimension
-else:
-    print('plz input dimension')
 
 # select problem from parameter
 if __name__ == "__main__":
 
-    problem = input_problem(args.problem, n_var)
-    search_domain = np.column_stack([np.array(args.lb),np.array(args.ub)])
+    problem = input_problem(args.problem, args.dimension)
     
-    if args.size is None:
-        input_X = random_pick_X(sd= search_domain, size = 50) 
-        print('\n\n********************')
-        print('*user did not input require data size,using default data point size 50*')
-    else:
-        input_X = random_pick_X(sd= search_domain, size = args.size)
-        print('\n\n********************')
+    
+    
+    input_X = np.random.uniform(low=xl,high=xu, size=args.size*args.dimension).reshape(-1,args.dimension)
+
+
     print('According input, design variable bound is as below')
     print('\nfrom bound given below, generating  data points {} successfully'.format(input_X.shape))
-    print(search_domain)
+    #print(search_domain)
     print('\n********************\n')
     #!!!! evaluateing input_X data by _valuate, filtering datasets
     ## based on codes constraints

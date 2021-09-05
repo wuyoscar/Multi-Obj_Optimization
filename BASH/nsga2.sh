@@ -21,7 +21,7 @@ cat <<EnD>/scratch/lk32/ow6835/MOOP_Result/bash_jobs/${p[0]}_${p[1]}_${p[2]}_nsg
 
 module load gcc/11.1.0
 module load intel-mkl/2020.3.304  python3/3.9.2
-python3 /scratch/lk32/ow6835/MOOP/NSGA-II.py -p ${p[0]} -s $s -n_eval $n_eval -lb $lb $lb -ub  $ub $ub -d ${p[1]} -o ${p[2]} -f ${p[0]}_${p[1]}_${p[2]}_nsga2.job_${s}_${lb}_$(($lb+$ub))_${n_eval}
+python3 /scratch/lk32/ow6835/MOOP/NSGA-II.py -p ${p[0]} -s $s -n_eval $n_eval -lb $lb  -ub  $(($lb+$ub)) -d ${p[1]} -o ${p[2]} -f ${p[0]}_${p[1]}_${p[2]}_nsga2.job_${s}_${lb}_$(($lb+$ub))_${n_eval}
 EnD
 
 #submited jobs
