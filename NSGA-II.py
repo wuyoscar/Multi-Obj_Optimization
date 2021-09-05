@@ -177,7 +177,7 @@ if __name__ == "__main__":
                     'lb', 'ub', 'input data size', 
                     '#_feasible', '#_infeasible','#_evaluations',
                     'algorithmn','#solutions algorithmns produce','Time elapsed by algorithm',
-                    'input X path', 'obejctive value of inoput X path',
+                    'input X path', 'obejctive value of input X path',
                     'feasible_X_path', 'infeasible_X_path',
                     'feasible_objective_path', 'infeasible_objective_path',
                     'algorihtmn_X_path',
