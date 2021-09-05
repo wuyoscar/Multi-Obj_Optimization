@@ -1,9 +1,9 @@
 #! /bin/bash
 while read -ra p
 do for s in 500 1000
-do for n_eval in 3000 
-do for lb in {-3..-1}
-do for ub in 1 
+do for n_eval in 3000 5000 8000
+do for lb in {-5..-2}
+do for ub in {1..3}
 do
 # problem, problem dimension, #objectives, data size, lower bound, upper bound, #evaluations
 # create PBS job with paramaters 
