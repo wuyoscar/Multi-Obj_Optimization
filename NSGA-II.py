@@ -85,6 +85,8 @@ if __name__ == "__main__":
         pass
     else:
         print ("Successfully created the directory %s" % path)
+    
+    #${p}_nsga2.job_2_${s}_${lb}_$(($lb+$ub))_${n_eval}
     pref_path = args.filename
     
     try:
@@ -119,7 +121,7 @@ if __name__ == "__main__":
 
 
 
-    algorithm = NSGA2(pop_size=100)
+    algorithm = NSGA2(pop_size=500)
 
 
     start = time.time()
