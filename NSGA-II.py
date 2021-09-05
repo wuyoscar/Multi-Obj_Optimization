@@ -25,7 +25,8 @@ parser.add_argument('-p','--problem', type=str, required=True,choices=['bnh','ca
                             'truss2d', 'tnk', 'osy', 'chankong','test', 
                             'ctp1', 'pro1','zdt1','zdt2','zdt3','zdt3',
                             'zdt4','zdt5','zdt6'],help="This is specific problem")
-parser.add_argument('-d','--dimension', type=int,help="This is dimension of input")
+parser.add_argument('-d','--dimension', type=int,help="This is dimension of problem")
+parser.add_argument('-o','--objectives', type=int,help="This is number of objetives")
 parser.add_argument('-lb', '--lb',type=float, nargs= '+', help='Integer or np.ndarray of length n_var representing the lower bounds of the design variables.')
 parser.add_argument('-ub', '--ub',type=float,nargs= '+', help ='Integer or np.ndarray of length n_var representing the upper bounds of the design variables.')
 parser.add_argument('-s', '--size', type=int,help='# of data points' )
@@ -76,26 +77,34 @@ if __name__ == "__main__":
     path = '/scratch/lk32/ow6835/MOOP_Result/Result/'
 
     #create output subfolder based on dimension 
-    subfolder = str(args.dimension) +'_dimension/'
-    path = path+subfolder
+    
 
     try:
-        os.makedirs(path)
+        os.makedirs(os.path.join(path, '/feasible_X/'))
+        os.makedirs(os.path.join(path, '/infeasible_X/'))
+        os.makedirs(os.path.join(path, '/feasible/_F/'))
+        os.makedirs(os.path.join(path, '/infeasib/le_F/'))
+        os.makedirs(os.path.join(path, '/input_X/'))
+        os.makedirs(os.path.join(path, '/output_X/'))
+        os.makedirs(os.path.join(path, '/NSGA-II_X/'))
+        os.makedirs(os.path.join(path, '/NSGA-II_F/'))
+
     except OSError:
         pass
     else:
         print ("Successfully created the directory %s" % path)
     
+    # problem dimension, #objectives, data size, lb, ub, #evaluation
     #${p}_nsga2.job_2_${s}_${lb}_$(($lb+$ub))_${n_eval}
     pref_path = args.filename
     
     try:
-        feasible_X_path= os.path.join(path, pref_path + '_feasible_X')
-        infeasible_X_path =os.path.join(path,  pref_path + '_infeasible_X')
-        feasible_objective_path =os.path.join(path, pref_path + '_feasible_F')
-        infeasible_objective_path = os.path.join(path,  pref_path + '_infeasible_F')
-        input_X_path= os.path.join(path,  pref_path + '_input_X')
-        output_X_path = os.path.join(path,  pref_path + '_output_X')
+        feasible_X_path= os.path.join(path, '/feasible_X/',pref_path)
+        infeasible_X_path =os.path.join(path,  '/infeasible_X/',pref_path)
+        feasible_objective_path =os.path.join(path,  '/feasible/_F/',pref_path)
+        infeasible_objective_path = os.path.join(path,    '/infeasib/le_F/',pref_path)
+        input_X_path= os.path.join(path, '/input_X/',pref_path)
+        output_X_path = os.path.join(path, '/output_X/',pref_path)
     except Exception:
         print('\n****plz input a filename argument***')
 
@@ -140,8 +149,8 @@ if __name__ == "__main__":
             verbose=True)
     print('\nTime elapsed for solving problem: ', time.time() - start, ' seconds\n')
 
-    algorithm_X_path = os.path.join(path, pref_path + '_NSGA-II_X')
-    algorithm_F_path = os.path.join(path, pref_path + '_NSGA-II_F')
+    algorithm_X_path = os.path.join(path, '/NSGA-II_X/', pref_path )
+    algorithm_F_path = os.path.join(path,'/NSGA-II_F/', pref_path)
 
 
     with open(algorithm_X_path, 'a') as f:  
@@ -149,6 +158,8 @@ if __name__ == "__main__":
 
     with open(algorithm_F_path, 'a') as f:  
             np.savetxt(f,res.F, delimiter=",")
+    
+
     
     print('\n\n---------')
     print('input X path is ', input_X_path)
@@ -165,3 +176,44 @@ if __name__ == "__main__":
     print('NSGAII optimal X path is : ',algorithm_X_path)
     print('------------')
     print('NSGAII optimal objective value path is: ',algorithm_F_path)
+
+# store result of each run into table 
+    import csv 
+
+    fieldnames = ['problem', 'problem dimension', '#_objectives', 
+                    'lb', 'ub', 'input data size', 
+                    '#_feasible', '#_infeasible','#_evaluations',
+                    'algorithmn','#solutions algorithmns produce','Time elapsed by algorithm',
+                    'input X path', 'obejctive value of inoput X path',
+                    'feasible_X_path', 'infeasible_X_path',
+                    'feasible_objective_path', 'infeasible_objective_path',
+                    'algorihtmn_X_path',
+                    'algorithmn_F_path']
+    rows = [
+        {'problem': args.problem,
+        'problem dimension': args.dimension,
+        '#_objectives': args.objectives,
+        'lb': args.lb,
+        'ub': args.ub,
+        'input data size': args.s,
+        '#_feasible': feasible_X.shape[0],
+        '#_infeasible': infeasible_X.shape[0],
+        'algorithmn': 'NSGA-II',
+        '#solutions algorithmns produce': res.X.shape[0]
+        '#_evaluations': args.n_eval,
+        'Time elapsed by algorithm':time.time() - start ,
+        'input X path':  input_X_path,
+        'obejctive value of input X path':output_X_path ,
+        'feasible_X_path': feasible_X_path,
+        'infeasible_X_path': infeasible_X_path ,
+        'feasible_objective_path': feasible_objective_path ,
+        'infeasible_objective_path':infeasible_objective_path,
+        'algorihtmn_X_path':algorithm_X_path ,
+        'algorihtmn_F_path'algorithm_F_path}
+    ]
+
+    with open('/scratch/lk32/ow6835/MOOP_Result/Result/table.csv', 'w', encoding='UTF8', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+
