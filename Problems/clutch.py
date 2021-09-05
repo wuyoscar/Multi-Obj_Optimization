@@ -12,21 +12,21 @@ class Clutch(Problem):
         # self.xl = anp.array([60, 90, 1, 600, 2]
         self.xl = anp.array([0, 0, 0, 0, 0])
         self.xu = anp.array([20, 20, 4, 400, 7])
-        self.x1 = anp.arange(60, 81)
-        self.x2 = anp.arange(90, 111)
-        self.x3 = anp.arange(1, 3.5, 0.5)
-        self.x4 = anp.arange(600, 1001)
-        self.x5 = anp.arange(2, 11)
+        #self.x1 = anp.arange(60, 81)
+        #self.x2 = anp.arange(90, 111)
+        #self.x3 = anp.arange(1, 3.5, 0.5)
+        #self.x4 = anp.arange(600, 1001)
+        #self.x5 = anp.arange(2, 11)
 
-    def _evaluate(self, x, out, *args, **kwargs):
+    def _evaluate(self, X, out, *args, **kwargs):
 
-        x1, x2, x3, x4, x5 = anp.split(x, 5, axis=1)
+        #x1, x2, x3, x4, x5 = anp.split(x, 5, axis=1)
 
-        x1 = self.x1[x1]
-        x2 = self.x2[x2]
-        x3 = self.x3[x3]
-        x4 = self.x4[x4]
-        x5 = self.x5[x5]
+        x1 = X[:,0]
+        x2 = X[:,1]
+        x3 = X[:,2]
+        x4 = X[:,3]
+        x5 = X[:,4]
 
         pi = anp.pi
         mu = 0.5

@@ -193,7 +193,7 @@ if __name__ == "__main__":
         '#_infeasible': infeasible_X.shape[0],
         'algorithmn': 'NSGA-II',
         '#solutions algorithmns produce': res.X.shape[0],
-        '#_evaluations': args.n_eval,
+        '#_evaluations': args.evaluation,
         'Time elapsed by algorithm':time.time() - start ,
         'input X path':  input_X_path,
         'obejctive value of input X path':output_X_path ,
