@@ -201,11 +201,12 @@ if __name__ == "__main__":
         'feasible_objective_path': feasible_objective_path ,
         'infeasible_objective_path':infeasible_objective_path,
         'algorihtmn_X_path':algorithm_X_path ,
-        'algorihtmn_F_path':algorithm_F_path}
+        'algorithmn_F_path':algorithm_F_path}
     
-
+    file_exists = os.path.isfile('/scratch/lk32/ow6835/MOOP_Result/Result/table.csv')
     with open('/scratch/lk32/ow6835/MOOP_Result/Result/table.csv', 'w', encoding='UTF8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
+        if not file_exists:
+                writer.writeheader()
         writer.writerows(rows)
 

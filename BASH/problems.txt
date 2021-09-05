@@ -12,5 +12,5 @@ zdt1  2 6
 zdt2  2 6
 zdt3  2 6
 zdt4  2 6
-zdt5  2 6
+zdt5  80 6
 zdt6  2 6
