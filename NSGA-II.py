@@ -75,8 +75,8 @@ if __name__ == "__main__":
     try:
         os.makedirs(path +'feasible_X/')
         os.makedirs(path +'infeasible_X/')
-        os.makedirs(path +'feasible/_F/')
-        os.makedirs(path +'infeasib/le_F/')
+        os.makedirs(path +'feasible_F/')
+        os.makedirs(path +'infeasible_F/')
         os.makedirs(path +'input_X/')
         os.makedirs(path +'output_X/')
         os.makedirs(path +'NSGA-II_X/')
@@ -94,8 +94,8 @@ if __name__ == "__main__":
     try:
         feasible_X_path= path+ 'feasible_X/'+pref_path
         infeasible_X_path =path+  'infeasible_X/'+pref_path
-        feasible_objective_path =path+  'feasible/_F/'+pref_path
-        infeasible_objective_path = path+  'infeasib/le_F/'+pref_path
+        feasible_objective_path =path+  'feasible_F/'+pref_path
+        infeasible_objective_path = path+  'infeasible_F/'+pref_path
         input_X_path= path+ 'input_X/'+pref_path
         output_X_path = path+ 'output_X/'+pref_path
     except Exception:
