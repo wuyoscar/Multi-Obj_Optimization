@@ -27,8 +27,8 @@ parser.add_argument('-p','--problem', type=str, required=True,choices=['bnh','ca
                             'zdt4','zdt5','zdt6'],help="This is specific problem")
 parser.add_argument('-d','--dimension', type=int,help="This is dimension of problem")
 parser.add_argument('-o','--objectives', type=int,help="This is number of objetives")
-parser.add_argument('-lb', '--lb',type=float, nargs= '+', help='Integer or np.ndarray of length n_var representing the lower bounds of the design variables.')
-parser.add_argument('-ub', '--ub',type=float,nargs= '+', help ='Integer or np.ndarray of length n_var representing the upper bounds of the design variables.')
+#parser.add_argument('-lb', '--lb',type=float, nargs= '+', help='Integer or np.ndarray of length n_var representing the lower bounds of the design variables.')
+#parser.add_argument('-ub', '--ub',type=float,nargs= '+', help ='Integer or np.ndarray of length n_var representing the upper bounds of the design variables.')
 parser.add_argument('-s', '--size', type=int,help='# of data points' )
 parser.add_argument('-f', '--filename', type=str,help='this is filename' ) #construct filename base on above parameters
 parser.add_argument('-n_eval', '--evaluation', type=int,help='# of evaluation NSGAII' )
@@ -46,11 +46,11 @@ xu =np.array(args.ub)
 # select problem from parameter
 if __name__ == "__main__":
 
-    problem = input_problem(args.problem, args.dimension)
+    problem = input_problem(args.problem)
     
     
-    
-    input_X = np.random.uniform(low=xl,high=xu, size=args.size*args.dimension).reshape(-1,args.dimension)
+    input_X = generate_data(p = problem, size= args.size)
+    #input_X = np.random.uniform(low=xl,high=xu, size=args.size*args.dimension).reshape(-1,args.dimension)
 
 
     print('According input, design variable bound is as below')
@@ -186,8 +186,8 @@ if __name__ == "__main__":
     'problem': args.problem,
     'problem dimension': args.dimension,
     '#_objectives': args.objectives,
-    'lb': args.lb[0],
-    'ub': args.ub[0],
+    'lb': p.xl,
+    'ub': p.xu,
     'input data size': args.size,
     '#_feasible': feasible_X.shape[0],
     '#_infeasible': infeasible_X.shape[0],

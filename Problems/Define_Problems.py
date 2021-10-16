@@ -51,7 +51,7 @@ def split_X(X,problem_F,problem_CV):
 
 
 
-def input_problem(problem_name,n_var):
+def input_problem(problem_name):
 
     problems_set_1 = ['bnh','carside','clutch','kursawe','weldebeam',"truss2d","tnk",'osy',  "chankong",'test','ctp1','pro1']
     if problem_name in problems_set_1:
@@ -88,3 +88,11 @@ def input_problem(problem_name,n_var):
     
     else:
         print('Plz select correct problem')
+
+def generate_data(p = None,size = None):
+    data_point = []
+    for i in np.column_stack([p.xl.T,p.xu.T]):
+        data_point.append(np.random.uniform(low=i[0],high=i[1], size=500))
+    data_point = np.array(data_point)
+    data_point = data_point.T
+    return data_point
