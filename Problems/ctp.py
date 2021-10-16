@@ -6,7 +6,9 @@ import autograd.numpy as anp
 class CTP(Problem):
 
     def __init__(self, n_var=2, n_constr=1, option="linear"):
-        super().__init__(n_var=n_var, n_obj=2, n_constr=n_constr, xl=0, xu=1, type_var=anp.double)
+        super().__init__(n_var=n_var, n_obj=2, n_constr=n_constr,  type_var=anp.double)
+        self.xu = np.array([0,0])
+        self.xp = np.array([1,1])
 
         def g_linear(x):
             return 1 + anp.sum(x, axis=1)

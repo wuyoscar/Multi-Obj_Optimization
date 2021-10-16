@@ -91,7 +91,7 @@ def input_problem(problem_name):
 
 def generate_data(p = None,size = None):
     data_point = []
-    for i in np.column_stack([p.xl.T,p.xu.T]):
+    for i in np.column_stack([p.xl,p.xu]):
         data_point.append(np.random.uniform(low=i[0],high=i[1], size=500))
     data_point = np.array(data_point)
     data_point = data_point.T
