@@ -40,13 +40,11 @@ args = parser.parse_args()
 current_path = os.getcwd()
 
 
-xl =np.array(args.lb)
-xu =np.array(args.ub)
-
 # select problem from parameter
 if __name__ == "__main__":
 
     problem = input_problem(args.problem)
+    P= problem
     
     
     input_X = generate_data(p = problem, size= args.size)
@@ -54,8 +52,9 @@ if __name__ == "__main__":
 
 
     print('According input, design variable bound is as below')
+    print(f'lower {p.xl} and upper {p.xu}')
     print('\nfrom bound given below, generating  data points {} successfully'.format(input_X.shape))
-    #print(search_domain)
+    
     print('\n********************\n')
     #!!!! evaluateing input_X data by _valuate, filtering datasets
     ## based on codes constraints
