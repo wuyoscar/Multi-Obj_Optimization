@@ -44,7 +44,7 @@ current_path = os.getcwd()
 if __name__ == "__main__":
 
     problem = input_problem(args.problem)
-    P= problem
+    p= problem
     
     
     input_X = generate_data(p = problem, size= args.size)
