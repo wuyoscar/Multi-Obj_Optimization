@@ -1,10 +1,59 @@
 from pymoo.core.problem import Problem
 import numpy as np
 import autograd.numpy as anp
-import os ,sys
+import os, sys
 sys.path.append(os.getcwd())
 
 from problems import * 
+
+
+def input_problem(problem_name= None, **kwargs):
+    problems_set_1 = ['bnh','carside','clutch','kursawe','weldebeam',"truss2d","tnk",'osy',  "chankong",'test','ctp1','pro1']
+    problems_set_2 = ['kur1']
+    problems_set_3 = ['zdt1','zdt2','zdt3','zdt4','zdt5','zdt6']
+    if problem_name in problems_set_1:
+        p_dict = {'bnh':bnh.BNH(), 
+            'carside':carside.Carside(), 
+            'clutch':clutch.Clutch(), 
+            'kursawe':kursawe.Kursawe(), 
+            'weldebeam':weldebeam.WeldedBeam(),
+            "truss2d":truss2d.Truss2D(),
+            "tnk": tnk.TNK(), 
+            'osy':osy.OSY(),
+            "chankong":chankong.Chankong(),
+            'test':test.Test(),
+            'ctp1':ctp1.CTP1()
+            }
+        problem = p_dict[problem_name]
+        print(f'probelm is : {problem}, and xl is {problem.xl}, xu is {problem.xu}')
+        return problem
+    
+
+    elif problem_name in problems_set_2:
+        p_dict = {
+            'kur1':kur1.Kur1(n_var = kwargs['n_var'], xu=kwargs['xu'], xl = kwargs['xl'])
+        }
+        problem = p_dict[problem_name]
+        return problem
+    
+    elif problem_name in problems_set_3:
+        p_dict  = {
+            'zdt1':zdt.ZDT1(n_var=kwargs['n_var']),
+            'zdt2':zdt.ZDT2(n_var=kwargs['n_var']),
+            'zdt3':zdt.ZDT3(n_var=kwargs['n_var']),
+            'zdt4':zdt.ZDT4(n_var=kwargs['n_var']),
+            'zdt5':zdt.ZDT5(),
+            'zdt6':zdt.ZDT6(n_var=kwargs['n_var'])
+        }
+        problem = p_dict[problem_name]
+        print(f'problem is : {problem}, and xl is {problem.xl}, xu is {problem.xu}')
+        return problem
+    
+    else:
+        print('Plz select correct problem')
+
+
+
 
 
 def lsp(objective_function):
@@ -38,40 +87,7 @@ def split_X(X,problem_F,problem_CV):
 
 
 
-def input_problem(problem_name, n_var, xl = None, xu = None):
 
-    problems_set_1 = ['bnh','carside','clutch','kursawe','weldebeam',"truss2d","tnk",'osy',  "chankong",'test','ctp1','pro1']
-    if problem_name in problems_set_1:
-        p_dict = {'bnh':bnh.BNH(), 
-            'carside':carside.Carside(), 
-            'clutch':clutch.Clutch(), 
-            'kursawe':kursawe.Kursawe(), 
-            'weldebeam':weldebeam.WeldedBeam(),
-            "truss2d":truss2d.Truss2D(),
-            "tnk": tnk.TNK(), 
-            'osy':osy.OSY(),
-            "chankong":chankong.Chankong(),
-            'test':test.Test(),
-            'ctp1':ctp1.CTP1(),
-            'kur1':kur1.Kur1(n_var = n_var, xu=xu, xl = xl)
-            }
-        problem = p_dict[problem_name]
-        print(f'probelm is : {problem}')
-        return problem
-    
-    elif problem_name in ['zdt1','zdt2','zdt3','zdt4','zdt5','zdt6']:
-        p_dict  = {'zdt1':zdt.ZDT1(n_var=n_var),
-            'zdt2':zdt.ZDT2(n_var=n_var),
-            'zdt3':zdt.ZDT3(n_var=n_var),
-            'zdt4':zdt.ZDT4(n_var=n_var),
-            'zdt5':zdt.ZDT5(),
-            'zdt6':zdt.ZDT6(n_var=n_var) }
-        problem = p_dict[problem_name]
-        print(f'probelm is : {problem}')
-        return problem
-    
-    else:
-        print('Plz select correct problem')
 
 def generate_data(p = None,size = None):
     data_point = []

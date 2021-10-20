@@ -26,7 +26,7 @@ parser.add_argument('-p','--problem', type=str, required=True,choices=['bnh','ca
                             'ctp1', 'pro1','zdt1','zdt2','zdt3','zdt3',
                             'zdt4','zdt5','zdt6'],help="This is specific problem")
 parser.add_argument('-d','--dimension', type=int,help="This is dimension of problem")
-parser.add_argument('-o','--objectives', type=int,help="This is number of objetives")
+parser.add_argument('-ob','--objectives', type=int,help="This is number of objetives")
 #parser.add_argument('-lb', '--lb',type=float, nargs= '+', help='Integer or np.ndarray of length n_var representing the lower bounds of the design variables.')
 #parser.add_argument('-ub', '--ub',type=float,nargs= '+', help ='Integer or np.ndarray of length n_var representing the upper bounds of the design variables.')
 parser.add_argument('-s', '--size', type=int,help='# of data points' )
