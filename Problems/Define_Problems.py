@@ -4,20 +4,6 @@ import autograd.numpy as anp
 import os 
 import sys
 
-sys.path.append('/scratch/lk32/ow6835/MOOP/Problems')
-
-from carside    import *
-from ctp        import *
-from kursawe    import *
-from bnh        import *
-from chankong   import *
-from clutch     import *
-from osy        import *
-from test_      import *
-from tnk        import *
-from truss2d    import *
-from weldebeam  import *
-from zdt        import *
 
 
 def lsp(objective_function):
@@ -51,7 +37,7 @@ def split_X(X,problem_F,problem_CV):
 
 
 
-def input_problem(problem_name):
+def input_problem(problem_name, n_var):
 
     problems_set_1 = ['bnh','carside','clutch','kursawe','weldebeam',"truss2d","tnk",'osy',  "chankong",'test','ctp1','pro1']
     if problem_name in problems_set_1:
