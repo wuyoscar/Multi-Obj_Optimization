@@ -8,9 +8,11 @@ from problems import *
 
 
 def input_problem(problem_name= None, **kwargs):
-    problems_set_1 = ['bnh','carside','clutch','kursawe','weldebeam',"truss2d","tnk",'osy',  "chankong",'test','ctp1','pro1']
-    problems_set_2 = ['kur1']
-    problems_set_3 = ['zdt1','zdt2','zdt3','zdt4','zdt5','zdt6']
+    problems_set_1 = ['bnh','carside','clutch','kursawe','weldebeam',"truss2d","tnk",'osy',  "chankong",
+    'ctp1','pro1', 'vu1', 'vu2','tkly1', 'ltdz1'] #fixed
+    
+    problems_set_2 = ['kur1','sk1','sk2'] # no bound 
+    problems_set_3 = ['zdt1','zdt2','zdt3','zdt4','zdt5','zdt6'] # free #objetives
     if problem_name in problems_set_1:
         p_dict = {'bnh':bnh.BNH(), 
             'carside':carside.Carside(), 
@@ -21,19 +23,27 @@ def input_problem(problem_name= None, **kwargs):
             "tnk": tnk.TNK(), 
             'osy':osy.OSY(),
             "chankong":chankong.Chankong(),
-            'test':test.Test(),
-            'ctp1':ctp1.CTP1()
+            'ctp1':ctp.CTP1(),
+            'vu1': vu.Vu1(),
+            'vu2':vu.Vu2(),
+            'tkly1':tkly1.TKLY1(),
+            'ltdz1':ltdz1.LTDZ1()
             }
         problem = p_dict[problem_name]
-        print(f'probelm is : {problem}, and xl is {problem.xl}, xu is {problem.xu}')
+        print(f'''probelm is : {problem} 
+# lower bound is {problem.xl}, upper bound is {problem.xu}''')
         return problem
     
 
     elif problem_name in problems_set_2:
         p_dict = {
-            'kur1':kur1.Kur1(n_var = kwargs['n_var'], xu=kwargs['xu'], xl = kwargs['xl'])
+            'kur1':kur1.Kur1(n_var = kwargs['n_var'], xu=kwargs['xu'], xl = kwargs['xl']),
+            "sk1":sk.SK1(xu=kwargs['xu'], xl = kwargs['xl']),
+            "sk2":sk.SK2(xu=kwargs['xu'], xl = kwargs['xl'])
         }
         problem = p_dict[problem_name]
+        print(f'''probelm is : {problem} 
+# lower bound is {problem.xl}, upper bound is {problem.xu}''')
         return problem
     
     elif problem_name in problems_set_3:
@@ -46,7 +56,8 @@ def input_problem(problem_name= None, **kwargs):
             'zdt6':zdt.ZDT6(n_var=kwargs['n_var'])
         }
         problem = p_dict[problem_name]
-        print(f'problem is : {problem}, and xl is {problem.xl}, xu is {problem.xu}')
+        print(f'''probelm is : {problem} 
+# lower bound is {problem.xl}, upper bound is {problem.xu}''')
         return problem
     
     else:

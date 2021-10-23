@@ -11,5 +11,9 @@ __all__ = [
     'zdt',
     'truss2d',
     'clutch',
-    'kursawe'
+    'kursawe',
+    'vu',
+    'sk',
+    'tkly1',
+    'ltdz1'
 ]
