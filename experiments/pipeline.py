@@ -73,7 +73,7 @@ if __name__ == "__main__":
     
 # now we have result 
     F = res.F
-    print('solution shape:',F.shape)
+    
 
 #performance indicator 
 
@@ -86,6 +86,7 @@ if __name__ == "__main__":
 
 
 #recording info of this job
+    print('solution shape:',F.shape)
     print(f"--- exec_time --: {res.exec_time}s")
     print(f'problem name is: {args.problem.upper()}')
     print(f'number of objetives {problem.n_obj}')
