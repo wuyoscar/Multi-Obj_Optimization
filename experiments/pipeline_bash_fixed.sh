@@ -3,10 +3,27 @@ while read -ra p
 do for a in nsga2 nsga3 agnomen moead rnsga2
 do for n_gen in 250 2500 
 do
+cat <<EnD>/home/582/ow6835/bash_scripts/${p[0]}_${a}_${n_gen}
+#!/bin/bash
+#PBS -l ncpus=1,mem=2GB
+#PBS -l walltime=10:00:00
+#PBS -P lk32
+#PBS -q normal
+#PBS -l wd
+#PBS -m n
+#PBS -o /home/582/ow6835/bash_script_ouput
+#PBS -e /home/582/ow6835/bash_script_ouput
+module load gcc/11.1.0
+module load intel-mkl/2020.3.304  python3/3.9.2
 python pipeline.py -p ${p[0]} -a $a  -gen ${n_gen} -n ${p[1]} -ob ${p[2]} 
+
+EnD
+
+qsub ${p[0]}_${a}_${n_gen}
+sleep 1 
 done 
 done 
-done </Users/wuyoscar/Documents/Project/MOOP/experiments/problems_fixed.txt
+done <problems_fixed.txt
 
 
 
