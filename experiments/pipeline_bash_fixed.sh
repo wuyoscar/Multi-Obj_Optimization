@@ -15,11 +15,11 @@ cat <<EnD>/home/582/ow6835/bash_scripts/${p[0]}_${a}_${n_gen}
 #PBS -e /home/582/ow6835/bash_script_ouput
 module load gcc/11.1.0
 module load intel-mkl/2020.3.304  python3/3.9.2
-python pipeline.py -p ${p[0]} -a $a  -gen ${n_gen} -n ${p[1]} -ob ${p[2]} 
+python3 pipeline.py -p ${p[0]} -a $a  -gen ${n_gen} -n ${p[1]} -ob ${p[2]} 
 
 EnD
 
-qsub ${p[0]}_${a}_${n_gen}
+qsub /home/582/ow6835/bash_scripts/${p[0]}_${a}_${n_gen}
 sleep 1 
 done 
 done 
