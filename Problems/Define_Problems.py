@@ -1,23 +1,78 @@
 from pymoo.core.problem import Problem
 import numpy as np
 import autograd.numpy as anp
-import os 
-import sys
+import os, sys
+sys.path.append(os.getcwd())
 
-sys.path.append('/scratch/lk32/ow6835/MOOP/Problems')
+from problems import * 
 
-from carside    import *
-from ctp        import *
-from kursawe    import *
-from bnh        import *
-from chankong   import *
-from clutch     import *
-from osy        import *
-from test_      import *
-from tnk        import *
-from truss2d    import *
-from weldebeam  import *
-from zdt        import *
+
+def input_problem(problem_name= None, **kwargs):
+    problems_set_1 = ['bnh','carside','clutch','kursawe','weldebeam',"truss2d","tnk",'osy',  "chankong",
+    'ctp1','pro1', 'vu1', 'vu2','tkly1', 'ltdz1'] #fixed
+    problems_set_2 = ['sk1','sk2'] # only no bound
+    problems_set_4 = ['kur1'] # no bound and no n_var 
+    problems_set_3 = ['zdt1','zdt2','zdt3','zdt4','zdt5','zdt6'] # only no n_var
+    
+
+####-----------  
+    if problem_name in problems_set_1:
+        p_dict = {'bnh':bnh.BNH(), 
+            'carside':carside.Carside(), 
+            'clutch':clutch.Clutch(), 
+            'kursawe':kursawe.Kursawe(), 
+            'weldebeam':weldebeam.WeldedBeam(),
+            "truss2d":truss2d.Truss2D(),
+            "tnk": tnk.TNK(), 
+            'osy':osy.OSY(),
+            "chankong":chankong.Chankong(),
+            'ctp1':ctp.CTP1(),
+            'vu1': vu.Vu1(),
+            'vu2':vu.Vu2(),
+            'tkly1':tkly1.TKLY1(),
+            'ltdz1':ltdz1.LTDZ1()
+            }
+        problem = p_dict[problem_name]
+        return problem
+####-----------  
+    elif problem_name in problems_set_2:
+        p_dict = {
+            "sk1":sk.SK1(xu=kwargs['xu'], xl = kwargs['xl']),
+            "sk2":sk.SK2(xu=kwargs['xu'], xl = kwargs['xl'])
+        }
+        problem = p_dict[problem_name]
+
+        return problem
+####-----------     
+    elif problem_name in problems_set_3:
+
+        p_dict  = {
+                'zdt1':zdt.ZDT1(n_var=kwargs['n_var']),
+                'zdt2':zdt.ZDT2(n_var=kwargs['n_var']),
+                'zdt3':zdt.ZDT3(n_var=kwargs['n_var']),
+                'zdt4':zdt.ZDT4(n_var=kwargs['n_var']),
+                'zdt5':zdt.ZDT5(),
+                'zdt6':zdt.ZDT6(n_var=kwargs['n_var'])
+            }
+        problem = p_dict[problem_name]
+        assert problem.n_var==kwargs['n_var'], 'Define number of variabels for this probelm'
+
+        return problem
+
+####-----------    
+    elif problem_name in problems_set_4:
+        p_dict = {
+            'kur1':kur1.Kur1(n_var = kwargs['n_var'], xu=kwargs['xu'], xl = kwargs['xl'])
+
+        }
+        problem = p_dict[problem_name]
+        return problem
+
+    else:
+        print('Plz select correct problem')
+
+
+
 
 
 def lsp(objective_function):
@@ -51,43 +106,7 @@ def split_X(X,problem_F,problem_CV):
 
 
 
-def input_problem(problem_name):
 
-    problems_set_1 = ['bnh','carside','clutch','kursawe','weldebeam',"truss2d","tnk",'osy',  "chankong",'test','ctp1','pro1']
-    if problem_name in problems_set_1:
-        p_dict = {'bnh':BNH(), 
-            'carside':Carside(), 
-            'clutch':Clutch(), 
-            'kursawe':Kursawe(), 
-            'weldebeam':WeldedBeam(),
-            "truss2d":Truss2D(),
-            "tnk": TNK(), 
-            'osy':OSY(),
-            "chankong":Chankong(),
-            'test':Test(),
-            'ctp1':CTP1()
-            }
-        problem = p_dict[problem_name]
-        print('\n\n***********')
-        print('probelm is :')
-        print(problem)
-        return problem
-    
-    elif problem_name in ['zdt1','zdt2','zdt3','zdt4','zdt5','zdt6']:
-        p_dict  = {'zdt1':ZDT1(n_var=n_var),
-            'zdt2':ZDT2(n_var=n_var),
-            'zdt3':ZDT3(n_var=n_var),
-            'zdt4':ZDT4(n_var=n_var),
-            'zdt5':ZDT5(),
-            'zdt6':ZDT6(n_var=n_var) }
-        problem = p_dict[problem_name]
-        print('\n\n***********')
-        print('probelm is :')
-        print(problem)
-        return problem
-    
-    else:
-        print('Plz select correct problem')
 
 def generate_data(p = None,size = None):
     data_point = []
