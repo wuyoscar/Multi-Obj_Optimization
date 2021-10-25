@@ -24,7 +24,7 @@
 |SK1 |${\text{Maximum}}={\begin{cases}f_{1}\left(x\right)=-x^4-3x^3+10x^2+10x+10\\f_{2}\left(x\right)={-0.5x^4+2x^3+10x^2-10x+5}\end{cases}}$|None|$?$|
 |SK2 |${\text{Maximum}}={\begin{cases}f_{1}\left(x\right)=-(x_1-2)^2-(x_2+3)^2-(x_3-5)^2-(x_4-4)^2+5\\f_{2}\left(x\right)={\frac{sinx_1+sinx_2+sinx_3+sinx_4}{1+(x_1^2+x_2^2+x_3^2+x_4^2)/100}}\end{cases}}$|None|$?$|
 |Kur1|${\text{Minimize}}={\begin{cases}f_{1}\left(x_1,x_2,....,x_n\right)=\sum_{i=1}^{n-1}-10exp^{-0.2}\sqrt{x^2_{i}+x^2_{i+1}}\\f_{2}\left(x_1,x_2,....,x_n\right)=\sum^{n}_{i=1}\|x_i\|^{0.8}+5sin^3x_i\\\end{cases}}$|None|$?$|
-|TKLY1|${\text{Minimum}}={\begin{cases}f_{1}\left(x_1\right)=x_1\\f_{2}\left(x_1,x_2,x_3,x_4\right)={\frac{1}{x_i}\Pi_{i=1}^{4}[2.0-exp(-(\frac{x_i-0.1}{0.004})^2)-0.8exp(-(\frac{x_i-0.9}{0.4})^2)]}\end{cases}}$|None|$0.1\leq{x_1}\leq1\\0\leq{x_2,x_3,x_4}\leq1$ |
+|TKLY1|${\text{Minimum}}={\begin{cases}f_{1}\left(x_1\right)=x_1\\f_{2}\left(x_1,x_2,x_3,x_4\right)={\frac{1}{x_i}\Pi_{i=2}^{4}[2.0-exp(-(\frac{x_i-0.1}{0.004})^2)-0.8exp(-(\frac{x_i-0.9}{0.4})^2)]}\end{cases}}$|None|$0.1\leq{x_1}\leq1\\0\leq{x_2,x_3,x_4}\leq1$ |
 |LTDZ1 |${\text{Maximum}}={\begin{cases}f_{1}\left(x_1,x_2,x_3\right)=3-(1+x_3)cos(x_1\pi/2)cos(x_2\pi/2)\\f_{2}\left(x_1,x_2,x_3\right)=3-(1+x_3)cos(x_1\pi/2)sin(x_2\pi/2)\\f_{3}\left(x_1,x_3\right)=3-(1+x_3)sin(x_1\pi/2)\end{cases}}$||$0\leq{x_1,x_2,x_3}\leq1$|
 
 

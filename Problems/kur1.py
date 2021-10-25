@@ -8,7 +8,7 @@ class Kur1(Problem):
         self.xu = np.array(xu)
         self.n_var = n_var
 
-        assert len(self.xl) == self.n_var
+        assert self.xl is not None, "Provide Search Domain"
         assert len(self.xu) == self.n_var
         
     def _evaluate(self,x, out, *args, **kwargs):
