@@ -119,7 +119,7 @@ if __name__ == "__main__":
             'lower bound': list(problem.xl),
             'upper bound': list(problem.xu),
             'exec_time':res.exec_time,
-            'solutions': str(F.shape()[0]),
+            'solutions': str(F.shape[0]),
             'path': output_location
     }
 
