@@ -6,8 +6,9 @@ from pymoo.indicators.hv import Hypervolume
 import os, sys,argparse,time,csv
 
 
-currentdir = os.path.dirname(os.path.realpath(__file__))
+currentdir = os.path.dirname(os.getcwd())
 parentdir = os.path.dirname(currentdir)
+sys.path.append(currentdir)
 sys.path.append(parentdir)
 from problems.Define_Problems import *
 from algorithms.algorithm import * 
