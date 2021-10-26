@@ -110,16 +110,20 @@ if __name__ == "__main__":
 
 
 #summary table:
+    fieldnames = ['Problem', 'Alg_name', 'Iteration', 'Objectives', 'n_variables',
+        'lower_bound', 'upper_bound', 'exec_time', 'solutions', 'path']
 
-
-    fieldnames = ['filename', 'lower bound', 'upper bound', 'exec_time','solutions','path']
-    rows = { 'filename':filename,
-            'lower bound': list(problem.xl),
-            'upper bound': list(problem.xu),
-            'exec_time':res.exec_time,
-            'solutions': str(F.shape[0]),
+    rows = { 'Problem':args.problem.upper(),
+            'Alg_name': args.algorithm.upper(),
+            'Iteration': args.generation,
+            'Objectives':res.exec_time,
+            'n_variables': problem.n_var,
+            'lower_bound': problem.xl,
+            'upper_bound': problem.xu,
+            'exec_time': res.exec_time,
+            'solutions': str(res.shape[0]),
             'path': output_location
-    }
+    }   
 
     table_path = os.path.join(currentdir,'Result','Jobs_record')
     file_exists = os.path.isfile(table_path)
