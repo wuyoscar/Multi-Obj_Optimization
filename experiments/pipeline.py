@@ -10,7 +10,7 @@ currentdir = os.path.dirname(os.getcwd())
 parentdir = os.path.dirname(currentdir)
 sys.path.append(currentdir)
 sys.path.append(parentdir)
-from problems.Define_Problems import *
+from Problems.Define_Problems import *
 from algorithms.algorithm import * 
 
 
@@ -99,8 +99,8 @@ if __name__ == "__main__":
         pass
     id = uuid.uuid4()
     filename = [args.problem.upper(), args.algorithm.upper(),"Iteration-"+str(args.generation),'Obj-'+str(problem.n_obj),'Var-'+str(problem.n_var)]
-    file_unique_name = filename +"."+str(id)
     file_unique_name = "_".join(file_unique_name)
+    file_unique_name = filename +"."+str(id)
 
     output_location = os.path.join(result_folder, file_unique_name) #objective export locaton
     print("folder name",result_folder)
