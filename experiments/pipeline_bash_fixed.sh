@@ -1,8 +1,8 @@
 #! /bin/bash
 while read -ra p
 do for a in nsga2 nsga3 agnomen moead rnsga2
-do for n_gen in 250 2500 
-do
+do for n_gen in 250 2500 25000
+do 
 cat <<EnD>/home/582/ow6835/bash_scripts/${p[0]}_${a}_${n_gen}
 #!/bin/bash
 #PBS -l ncpus=1,mem=2GB

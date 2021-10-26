@@ -3,7 +3,7 @@ from pymoo.optimize import minimize
 from pymoo.factory import get_sampling, get_crossover, get_mutation, get_termination
 import numpy as np
 from pymoo.indicators.hv import Hypervolume
-import os, sys,argparse,time,csv
+import os, sys,argparse,time,csv,uuid
 
 
 currentdir = os.path.dirname(os.getcwd())
@@ -99,13 +99,13 @@ if __name__ == "__main__":
 
 
 #construct output file:
-    result_folder = os.path.join(parentdir,'Result',args.problem.upper(),args.algorithm.upper()+'_' +args.problem.upper())
+    result_folder = os.path.join(currentdir,'Result',args.problem.upper(),args.algorithm.upper()+'_' +args.problem.upper())
     try:
         os.makedirs(result_folder)
     except OSError:
         pass
-
-    filename = [args.problem.upper(), args.algorithm.upper(),"Iteration-"+str(args.generation),'Obj-'+str(problem.n_obj),'Var-'+str(problem.n_var)]
+    id = uuid.uuid4()
+    filename = [args.problem.upper(), args.algorithm.upper(),"Iteration-"+str(args.generation),'Obj-'+str(problem.n_obj),'Var-'+str(problem.n_var)+"."+str(id)]
     filename = "_".join(filename)
 
     output_location = os.path.join(result_folder, filename) #objective export locaton
@@ -114,18 +114,20 @@ if __name__ == "__main__":
     print('Output location:', output_location)
     np.savetxt(output_location, F)
 
+
 #summary table:
 
 
-    fieldnames = ['filename', 'lower bound', 'upper bound', 'exec_time','path']
+    fieldnames = ['filename', 'lower bound', 'upper bound', 'exec_time','solutions','path']
     rows = { 'filename':filename,
             'lower bound': list(problem.xl),
             'upper bound': list(problem.xu),
             'exec_time':res.exec_time,
+            'solutions': str(F.shape()[0]),
             'path': output_location
     }
 
-    table_path = os.path.join(parentdir,'Result','Jobs_record')
+    table_path = os.path.join(currentdir,'Result','Jobs_record')
     file_exists = os.path.isfile(table_path)
     with open(table_path, 'a+', encoding='UTF8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
