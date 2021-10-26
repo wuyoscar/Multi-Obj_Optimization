@@ -110,14 +110,16 @@ if __name__ == "__main__":
     print('Output location:', output_location)
     np.savetxt(output_location, F)
 
+
 #summary table:
 
 
-    fieldnames = ['filename', 'lower bound', 'upper bound', 'exec_time','path']
+    fieldnames = ['filename', 'lower bound', 'upper bound', 'exec_time','solutions','path']
     rows = { 'filename':filename,
             'lower bound': list(problem.xl),
             'upper bound': list(problem.xu),
             'exec_time':res.exec_time,
+            'solutions': str(F.shape()[0]),
             'path': output_location
     }
 
