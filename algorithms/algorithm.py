@@ -66,8 +66,8 @@ def input_algorithm(algorithm_name, **kwargs):
     elif algorithm_name=='moead':
         algorithm = MOEAD_f(m = kwargs['m'], n_partitions = kwargs['n_partitions'])
         return algorithm
-    elif algorithm_name=='rnsga2':
 
+    elif algorithm_name=='rnsga2':
         algorithm = RNSGA2_f(pop_size= kwargs['pop_size'],m = kwargs['m'], n_partitions = kwargs['n_partitions'])
         return algorithm
 
