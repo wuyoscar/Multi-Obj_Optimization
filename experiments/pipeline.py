@@ -54,14 +54,16 @@ if __name__ == "__main__":
         problem = input_problem(problem_name = args.problem, n_var = args.var)
     elif args.var and args.lb is not None:
         problem = input_problem(problem_name = args.problem, n_var = args.var, xl= args.lb, xu = args.ub)
-
+    print(f'problem name is: {args.problem.upper()}')
+    print(f'number of objetives {problem.n_obj}')
+    print(f'number of variables {problem.n_var}')
 #initial algorithm
     algorithm = input_algorithm(algorithm_name = args.algorithm, m = problem.n_obj, pop_size = args.pop_size, n_partitions = args.n_partitions)
 
 # initial termination 
     assert args.generation, "Define termination"
     termination = get_termination("n_gen", args.generation)
-
+    print(f'algorithm name is: {args.algorithm.upper()}')
 
 # start execution
 
@@ -70,7 +72,7 @@ if __name__ == "__main__":
             termination=termination,
             seed=1,
             verbose=False)
-
+    print(f"--- exec_time --: {res.exec_time}s")
     
 # now we have result 
     F = res.F
@@ -84,11 +86,6 @@ if __name__ == "__main__":
 
 #recording info of this job
     print('solution shape:',F.shape)
-    print(f"--- exec_time --: {res.exec_time}s")
-    print(f'problem name is: {args.problem.upper()}')
-    print(f'number of objetives {problem.n_obj}')
-    print(f'number of variables {problem.n_var}')
-    print(f'algorithm name is: {args.algorithm.upper()}')
     print(f'generation is: {args.generation}')
     print(f'lower bound is:{problem.xl} and upper bound is {problem.xu}')
 
@@ -101,10 +98,11 @@ if __name__ == "__main__":
     except OSError:
         pass
     id = uuid.uuid4()
-    filename = [args.problem.upper(), args.algorithm.upper(),"Iteration-"+str(args.generation),'Obj-'+str(problem.n_obj),'Var-'+str(problem.n_var)+"."+str(id)]
-    filename = "_".join(filename)
+    filename = [args.problem.upper(), args.algorithm.upper(),"Iteration-"+str(args.generation),'Obj-'+str(problem.n_obj),'Var-'+str(problem.n_var)]
+    file_unique_name = filename +"."+str(id)
+    file_unique_name = "_".join(file_unique_name)
 
-    output_location = os.path.join(result_folder, filename) #objective export locaton
+    output_location = os.path.join(result_folder, file_unique_name) #objective export locaton
     print("folder name",result_folder)
     print("filename",filename)
     print('Output location:', output_location)

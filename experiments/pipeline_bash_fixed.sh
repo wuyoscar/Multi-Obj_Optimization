@@ -11,8 +11,8 @@ cat <<EnD>/home/582/ow6835/bash_scripts/${p[0]}_${a}_${n_gen}
 #PBS -q normal
 #PBS -l wd
 #PBS -m n
-#PBS -o /home/582/ow6835/bash_script_ouput
-#PBS -e /home/582/ow6835/bash_script_ouput
+#PBS -o /home/582/ow6835/bash_ouput
+#PBS -e /home/582/ow6835/bash_error_ouput
 module load gcc/11.1.0
 module load intel-mkl/2020.3.304  python3/3.9.2
 python3 pipeline.py -p ${p[0]} -a $a  -gen ${n_gen} -n ${p[1]} -ob ${p[2]} 
