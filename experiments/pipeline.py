@@ -116,12 +116,12 @@ if __name__ == "__main__":
     rows = { 'Problem':args.problem.upper(),
             'Alg_name': args.algorithm.upper(),
             'Iteration': args.generation,
-            'Objectives':res.exec_time,
+            'Objectives':problem.n_obj,
             'n_variables': problem.n_var,
             'lower_bound': problem.xl,
             'upper_bound': problem.xu,
             'exec_time': res.exec_time,
-            'solutions': str(res.shape[0]),
+            'solutions': str(res.F.shape[0]),
             'path': output_location
     }   
 
