@@ -4,7 +4,7 @@ from pymoo.factory import get_sampling, get_crossover, get_mutation, get_termina
 import numpy as np
 from pymoo.indicators.hv import Hypervolume
 import os, sys,argparse,time,csv,uuid
-
+from datetime import datetime
 
 currentdir = os.path.dirname(os.getcwd())
 parentdir = os.path.dirname(currentdir)
@@ -100,7 +100,8 @@ if __name__ == "__main__":
     id = uuid.uuid4()
     filename = [args.problem.upper(), args.algorithm.upper(),"Iteration-"+str(args.generation),'Obj-'+str(problem.n_obj),'Var-'+str(problem.n_var)]
     file_unique_name = "_".join(filename)
-    file_unique_name = file_unique_name +"."+str(id)
+    date = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
+    file_unique_name = file_unique_name +"."+date
 
     output_location = os.path.join(result_folder, file_unique_name) #objective export locaton
     print("folder name",result_folder)
