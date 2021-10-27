@@ -1,4 +1,5 @@
 #! /bin/bash
+i=0
 while read -ra p
 do for a in nsga2 nsga3 agnomen moead rnsga2
 do for n_gen in 250 2500 25000
@@ -18,13 +19,13 @@ module load intel-mkl/2020.3.304  python3/3.9.2
 python3 pipeline.py -p ${p[0]} -a $a  -gen ${n_gen} -n ${p[1]} -ob ${p[2]} 
 
 EnD
-
+((i++))
 qsub /home/582/ow6835/bash_scripts/${p[0]}_${a}_${n_gen}
 sleep 1 
 done 
 done 
 done <problems_fixed.txt
-
+echo ${i} number of jobs
 
 
 
