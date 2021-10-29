@@ -34,7 +34,7 @@ parser.add_argument('-n', '--var', type = int, help= 'Number of variables')
 
 
 #!-------algorithm parameters  
-parser.add_argument('-pop', '--pop_size', default=300,type=int,help='#population size')   
+parser.add_argument('-pop', '--pop_size', default=500,type=int,help='#population size')   
 parser.add_argument('-np', '--n_partitions', default=800,type=int)                         
 parser.add_argument('-gen', '--generation', type=int,help='# of generation NSGAII')
 
