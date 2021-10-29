@@ -4,8 +4,8 @@ class Kur1(Problem):
     def __init__(self, n_var=None, xl=None, xu = None,**kwargs):
         super().__init__(n_obj=2, n_constr=0,**kwargs)
     #define bound here
-        self.xl= np.array(xl)
-        self.xu = np.array(xu)
+        self.xl= np.ones(n_var)*xl
+        self.xu = np.ones(n_var)*xu
         self.n_var = n_var
 
         assert self.xl is not None, "Provide Search Domain"
