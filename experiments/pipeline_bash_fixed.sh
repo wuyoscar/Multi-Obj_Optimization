@@ -7,7 +7,7 @@ do
 cat <<EnD>/home/582/ow6835/bash_scripts/${p[0]}_${a}_${n_gen}
 #!/bin/bash
 #PBS -l ncpus=1,mem=2GB
-#PBS -l walltime=10:00:00
+#PBS -l walltime=24:00:00
 #PBS -P lk32
 #PBS -q normal
 #PBS -l wd
