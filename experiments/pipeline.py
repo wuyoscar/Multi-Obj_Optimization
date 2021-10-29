@@ -126,7 +126,7 @@ if __name__ == "__main__":
             'path': output_location
     }   
 
-    table_path = os.path.join(currentdir,'Result','Jobs_record')
+    table_path = os.path.join(currentdir,'Result','Jobs_Record')
     file_exists = os.path.isfile(table_path)
     with open(table_path, 'a+', encoding='UTF8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
