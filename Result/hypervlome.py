@@ -41,3 +41,10 @@ output_result = final_result[['Problem', 'Alg_name', 'Iteration', 'Objectives', 
 date = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
 
 output_result.to_csv(f'result_{date}')
+
+
+
+
+
+
+

@@ -2,4 +2,3 @@ kur1 2 2
 kur1 3 2
 kur1 4 2 
 kur1 5 2 
-sk2 4 2 
