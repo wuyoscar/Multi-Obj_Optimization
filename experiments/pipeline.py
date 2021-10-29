@@ -107,9 +107,9 @@ if __name__ == "__main__":
     print("folder name",result_folder)
     print("filename",filename)
     print('Output location:', output_location)
-#    np.savetxt(output_location, F)
+    np.savetxt(output_location, F)
 
-'''
+
 #summary table:
     fieldnames = ['Problem', 'Alg_name', 'Iteration', 'Objectives', 'n_variables',
         'lower_bound', 'upper_bound', 'exec_time', 'solutions', 'path']
@@ -133,4 +133,3 @@ if __name__ == "__main__":
         if not file_exists:
             writer.writeheader()
         writer.writerow(rows)
-'''
