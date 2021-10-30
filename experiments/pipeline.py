@@ -34,8 +34,8 @@ parser.add_argument('-n', '--var', type = int, help= 'Number of variables')
 
 
 #!-------algorithm parameters  
-parser.add_argument('-pop', '--pop_size', default=500,type=int,help='#population size')   
-parser.add_argument('-np', '--n_partitions', default=800,type=int)                         
+parser.add_argument('-pop', '--pop_size', default=100,type=int,help='#population size')   
+parser.add_argument('-np', '--n_partitions', default=500,type=int)                         
 parser.add_argument('-gen', '--generation', type=int,help='# of generation NSGAII')
 
 
@@ -48,12 +48,8 @@ args = parser.parse_args()
 if __name__ == "__main__":
 
 #initial problem, filtering problem base on condition 
-    if args.var is None:
-        problem = input_problem(problem_name = args.problem)
-    elif (args.var is not None )and (args.lb is None):
-        problem = input_problem(problem_name = args.problem, n_var = args.var)
-    elif args.var and args.lb is not None:
-        problem = input_problem(problem_name = args.problem, n_var = args.var, xl= args.lb, xu = args.ub)
+    problem = input_problem(problem_name = args.problem, n_var = args.var)
+    assert problem.n_var == args.var, "Variables dimension inconsistent"
     print(f'problem name is: {args.problem.upper()}')
     print(f'number of objetives {problem.n_obj}')
     print(f'number of variables {problem.n_var}')
@@ -112,17 +108,17 @@ if __name__ == "__main__":
 
 #summary table:
     fieldnames = ['Problem', 'Alg_name', 'Iteration', 'Objectives', 'n_variables',
-        'lower_bound', 'upper_bound', 'exec_time', 'solutions', 'path']
+        'xl', 'xu', 'exec_time', 'solutions_shape', 'path']
 
     rows = { 'Problem':args.problem.upper(),
             'Alg_name': args.algorithm.upper(),
             'Iteration': args.generation,
             'Objectives':problem.n_obj,
             'n_variables': problem.n_var,
-            'lower_bound': problem.xl,
-            'upper_bound': problem.xu,
+            'xl': problem.xl,
+            'xu': problem.xu,
             'exec_time': res.exec_time,
-            'solutions': str(res.F.shape[0]),
+            'solutions_shape': str(res.F.shape[0]),
             'path': output_location
     }   
 
