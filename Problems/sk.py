@@ -1,5 +1,7 @@
 from pymoo.core.problem import Problem
 import numpy as np 
+
+#this is maximun problem
 class SK1(Problem):
     def __init__(self,n_var=1,**kwargs):
         super().__init__(n_var=n_var,xl=-10, xu = 10,n_obj=2 ,type_var= np.double,n_constr=0,**kwargs)
