@@ -6,8 +6,8 @@ import autograd.numpy as anp
 class Kursawe(Problem):
     def __init__(self):
         super().__init__(n_var=3, n_obj=2, xl=-5,xu=5,n_constr=0, type_var=anp.double)
-        self.xl =anp.array([-5,-5])
-        self.xu = anp.array([5,5]) 
+        self.xl =anp.array([-5,-5,-5])
+        self.xu = anp.array([5,5,5]) 
 
     def _evaluate(self, x, out, *args, **kwargs):
         l = []
