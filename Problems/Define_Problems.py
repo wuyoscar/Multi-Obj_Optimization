@@ -4,13 +4,13 @@ import autograd.numpy as anp
 import os, sys
 sys.path.append(os.getcwd())
 
-from Problems import * 
+from problems import * 
 
 
 def input_problem(problem_name= None, **kwargs):
     problems_set_1 = ['bnh','carside','clutch','kursawe','weldebeam',"truss2d","tnk",'osy',  "chankong",
     'ctp1','pro1', 'vu1', 'vu2','tkly1', 'ltdz1'] #fixed
-    problems_set_2 = ['sk1','sk2'] # only no bound
+    problems_set_2 = ['sk1','sk2','sk2_typo'] # only no bound
     problems_set_4 = ['kur1'] # no bound and no n_var 
     problems_set_3 = ['zdt1','zdt2','zdt3','zdt4','zdt5','zdt6'] # only no n_var
     
@@ -37,8 +37,9 @@ def input_problem(problem_name= None, **kwargs):
 ####-----------  
     elif problem_name in problems_set_2:
         p_dict = {
-            "sk1":sk.SK1(xu=kwargs['xu'], xl = kwargs['xl']),
-            "sk2":sk.SK2(xu=kwargs['xu'], xl = kwargs['xl'])
+            "sk1":sk.SK1(n_var=kwargs['n_var']),
+            "sk2":sk.SK2(n_var=kwargs['n_var']),
+            "sk2_typo":sk.SK2_typo(n_var=kwargs['n_var'])
         }
         problem = p_dict[problem_name]
 
@@ -62,7 +63,7 @@ def input_problem(problem_name= None, **kwargs):
 ####-----------    
     elif problem_name in problems_set_4:
         p_dict = {
-            'kur1':kur1.Kur1(n_var = kwargs['n_var'], xu=kwargs['xu'], xl = kwargs['xl'])
+            'kur1':kur1.Kur1(n_var = kwargs['n_var'])
 
         }
         problem = p_dict[problem_name]

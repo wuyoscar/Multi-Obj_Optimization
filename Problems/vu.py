@@ -1,14 +1,9 @@
 from pymoo.core.problem import Problem
 import numpy as np 
 class Vu1(Problem):
-    def __init__(self,  xl=None, xu = None,**kwargs):
-        super().__init__(n_var = 2,n_obj=2, n_constr=0,**kwargs)
+    def __init__(self,**kwargs):
+        super().__init__(n_var = 2,n_obj=2,xl=-3, xu = 3,n_constr=0,**kwargs)
     #define bound here
-        self.xl= np.array([-3,-3])
-        self.xu = np.array([3,3])
-
-        assert len(self.xl) == self.n_var
-        assert len(self.xu) == self.n_var
         
     def _evaluate(self,x, out, *args, **kwargs):
         f1 = 1/(np.sum(np.power(x,2), axis=1)+1)
@@ -18,14 +13,9 @@ class Vu1(Problem):
 
 
 class Vu2(Problem):
-    def __init__(self,  xl=None, xu = None,**kwargs):
-        super().__init__(n_var = 2,n_obj=2, n_constr=0,**kwargs)
+    def __init__(self,**kwargs):
+        super().__init__(n_var = 2,xl=-3, xu = 3,n_obj=2, n_constr=0,**kwargs)
     #define bound here
-        self.xl= np.array([-3,-3])
-        self.xu = np.array([3,3])
-
-        assert len(self.xl) == self.n_var
-        assert len(self.xu) == self.n_var
         
     def _evaluate(self,x, out, *args, **kwargs):
         

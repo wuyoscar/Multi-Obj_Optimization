@@ -1,15 +1,9 @@
 from pymoo.core.problem import Problem
 import numpy as np 
 class Kur1(Problem):
-    def __init__(self, n_var=None, xl=None, xu = None,**kwargs):
-        super().__init__(n_obj=2, n_constr=0,**kwargs)
-    #define bound here
-        self.xl= np.ones(n_var)*xl
-        self.xu = np.ones(n_var)*xu
-        self.n_var = n_var
+    def __init__(self,n_var= None,**kwargs):
+        super().__init__(n_obj=2, n_var=n_var, xl=-5.05, xu = 5,type_var= np.double, n_constr=0,**kwargs)
 
-        assert self.xl is not None, "Provide Search Domain"
-        assert len(self.xu) == self.n_var
         
     def _evaluate(self,x, out, *args, **kwargs):
         #for i in range self.var-1
