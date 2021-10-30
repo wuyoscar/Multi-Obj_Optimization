@@ -23,6 +23,7 @@ EnD
 ((i++))
 qsub /home/582/ow6835/bash_scripts/${p[0]}_${a}_${n_gen}
 sleep 1 
+done
 done 
 done 
 done <kur1.txt

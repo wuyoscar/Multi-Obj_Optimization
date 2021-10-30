@@ -25,6 +25,7 @@ qsub /home/582/ow6835/bash_scripts/${p[0]}_${a}_${n_gen}
 sleep 1 
 done 
 done 
+done
 done <problems_fixed.txt
 echo ${i} number of jobs
 
