@@ -128,11 +128,12 @@ if __name__ == "__main__":
 
 #construct image file:
     images_folder = os.path.join(currentdir,'Result', 'Images',args.problem.upper(),args.algorithm.upper()+'_' +args.problem.upper())
+    #images_folder = os.path.join(currentdir,'Result', 'Images',args.problem.upper(),args.algorithm.upper()+'_' +args.problem.upper())
     try:
         os.makedirs(images_folder)
     except OSError:
         pass
-
+    file_unique_name = "_".join(filename)
     image_location = os.path.join(images_folder, file_unique_name) #objective export locaton
 
 
