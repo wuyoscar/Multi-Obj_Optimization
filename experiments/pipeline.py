@@ -75,12 +75,6 @@ if __name__ == "__main__":
     F = res.F
     
 
-#performance indicator 
-    #ref_point = np.array([1,1])
-    #metric = Hypervolume(nds=True,ref_point = ref_point,norm_ref_point=False)
-    #hv = metric.do(F)
-    
-
 #recording info of this job
     print('solution shape:',F.shape)
     print(f'generation is: {args.generation}')
