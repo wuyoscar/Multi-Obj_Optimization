@@ -137,7 +137,7 @@ if __name__ == "__main__":
     rows = { 'Problem':args.problem.upper(),
             'Alg_name': args.algorithm.upper(),
             'Iteration': args.generation,
-            'Evaluations':,res.history[-1].evaluator.n_eval,
+            'Evaluations':res.history[-1].evaluator.n_eval,
             'Objectives':problem.n_obj,
             'n_variables': problem.n_var,
             'xl': problem.xl,
