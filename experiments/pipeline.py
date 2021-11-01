@@ -101,30 +101,7 @@ if __name__ == "__main__":
     approx_ideal = F.min(axis=0)
     approx_nadir = F.max(axis=0)
 
-#summary table:
-    fieldnames = ['Problem', 'Alg_name', 'Iteration', 'Objectives', 'n_variables',
-        'xl', 'xu', 'exec_time', 'approx_nadir','solutions_shape', 'path']
 
-    rows = { 'Problem':args.problem.upper(),
-            'Alg_name': args.algorithm.upper(),
-            'Iteration': args.generation,
-            'Objectives':problem.n_obj,
-            'n_variables': problem.n_var,
-            'xl': problem.xl,
-            'xu': problem.xu,
-            'exec_time': res.exec_time,
-            'approx_nadir':approx_nadir,
-            'solutions_shape': str(res.F.shape[0]),
-            'path': output_location
-    }   
-
-    table_path = os.path.join(currentdir,'Result','Kursawe_Result')
-    file_exists = os.path.isfile(table_path)
-    with open(table_path, 'a+', encoding='UTF8', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        if not file_exists:
-            writer.writeheader()
-        writer.writerow(rows)
 
 #construct image file:
     images_folder = os.path.join(currentdir,'Result', 'Images',args.problem.upper(),args.algorithm.upper()+'_' +args.problem.upper())
@@ -148,3 +125,32 @@ if __name__ == "__main__":
     plt.ylabel("$f2$")
     plt.legend()
     plt.savefig(f"{image_location}")
+    print(f"image location {image_location}")
+
+
+
+#summary table:
+    fieldnames = ['Problem', 'Alg_name', 'Iteration', 'Objectives', 'n_variables',
+        'xl', 'xu', 'exec_time', 'approx_nadir','solutions_shape', 'path','image_location']
+
+    rows = { 'Problem':args.problem.upper(),
+            'Alg_name': args.algorithm.upper(),
+            'Iteration': args.generation,
+            'Objectives':problem.n_obj,
+            'n_variables': problem.n_var,
+            'xl': problem.xl,
+            'xu': problem.xu,
+            'exec_time': res.exec_time,
+            'approx_nadir':approx_nadir,
+            'solutions_shape': str(res.F.shape[0]),
+            'path': output_location,
+            'image_location':image_location
+    }   
+
+    table_path = os.path.join(currentdir,'Result','Kursawe_Result')
+    file_exists = os.path.isfile(table_path)
+    with open(table_path, 'a+', encoding='UTF8', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        if not file_exists:
+            writer.writeheader()
+        writer.writerow(rows)
