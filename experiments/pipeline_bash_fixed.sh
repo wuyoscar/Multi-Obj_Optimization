@@ -1,7 +1,7 @@
 #! /bin/bash
 i=0
 while read -ra p
-do for a in nsga2 nsga3 agnomen moead rnsga2
+do for a in nsga2 nsga3 agnomen rnsga2
 do for n_gen in 100 200 500 1000 10000  
 do for pop in 100 200 300 500
 do

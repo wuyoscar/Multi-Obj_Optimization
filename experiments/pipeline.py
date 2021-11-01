@@ -67,6 +67,7 @@ if __name__ == "__main__":
     res = minimize(problem= problem,
             algorithm = algorithm,
             termination=termination,
+            save_history=True,
             seed=1,
             verbose=False)
     print(f"--- exec_time --: {res.exec_time}s")
@@ -130,12 +131,13 @@ if __name__ == "__main__":
 
 
 #summary table:
-    fieldnames = ['Problem', 'Alg_name', 'Iteration', 'Objectives', 'n_variables',
+    fieldnames = ['Problem', 'Alg_name', 'Iteration', 'Evaluations','Objectives', 'n_variables',
         'xl', 'xu', 'exec_time', 'approx_nadir','solutions_shape', 'path','image_location']
 
     rows = { 'Problem':args.problem.upper(),
             'Alg_name': args.algorithm.upper(),
             'Iteration': args.generation,
+            'Evaluations':,res.history[-1].evaluator.n_eval,
             'Objectives':problem.n_obj,
             'n_variables': problem.n_var,
             'xl': problem.xl,
