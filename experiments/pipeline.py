@@ -96,8 +96,7 @@ if __name__ == "__main__":
     id = uuid.uuid4()
     filename = [args.problem.upper(), args.algorithm.upper(),"Iteration-"+str(args.generation),'Obj-'+str(problem.n_obj),'Var-'+str(problem.n_var)]
     file_unique_name = "_".join(filename)
-    date = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
-    file_unique_name = file_unique_name +"."+date
+    file_unique_name = file_unique_name +"."+str(id)
 
     output_location = os.path.join(result_folder, file_unique_name) #objective export locaton
     print("folder name",result_folder)
@@ -122,7 +121,7 @@ if __name__ == "__main__":
             'path': output_location
     }   
 
-    table_path = os.path.join(currentdir,'Result','Jobs_Record')
+    table_path = os.path.join(currentdir,'Result','Kursawe_Result')
     file_exists = os.path.isfile(table_path)
     with open(table_path, 'a+', encoding='UTF8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
