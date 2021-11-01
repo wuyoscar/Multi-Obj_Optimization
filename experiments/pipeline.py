@@ -12,6 +12,7 @@ sys.path.append(currentdir)
 sys.path.append(parentdir)
 from Problems.Define_Problems import *
 from algorithms.algorithm import * 
+from matplotlib import pyplot as plt 
 
 
 
@@ -103,11 +104,12 @@ if __name__ == "__main__":
     print("filename",filename)
     print('Output location:', output_location)
     np.savetxt(output_location, F)
-
+    approx_ideal = F.min(axis=0)
+    approx_nadir = F.max(axis=0)
 
 #summary table:
     fieldnames = ['Problem', 'Alg_name', 'Iteration', 'Objectives', 'n_variables',
-        'xl', 'xu', 'exec_time', 'solutions_shape', 'path']
+        'xl', 'xu', 'exec_time', 'approx_nadir','solutions_shape', 'path']
 
     rows = { 'Problem':args.problem.upper(),
             'Alg_name': args.algorithm.upper(),
@@ -117,6 +119,7 @@ if __name__ == "__main__":
             'xl': problem.xl,
             'xu': problem.xu,
             'exec_time': res.exec_time,
+            'approx_nadir':approx_nadir,
             'solutions_shape': str(res.F.shape[0]),
             'path': output_location
     }   
@@ -128,3 +131,25 @@ if __name__ == "__main__":
         if not file_exists:
             writer.writeheader()
         writer.writerow(rows)
+
+#construct image file:
+    images_folder = os.path.join(currentdir,'Result', 'Images',args.problem.upper(),args.algorithm.upper()+'_' +args.problem.upper())
+    try:
+        os.makedirs(images_folder)
+    except OSError:
+        pass
+
+    image_location = os.path.join(images_folder, file_unique_name) #objective export locaton
+
+
+#visualization 
+
+    plt.figure(figsize=(7, 5))
+    plt.scatter(F[:, 0], F[:, 1], s=30, facecolors='none', edgecolors='blue')
+    plt.scatter(approx_ideal[0], approx_ideal[1], facecolors='none', edgecolors='red', marker="*", s=100, label="Ideal Point (Approx)")
+    plt.scatter(approx_nadir[0], approx_nadir[1], facecolors='none', edgecolors='black', marker="p", s=100, label="Nadir Point (Approx)")
+    plt.title("Objective Space")
+    plt.xlabel("$f1$")
+    plt.ylabel("$f2$")
+    plt.legend()
+    plt.savefig(f"{image_location}")
