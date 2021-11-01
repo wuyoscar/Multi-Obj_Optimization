@@ -26,7 +26,7 @@ parser.add_argument('-p','--problem', type=str, required=True,
                             'clutch','kursawe','weldebeam',
                             'truss2d', 'tnk', 'osy', 'chankong', 
                             'ctp1', 'pro1','zdt1','zdt2','zdt3','zdt3',
-                            'zdt4','zdt5','zdt6', 
+                            'zdt4','zdt5','zdt6', 'sk2_typo',
                             'kur1', 'vu1', 'vu2', 'sk1','sk2','tkly1','ltdz1'])
 parser.add_argument('-ob','--objectives', type=int,help="This is number of objetives") 
 parser.add_argument('-xl', '--lb', type=float,nargs= '+')
