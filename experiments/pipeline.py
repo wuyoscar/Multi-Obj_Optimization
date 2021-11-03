@@ -132,7 +132,7 @@ if __name__ == "__main__":
 
 #summary table:
     fieldnames = ['Problem', 'Alg_name', 'Iteration', 'Evaluations','Objectives', 'n_variables',
-        'xl', 'xu', 'exec_time', 'approx_nadir','solutions_shape', 'path','image_location']
+        'xl', 'xu', 'exec_time', 'approx_nadir','solutions_shape', 'pop_size,','path','image_location']
 
     rows = { 'Problem':args.problem.upper(),
             'Alg_name': args.algorithm.upper(),
@@ -145,11 +145,12 @@ if __name__ == "__main__":
             'exec_time': res.exec_time,
             'approx_nadir':approx_nadir,
             'solutions_shape': str(res.F.shape[0]),
+	    'pop_size':args.pop_size,
             'path': output_location,
             'image_location':image_location
     }   
 
-    table_path = os.path.join(currentdir,'Result','first_result')
+    table_path = os.path.join(currentdir,'Result','first_result_with_popsize')
     file_exists = os.path.isfile(table_path)
     with open(table_path, 'a+', encoding='UTF8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
