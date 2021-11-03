@@ -84,7 +84,7 @@ if __name__ == "__main__":
 
 
 #construct output file:
-    result_folder = os.path.join(currentdir,'Result',args.problem.upper(),args.algorithm.upper()+'_' +args.problem.upper())
+    result_folder = os.path.join(currentdir,'Result',args.problem.upper(),args.algorithm.upper()+'_' +args.problem.upper()+'_'+args.n_var)
     try:
         os.makedirs(result_folder)
     except OSError:
@@ -105,7 +105,7 @@ if __name__ == "__main__":
 
 
 #construct image file:
-    images_folder = os.path.join(currentdir,'Result', 'Images',args.problem.upper(),args.algorithm.upper()+'_' +args.problem.upper())
+    images_folder = os.path.join(currentdir,'Result', 'Images',args.problem.upper(),args.algorithm.upper()+'_' +args.problem.upper()+'_'+args.n_var)
     #images_folder = os.path.join(currentdir,'Result', 'Images',args.problem.upper(),args.algorithm.upper()+'_' +args.problem.upper())
     try:
         os.makedirs(images_folder)
