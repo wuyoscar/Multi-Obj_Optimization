@@ -26,7 +26,7 @@ sleep 1
 done 
 done 
 done
-done <problems_fixed.txt
+done <problem_1.txt
 echo ${i} number of jobs
 
 
