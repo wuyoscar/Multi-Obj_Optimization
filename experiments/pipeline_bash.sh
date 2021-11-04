@@ -7,7 +7,7 @@ do for pop in 100 200 300 500
 do
 cat <<EnD>/home/582/ow6835/bash_scripts/${p[0]}_${a}_${n_gen}
 #!/bin/bash
-#PBS -l ncpus=4,mem=32GB
+#PBS -l ncpus=4,mem=16GB
 #PBS -l walltime=24:00:00
 #PBS -P lk32
 #PBS -q normal
@@ -20,14 +20,16 @@ module load intel-mkl/2020.3.304  python3/3.9.2
 python3 pipeline.py -p ${p[0]} -a $a  -gen ${n_gen} -n ${p[1]} -ob ${p[2]} -pop $pop
 
 EnD
+echo python3 pipeline.py -p ${p[0]} -a $a  -gen ${n_gen} -n ${p[1]} -ob ${p[2]} -pop $pop
+echo This is runing ${i} job
 ((i++))
 qsub /home/582/ow6835/bash_scripts/${p[0]}_${a}_${n_gen}
 sleep 1 
 done 
 done 
 done
-done <problem_1.txt
-echo ${i} number of jobs
+done <problem_2.txt
+echo ${i} number of jobs, totally
 
 
 
