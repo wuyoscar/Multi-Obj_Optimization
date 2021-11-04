@@ -105,7 +105,7 @@ if __name__ == "__main__":
 
 
 #construct image file:
-    images_folder = os.path.join(currentdir,'Result', 'Images',args.problem.upper(),args.algorithm.upper()+'_' +args.problem.upper()+'_'+str(args.var))
+    images_folder = os.path.join(currentdir,'Result', 'Images',args.problem.upper(),args.algorithm.upper()+'_' +args.problem.upper()+'_'+str(args.var)+'_pop_size'+str(args.pop_size))
     #images_folder = os.path.join(currentdir,'Result', 'Images',args.problem.upper(),args.algorithm.upper()+'_' +args.problem.upper())
     try:
         os.makedirs(images_folder)
@@ -118,10 +118,10 @@ if __name__ == "__main__":
 #visualization 
 
     plt.figure(figsize=(7, 5))
-    plt.scatter(F[:, 0], F[:, 1], s=30, facecolors='none', edgecolors='blue')
+    plt.scatter(F[:, 0], F[:, 1], alpha=0.4,s=30, facecolors='none', edgecolors='blue')
     plt.scatter(approx_ideal[0], approx_ideal[1], facecolors='none', edgecolors='red', marker="*", s=100, label="Ideal Point (Approx)")
     plt.scatter(approx_nadir[0], approx_nadir[1], facecolors='none', edgecolors='black', marker="p", s=100, label="Nadir Point (Approx)")
-    plt.title("Objective Space")
+    plt.title(f"Objective Space with pop_size {args.var}")
     plt.xlabel("$f1$")
     plt.ylabel("$f2$")
     plt.legend()
@@ -150,7 +150,7 @@ if __name__ == "__main__":
             'image_location':image_location
     }   
 
-    table_path = os.path.join(currentdir,'Result','result_with_popsize_large_memory_3')
+    table_path = os.path.join(currentdir,'Result','result_1')
     file_exists = os.path.isfile(table_path)
     with open(table_path, 'a+', encoding='UTF8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)

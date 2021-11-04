@@ -8,7 +8,7 @@ do
 cat <<EnD>/home/582/ow6835/bash_scripts/${p[0]}_${a}_${n_gen}
 #!/bin/bash
 #PBS -l ncpus=4,mem=16GB
-#PBS -l walltime=24:00:00
+#PBS -l walltime=10:00:00
 #PBS -P lk32
 #PBS -q normal
 #PBS -l wd
@@ -28,7 +28,7 @@ sleep 1
 done 
 done 
 done
-done <problem_3.txt
+done <problem_1.txt
 echo ${i} number of jobs, totally
 
 
