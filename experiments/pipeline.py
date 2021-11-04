@@ -105,14 +105,15 @@ if __name__ == "__main__":
 
 
 #construct image file:
-    images_folder = os.path.join(currentdir,'Result', 'Images',args.problem.upper(),args.algorithm.upper()+'_' +args.problem.upper()+'_'+str(args.var)+'_pop_size'+str(args.pop_size))
+    images_folder = os.path.join(currentdir,'Result', 'Images',args.problem.upper(),args.algorithm.upper()+'_' +args.problem.upper())
     #images_folder = os.path.join(currentdir,'Result', 'Images',args.problem.upper(),args.algorithm.upper()+'_' +args.problem.upper())
     try:
         os.makedirs(images_folder)
     except OSError:
         pass
-    file_unique_name = "_".join(filename)
-    image_location = os.path.join(images_folder, file_unique_name) #objective export locaton
+    image_name = [args.problem.upper(), args.algorithm.upper(),"Iteration-"+str(args.generation),'Obj-'+str(problem.n_obj),'Var-'+str(problem.n_var), 'Pop_size'+str(args.pop_size)]
+    image_name_unique_name = "_".join(image_name)
+    image_location = os.path.join(images_folder, image_name_unique_name) #objective export locaton
 
 
 #visualization 
