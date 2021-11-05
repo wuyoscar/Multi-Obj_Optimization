@@ -1,0 +1,16 @@
+vu1 2 2 
+vu2 2 2 
+tkly1 4 2 
+ltdz1 3 3 
+sk2 4 2
+sk2_typo 4 4
+kur1 2 2 
+kur1 3 2 
+kur1 4 2 
+kur1 5 2
+zdt1 10 2
+zdt1 20 2
+zdt2 10 2
+zdt2 20 2
+zdt3 10 2
+zdt3 20 2

@@ -2,12 +2,12 @@
 i=0
 while read -ra p
 do for a in nsga2 nsga3 agnomen rnsga2
-do for n_gen in 100 200 500 1000    
-do for pop in 100 200 300 500
+do for n_gen in 10000 100000  
+do for pop in 100 200 
 do
 cat <<EnD>/home/582/ow6835/bash_scripts/${p[0]}_${a}_${n_gen}
 #!/bin/bash
-#PBS -l ncpus=4,mem=16GB
+#PBS -l ncpus=4,mem=128GB
 #PBS -l walltime=10:00:00
 #PBS -P lk32
 #PBS -q normal
@@ -28,13 +28,5 @@ sleep 1
 done 
 done 
 done
-done <problem_1.txt
+done <problem_large.txt
 echo ${i} number of jobs, totally
-
-
-
-
-
-
-
-
