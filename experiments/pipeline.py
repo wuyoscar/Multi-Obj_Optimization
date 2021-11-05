@@ -10,7 +10,7 @@ currentdir = os.path.dirname(os.getcwd())
 parentdir = os.path.dirname(currentdir)
 sys.path.append(currentdir)
 sys.path.append(parentdir)
-from problems.Define_Problems import *
+from Problems.Define_Problems import *
 from algorithms.algorithm import * 
 from matplotlib import pyplot as plt 
 
