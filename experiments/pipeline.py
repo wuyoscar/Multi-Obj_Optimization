@@ -10,7 +10,7 @@ currentdir = os.path.dirname(os.getcwd())
 parentdir = os.path.dirname(currentdir)
 sys.path.append(currentdir)
 sys.path.append(parentdir)
-from Problems.Define_Problems import *
+from problems.Define_Problems import *
 from algorithms.algorithm import * 
 from matplotlib import pyplot as plt 
 
@@ -122,7 +122,7 @@ if __name__ == "__main__":
     plt.scatter(F[:, 0], F[:, 1], alpha=0.4,s=30, facecolors='none', edgecolors='blue')
     plt.scatter(approx_ideal[0], approx_ideal[1], facecolors='none', edgecolors='red', marker="*", s=100, label="Ideal Point (Approx)")
     plt.scatter(approx_nadir[0], approx_nadir[1], facecolors='none', edgecolors='black', marker="p", s=100, label="Nadir Point (Approx)")
-    plt.title(f"Objective Space with pop_size {args.pop}")
+    plt.title(f"Objective Space with pop_size {args.pop_size}")
     plt.xlabel("$f1$")
     plt.ylabel("$f2$")
     plt.legend()
@@ -151,10 +151,11 @@ if __name__ == "__main__":
             'image_location':image_location
     }   
 
-    table_path = os.path.join(currentdir,'Result','result_5NOV_2')
+    table_path = os.path.join(currentdir,'Result','result_5NOV')
     file_exists = os.path.isfile(table_path)
     with open(table_path, 'a+', encoding='UTF8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         if not file_exists:
             writer.writeheader()
         writer.writerow(rows)
+    print(f'table path is {table_path}')

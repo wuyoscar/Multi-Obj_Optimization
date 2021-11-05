@@ -3,7 +3,7 @@ i=0
 while read -ra p
 do for a in nsga2 nsga3 agnomen rnsga2
 do for n_gen in 100 200 500 1000    
-do for pop in 100 200 300 500
+do for pop in 40 100 200 
 do
 cat <<EnD>/home/582/ow6835/bash_scripts/${p[0]}_${a}_${n_gen}
 #!/bin/bash
