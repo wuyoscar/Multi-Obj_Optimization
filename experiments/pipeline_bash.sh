@@ -28,7 +28,7 @@ sleep 1
 done 
 done 
 done
-done <problem_3.txt
+done <problem_1.txt
 echo ${i} number of jobs, totally
 
 
