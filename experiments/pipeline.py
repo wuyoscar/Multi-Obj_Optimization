@@ -126,7 +126,7 @@ if __name__ == "__main__":
     plt.xlabel("$f1$")
     plt.ylabel("$f2$")
     plt.legend()
-    plt.savefig(f"{image_location}")
+#    plt.savefig(f"{image_location}")
     print(f"image location {image_location}")
 
 
@@ -151,7 +151,7 @@ if __name__ == "__main__":
             'image_location':image_location
     }   
 
-    table_path = os.path.join(currentdir,'Result','result_5NOV')
+    table_path = os.path.join(currentdir,'Result','paretoset')
     file_exists = os.path.isfile(table_path)
     with open(table_path, 'a+', encoding='UTF8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
