@@ -99,8 +99,7 @@ if __name__ == "__main__":
     print("filename",filename)
     print('Output location:', output_location)
     np.savetxt(output_location, F)
-    approx_ideal = F.min(axis=0)
-    approx_nadir = F.max(axis=0)
+
 
 
 
@@ -117,7 +116,8 @@ if __name__ == "__main__":
 
 
 #visualization 
-
+    approx_ideal = F.min(axis=0)
+    approx_nadir = F.max(axis=0)
     plt.figure(figsize=(7, 5))
     plt.scatter(F[:, 0], F[:, 1], alpha=0.4,s=30, facecolors='none', edgecolors='blue')
     plt.scatter(approx_ideal[0], approx_ideal[1], facecolors='none', edgecolors='red', marker="*", s=100, label="Ideal Point (Approx)")
