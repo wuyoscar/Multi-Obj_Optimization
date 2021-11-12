@@ -2,7 +2,7 @@
 i=0
 while read -ra p
 do for a in nsga2 nsga3 agnomen rnsga2
-do for e_val in  10e+6  50e+6
+do for e_val in  10000000  50000000
 do for pop in 100  
 do
 cat <<EnD>/home/582/ow6835/bash_scripts/${p[0]}_${a}_${e_val}
