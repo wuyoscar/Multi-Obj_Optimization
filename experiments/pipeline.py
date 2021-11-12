@@ -37,7 +37,7 @@ parser.add_argument('-n', '--var', type = int, help= 'Number of variables')
 #!-------algorithm parameters  
 parser.add_argument('-pop', '--pop_size', default=100,type=int,help='#population size')   
 parser.add_argument('-np', '--n_partitions', default=500,type=int)                         
-parser.add_argument('-gen', '--generation', type=int,help='# of generation NSGAII')
+parser.add_argument('-e_val', '--evaluation', type=int,help='# of evaluation NSGAII')
 
 
 
@@ -58,8 +58,8 @@ if __name__ == "__main__":
     algorithm = input_algorithm(algorithm_name = args.algorithm, m = problem.n_obj, pop_size = args.pop_size, n_partitions = args.n_partitions)
 
 # initial termination 
-    assert args.generation, "Define termination"
-    termination = get_termination("n_gen", args.generation)
+    assert args.evaluation, "Define termination"
+    termination = get_termination("n_eval", args.evaluation)
     print(f'algorithm name is: {args.algorithm.upper()}')
 
 # start execution
@@ -74,11 +74,11 @@ if __name__ == "__main__":
     
 # now we have result 
     F = res.F
-    
+    iteration = len(res.history)
 
 #recording info of this job
     print('solution shape:',F.shape)
-    print(f'generation is: {args.generation}')
+    print(f'evaluation is: {args.evaluation}')
     print(f'lower bound is:{problem.xl} and upper bound is {problem.xu}')
 
 
@@ -90,7 +90,7 @@ if __name__ == "__main__":
     except OSError:
         pass
     id = uuid.uuid4()
-    filename = [args.problem.upper(), args.algorithm.upper(),"Iteration-"+str(args.generation),'Obj-'+str(problem.n_obj),'Var-'+str(problem.n_var)]
+    filename = [args.problem.upper(), args.algorithm.upper(),"Iteration-"+str(iteration),'Obj-'+str(problem.n_obj),'Var-'+str(problem.n_var)]
     file_unique_name = "_".join(filename)
     file_unique_name = file_unique_name +"."+str(id)
 
@@ -110,7 +110,7 @@ if __name__ == "__main__":
         os.makedirs(images_folder)
     except OSError:
         pass
-    image_name = [args.problem.upper(), args.algorithm.upper(),"Iteration-"+str(args.generation),'Obj-'+str(problem.n_obj),'Var-'+str(problem.n_var), 'Pop_size'+str(args.pop_size)]
+    image_name = [args.problem.upper(), args.algorithm.upper(),"Iteration-"+str(iteration),'Obj-'+str(problem.n_obj),'Var-'+str(problem.n_var), 'Pop_size'+str(args.pop_size)]
     image_name_unique_name = "_".join(image_name)
     image_location = os.path.join(images_folder, image_name_unique_name) #objective export locaton
 
@@ -137,8 +137,8 @@ if __name__ == "__main__":
 
     rows = { 'Problem':args.problem.upper(),
             'Alg_name': args.algorithm.upper(),
-            'Iteration': args.generation,
-            'Evaluations':res.history[-1].evaluator.n_eval,
+            'Iteration': iteration,
+            'Evaluations':args.evaluation,
             'Objectives':problem.n_obj,
             'n_variables': problem.n_var,
             'xl': problem.xl,
@@ -151,7 +151,7 @@ if __name__ == "__main__":
             'image_location':image_location
     }   
 
-    table_path = os.path.join(currentdir,'Result','paretoset')
+    table_path = os.path.join(currentdir,'Result','million_result')
     file_exists = os.path.isfile(table_path)
     with open(table_path, 'a+', encoding='UTF8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
