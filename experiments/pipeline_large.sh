@@ -2,12 +2,12 @@
 i=0
 while read -ra p
 do for a in nsga2 nsga3 agnomen rnsga2
-do for e_val in  10000000  50000000
+do for e_val in  10000000  
 do for pop in 100  
 do
 cat <<EnD>/home/582/ow6835/bash_scripts/${p[0]}_${a}_${e_val}
 #!/bin/bash
-#PBS -l ncpus=8,mem=128GB
+#PBS -l ncpus=6,mem=32GB
 #PBS -l walltime=24:00:00
 #PBS -P lk32
 #PBS -q normal

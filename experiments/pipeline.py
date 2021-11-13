@@ -126,7 +126,7 @@ if __name__ == "__main__":
     plt.xlabel("$f1$")
     plt.ylabel("$f2$")
     plt.legend()
-#    plt.savefig(f"{image_location}")
+    plt.savefig(f"{image_location}")
     print(f"image location {image_location}")
 
 
