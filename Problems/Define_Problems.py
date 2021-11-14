@@ -4,7 +4,7 @@ import autograd.numpy as anp
 import os, sys
 sys.path.append(os.getcwd())
 
-from problems import * 
+from Problems import * 
 
 
 def input_problem(problem_name= None, **kwargs):

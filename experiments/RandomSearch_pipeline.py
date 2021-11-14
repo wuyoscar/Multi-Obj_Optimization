@@ -41,10 +41,14 @@ args = parser.parse_args()
 
 if __name__ == "__main__":
 #get problem first
-    print("/n/n")
+    print("\n\n")
     problem = input_problem(problem_name = args.problem, n_var = args.var)
     assert problem.n_var == args.var, "Variables dimension inconsistent"
-    print(f'problem name is: {args.problem.upper()}')
+
+    print(args.problem)
+
+
+    print(f'problem name is: {str(args.problem.upper())}')
     print(f'number of objetives {problem.n_obj}')
     print(f'number of variables {problem.n_var}')
     
