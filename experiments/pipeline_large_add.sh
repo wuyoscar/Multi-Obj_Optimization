@@ -7,7 +7,7 @@ do for pop in 100
 do
 cat <<EnD>/home/582/ow6835/bash_scripts/${p[0]}_${a}_${e_val}
 #!/bin/bash
-#PBS -l ncpus=6,mem=226GB
+#PBS -l ncpus=6,mem=188GB
 #PBS -l walltime=12:00:00
 #PBS -P lk32
 #PBS -q normal
