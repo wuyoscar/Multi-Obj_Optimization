@@ -29,7 +29,7 @@ done
 done 
 done
 done <problem_1.txt
-echo ${i} number of jobs, totally
+echo ${i-1} number of jobs, totally
 
 
 
