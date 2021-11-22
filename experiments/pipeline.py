@@ -37,7 +37,7 @@ parser.add_argument('-n', '--var', type = int, help= 'Number of variables')
 #!-------algorithm parameters  
 parser.add_argument('-pop', '--pop_size', default=100,type=int,help='#population size')   
 parser.add_argument('-np', '--n_partitions', default=500,type=int)                         
-parser.add_argument('-e_val', '--evaluation', type=int,help='# of evaluation NSGAII')
+parser.add_argument('-e_val', '--evaluation', type=int,help='# of evaluations')
 
 
 

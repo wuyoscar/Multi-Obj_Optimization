@@ -1,7 +1,7 @@
 #! /bin/bash
 i=1
 while read -ra p
-do for a in  nsga3  rnsga2
+do for a in  nsga2 nsga3 agnomen rnsga2
 do for e_val in  50000000  
 do for pop in 100  
 do
