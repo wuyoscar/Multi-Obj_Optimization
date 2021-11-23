@@ -78,7 +78,7 @@ if __name__ == "__main__":
 
 #recording info of this job
     print('solution shape:',F.shape)
-    print(f'evaluation is: {args.evaluation}')
+    print(f'evaluation is: {res.history[-1].evaluator.n_eval}')
     print(f'lower bound is:{problem.xl} and upper bound is {problem.xu}')
 
 
@@ -138,7 +138,7 @@ if __name__ == "__main__":
     rows = { 'Problem':args.problem.upper(),
             'Alg_name': args.algorithm.upper(),
             'Iteration': iteration,
-            'Evaluations':args.evaluation,
+            'Evaluations':res.history[-1].evaluator.n_eval,
             'Objectives':problem.n_obj,
             'n_variables': problem.n_var,
             'xl': problem.xl,
