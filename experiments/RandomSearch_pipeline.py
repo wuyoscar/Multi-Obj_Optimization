@@ -45,7 +45,7 @@ if __name__ == "__main__":
     problem = input_problem(problem_name = args.problem, n_var = args.var)
     assert problem.n_var == args.var, "Variables dimension inconsistent"
 
-    print(args.problem)
+    print(problem)
 
 
     print(f'problem name is: {str(args.problem.upper())}')
@@ -71,7 +71,7 @@ if __name__ == "__main__":
 #dl (list of 1D NumPy int array): the domination list
 #dc (1D NumPy int array): the domination count
 #ndr (1D NumPy int array): the non domination ranks
-    non_donmiated_solution = total_solution[dl[0]]
+    non_donmiated_solution = total_solution[ndf[0]]
     print(f'Non dominated solution shape is :{non_donmiated_solution.shape} given data points {args.pop_size}')
 
     # if can't find non-dominated set
