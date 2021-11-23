@@ -7,7 +7,7 @@ do for pop in 40 100 200
 do
 cat <<EnD>/home/582/ow6835/bash_scripts/${p[0]}_${a}_${n_eval}
 #!/bin/bash
-#PBS -l ncpus=4,mem=16GB
+#PBS -l ncpus=4,mem=12GB
 #PBS -l walltime=10:00:00
 #PBS -P lk32
 #PBS -q normal
@@ -28,7 +28,7 @@ sleep 1
 done 
 done 
 done
-done <problem_1.txt
+done <problem_3.txt
 echo ${i-1} number of jobs, totally
 
 
