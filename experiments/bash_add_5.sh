@@ -9,7 +9,4 @@
 #PBS -e /home/582/ow6835/bash_error_ouput
 module load gcc/11.1.0
 module load intel-mkl/2020.3.304  python3/3.9.2
-python3 pipeline.py -p vu1 -a nsga3 -e_val 50000000 -n 2 -ob 2 -pop 80
-
-
-
+python3 pipeline.py -p zdt1 -a nsga3 -e_val 50000000 -n 20 -ob 2 -pop 80
