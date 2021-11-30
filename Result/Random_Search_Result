@@ -1,0 +1,579 @@
+Problem,Objectives,n_variables,xl,xu,pf_shape,data_point_shape,path,image_location
+VU1,2,2,[-2.99499077 -2.98163166],[2.96996695 2.98179891],30,100,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU1/VU1_Obj-2_Var-2.d1dd4117-eb1b-49cb-90a3-d30cacdbedcf,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU1/VU1_Obj-2_Var-2d1dd4117-eb1b-49cb-90a3-d30cacdbedcf
+VU1,2,2,[-2.98575163 -2.99221243],[2.98054947 2.96577688],43,200,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU1/VU1_Obj-2_Var-2.ff7e5139-4f4c-411c-9c76-75801b2c338e,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU1/VU1_Obj-2_Var-2ff7e5139-4f4c-411c-9c76-75801b2c338e
+VU1,2,2,[-2.99411233 -2.98414142],[2.99057053 2.97094981],56,300,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU1/VU1_Obj-2_Var-2.3c83abaf-69ad-4fa2-ba31-5358e5d9eb09,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU1/VU1_Obj-2_Var-23c83abaf-69ad-4fa2-ba31-5358e5d9eb09
+VU1,2,2,[-2.99555321 -2.9954233 ],[2.99258566 2.99657348],69,500,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU1/VU1_Obj-2_Var-2.6518b71b-4123-42fd-8d96-f261944d477f,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU1/VU1_Obj-2_Var-26518b71b-4123-42fd-8d96-f261944d477f
+VU1,2,2,[-2.94183915 -2.99613899],[2.9993044  2.98407029],75,600,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU1/VU1_Obj-2_Var-2.2a1fd187-3bc2-435f-941c-169ad023e53c,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU1/VU1_Obj-2_Var-22a1fd187-3bc2-435f-941c-169ad023e53c
+VU1,2,2,[-2.99297186 -2.99380298],[2.99023532 2.98170246],117,1000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU1/VU1_Obj-2_Var-2.e259149a-ed77-42fb-84ab-352e154aa86a,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU1/VU1_Obj-2_Var-2e259149a-ed77-42fb-84ab-352e154aa86a
+VU1,2,2,[-2.99877576 -2.99997696],[2.99618281 2.99960811],222,3000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU1/VU1_Obj-2_Var-2.d6f49d83-e427-424b-93aa-1877a35e972f,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU1/VU1_Obj-2_Var-2d6f49d83-e427-424b-93aa-1877a35e972f
+VU1,2,2,[-2.99945646 -2.99930966],[2.99925689 2.99967767],311,6000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU1/VU1_Obj-2_Var-2.ca8085cc-009b-47de-823d-783c324058e0,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU1/VU1_Obj-2_Var-2ca8085cc-009b-47de-823d-783c324058e0
+VU1,2,2,[-2.99987324 -2.99927598],[2.99988551 2.99968481],472,10000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU1/VU1_Obj-2_Var-2.215bab87-1bf7-43c0-9391-54d1be31437a,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU1/VU1_Obj-2_Var-2215bab87-1bf7-43c0-9391-54d1be31437a
+VU1,2,2,[-2.99982857 -2.99990238],[2.99984489 2.99927103],602,15000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU1/VU1_Obj-2_Var-2.46545e11-fd97-41ab-bc29-ccc8d0c2846b,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU1/VU1_Obj-2_Var-246545e11-fd97-41ab-bc29-ccc8d0c2846b
+VU1,2,2,[-2.99942462 -2.9991381 ],[2.99997435 2.99994455],689,20000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU1/VU1_Obj-2_Var-2.7151c1d5-227e-4911-bc13-4ee1853fb4c0,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU1/VU1_Obj-2_Var-27151c1d5-227e-4911-bc13-4ee1853fb4c0
+VU1,2,2,[-2.99988938 -2.99999211],[2.99996232 2.99990535],1305,50000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU1/VU1_Obj-2_Var-2.0642ce00-94f3-4148-8bf8-6efd3555b734,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU1/VU1_Obj-2_Var-20642ce00-94f3-4148-8bf8-6efd3555b734
+VU1,2,2,[-2.99985964 -2.99997349],[2.99987438 2.99998158],1972,100000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU1/VU1_Obj-2_Var-2.414cb689-a90a-4a1b-b132-54a5d133744e,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU1/VU1_Obj-2_Var-2414cb689-a90a-4a1b-b132-54a5d133744e
+VU2,2,2,[-2.8152912  -2.98351594],[2.94956644 2.91599079],5,100,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU2/VU2_Obj-2_Var-2.21299878-315f-4abd-b7e2-c6cbc6aedfeb,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU2/VU2_Obj-2_Var-221299878-315f-4abd-b7e2-c6cbc6aedfeb
+VU2,2,2,[-2.98808806 -2.94318857],[2.95194782 2.99913455],9,200,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU2/VU2_Obj-2_Var-2.05553be6-146a-4dba-95bb-21521f85f7dc,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU2/VU2_Obj-2_Var-205553be6-146a-4dba-95bb-21521f85f7dc
+VU2,2,2,[-2.99162227 -2.99050587],[2.98683166 2.98583277],10,300,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU2/VU2_Obj-2_Var-2.1010045e-7868-4721-a167-f3264fbc5b26,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU2/VU2_Obj-2_Var-21010045e-7868-4721-a167-f3264fbc5b26
+VU2,2,2,[-2.99984228 -2.96602357],[2.99749176 2.99219394],9,500,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU2/VU2_Obj-2_Var-2.b4a3c095-52e4-405a-8a8a-1ea0486e4f22,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU2/VU2_Obj-2_Var-2b4a3c095-52e4-405a-8a8a-1ea0486e4f22
+VU2,2,2,[-2.99931081 -2.99854492],[2.99605586 2.99862791],16,600,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU2/VU2_Obj-2_Var-2.f97bde1d-4de8-4b66-9f1e-c825cf0a4651,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU2/VU2_Obj-2_Var-2f97bde1d-4de8-4b66-9f1e-c825cf0a4651
+VU2,2,2,[-2.9791553  -2.99183619],[2.9401836  2.99893033],15,1000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU2/VU2_Obj-2_Var-2.ccbdad45-d576-426f-9d28-71169bb48657,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU2/VU2_Obj-2_Var-2ccbdad45-d576-426f-9d28-71169bb48657
+VU2,2,2,[-2.99916714 -2.99827537],[2.99968298 2.99526131],27,3000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU2/VU2_Obj-2_Var-2.82a3ac8b-5447-4942-b5b9-d89a86140c97,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU2/VU2_Obj-2_Var-282a3ac8b-5447-4942-b5b9-d89a86140c97
+VU2,2,2,[-2.99930793 -2.99815869],[2.99939981 2.9987533 ],38,6000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU2/VU2_Obj-2_Var-2.2c4b636c-b2d5-47de-bdbc-343753312fea,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU2/VU2_Obj-2_Var-22c4b636c-b2d5-47de-bdbc-343753312fea
+VU2,2,2,[-2.99762274 -2.99984041],[2.99988306 2.99957581],57,10000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU2/VU2_Obj-2_Var-2.12165a0b-66b6-45ac-ba1c-7abd942a4b64,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU2/VU2_Obj-2_Var-212165a0b-66b6-45ac-ba1c-7abd942a4b64
+VU2,2,2,[-2.99959267 -2.99971371],[2.9998392  2.99996759],59,15000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU2/VU2_Obj-2_Var-2.2c91f17e-7b26-425d-80c3-8f1373f020cb,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU2/VU2_Obj-2_Var-22c91f17e-7b26-425d-80c3-8f1373f020cb
+VU2,2,2,[-2.99997559 -2.99980242],[2.99889303 2.99971182],64,20000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU2/VU2_Obj-2_Var-2.a1009ca3-13f2-456b-b0b8-755dc6e4a991,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU2/VU2_Obj-2_Var-2a1009ca3-13f2-456b-b0b8-755dc6e4a991
+VU2,2,2,[-2.99984334 -2.99999182],[2.99991299 2.9999007 ],107,50000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU2/VU2_Obj-2_Var-2.08fcd9a4-cf0a-4c80-8a78-40a00a6ec496,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU2/VU2_Obj-2_Var-208fcd9a4-cf0a-4c80-8a78-40a00a6ec496
+VU2,2,2,[-2.99997815 -2.99998764],[2.99997336 2.99990214],141,100000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/VU2/VU2_Obj-2_Var-2.7c43329c-fb58-4430-9604-a43584973050,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/VU2/VU2_Obj-2_Var-27c43329c-fb58-4430-9604-a43584973050
+TKLY1,2,4,[0.00924311 0.00228655 0.01030147 0.01782849],[0.99119113 0.99808449 0.99333098 0.98459276],11,100,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/TKLY1/TKLY1_Obj-2_Var-4.6469cfb7-4881-4c80-9158-7df841dab335,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/TKLY1/TKLY1_Obj-2_Var-46469cfb7-4881-4c80-9158-7df841dab335
+TKLY1,2,4,[0.01563522 0.0029379  0.00346354 0.00365015],[0.9993813  0.98767131 0.9976884  0.99071366],17,200,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/TKLY1/TKLY1_Obj-2_Var-4.f5b2bbef-af09-470d-8367-e069621bba99,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/TKLY1/TKLY1_Obj-2_Var-4f5b2bbef-af09-470d-8367-e069621bba99
+TKLY1,2,4,[0.00312432 0.00318085 0.00522003 0.00226578],[0.99750791 0.99993208 0.99627931 0.99964583],16,300,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/TKLY1/TKLY1_Obj-2_Var-4.07747891-0836-42c7-b031-c7d583f45a2e,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/TKLY1/TKLY1_Obj-2_Var-407747891-0836-42c7-b031-c7d583f45a2e
+TKLY1,2,4,[0.00131089 0.00104939 0.0004034  0.00076547],[0.99880141 0.99851733 0.99898576 0.99957499],20,500,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/TKLY1/TKLY1_Obj-2_Var-4.9a6d13d9-4041-4548-9bac-9d50a126f6fc,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/TKLY1/TKLY1_Obj-2_Var-49a6d13d9-4041-4548-9bac-9d50a126f6fc
+TKLY1,2,4,[6.40316607e-05 9.36071372e-04 1.91199299e-03 3.88293040e-03],[0.9978382  0.9987947  0.99804784 0.99968299],20,600,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/TKLY1/TKLY1_Obj-2_Var-4.903932d3-3ad9-4617-8a7c-eb462d9b54fd,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/TKLY1/TKLY1_Obj-2_Var-4903932d3-3ad9-4617-8a7c-eb462d9b54fd
+TKLY1,2,4,[0.00039552 0.00032026 0.00036811 0.00080478],[0.999694   0.99941205 0.99831858 0.99982324],24,1000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/TKLY1/TKLY1_Obj-2_Var-4.d0b2c74d-1d30-4662-a2c0-e141facacbd1,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/TKLY1/TKLY1_Obj-2_Var-4d0b2c74d-1d30-4662-a2c0-e141facacbd1
+TKLY1,2,4,[0.00053247 0.00099971 0.00195552 0.0003973 ],[0.99989331 0.99985633 0.99993075 0.9998324 ],34,3000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/TKLY1/TKLY1_Obj-2_Var-4.816b593c-d42b-4f5a-8be1-003939a3b7ca,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/TKLY1/TKLY1_Obj-2_Var-4816b593c-d42b-4f5a-8be1-003939a3b7ca
+TKLY1,2,4,[8.61186243e-05 3.75373795e-04 1.98722802e-05 8.45003429e-05],[0.99993157 0.99974561 0.9999542  0.9999432 ],54,6000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/TKLY1/TKLY1_Obj-2_Var-4.55e8f022-1093-4dc8-b723-52f2d016ef12,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/TKLY1/TKLY1_Obj-2_Var-455e8f022-1093-4dc8-b723-52f2d016ef12
+TKLY1,2,4,[2.84836702e-05 9.15821281e-05 4.41804878e-05 3.35404845e-05],[0.99975169 0.99982537 0.99994266 0.99979912],42,10000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/TKLY1/TKLY1_Obj-2_Var-4.d49a7d80-4b4d-47fb-b0e8-57bd12f136c1,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/TKLY1/TKLY1_Obj-2_Var-4d49a7d80-4b4d-47fb-b0e8-57bd12f136c1
+TKLY1,2,4,[6.26885088e-05 9.26914896e-05 4.68262854e-05 2.03490496e-04],[0.99993589 0.9998975  0.99995954 0.99994895],63,15000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/TKLY1/TKLY1_Obj-2_Var-4.96b35213-a8e0-4e96-9345-52b9491fa2c5,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/TKLY1/TKLY1_Obj-2_Var-496b35213-a8e0-4e96-9345-52b9491fa2c5
+TKLY1,2,4,[1.97291558e-05 6.31353800e-05 2.24059965e-04 1.24093186e-05],[0.99991679 0.99994479 0.99999512 0.999993  ],71,20000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/TKLY1/TKLY1_Obj-2_Var-4.79750ebd-0114-488a-be3f-3b8a3e946747,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/TKLY1/TKLY1_Obj-2_Var-479750ebd-0114-488a-be3f-3b8a3e946747
+TKLY1,2,4,[2.02722645e-06 1.66646107e-06 1.66054236e-05 1.82309822e-07],[0.99999535 0.99999136 0.99999149 0.99998794],53,50000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/TKLY1/TKLY1_Obj-2_Var-4.c31fd89c-313c-4242-aa25-fe1b18ebf85d,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/TKLY1/TKLY1_Obj-2_Var-4c31fd89c-313c-4242-aa25-fe1b18ebf85d
+TKLY1,2,4,[9.12002727e-06 3.76478246e-06 4.17355832e-06 4.50448574e-06],[0.99999687 0.99995824 0.99999018 0.99999926],65,100000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/TKLY1/TKLY1_Obj-2_Var-4.15912206-b9bc-4c7b-a943-bce871953f12,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/TKLY1/TKLY1_Obj-2_Var-415912206-b9bc-4c7b-a943-bce871953f12
+LTDZ1,3,3,[0.04116359 0.03287164 0.0009108 ],[0.96049187 0.99212329 0.98529058],23,100,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-3.5525b5e6-58e9-4509-999f-d18f54541c37,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-35525b5e6-58e9-4509-999f-d18f54541c37
+LTDZ1,3,3,[0.01944486 0.00015215 0.00302461],[0.99910758 0.99696308 0.99498048],36,200,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-3.282ccf86-00ac-4ebc-8a83-447373088cd1,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-3282ccf86-00ac-4ebc-8a83-447373088cd1
+LTDZ1,3,3,[0.00328074 0.00179288 0.00101767],[0.99790519 0.99773386 0.98740737],62,300,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-3.e2ebc044-15f9-4d1a-bb2b-551b50ad883b,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-3e2ebc044-15f9-4d1a-bb2b-551b50ad883b
+LTDZ1,3,3,[0.00070419 0.00175572 0.00285137],[0.99911567 0.99922378 0.99544119],73,500,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-3.83a173ab-65ce-4c08-928d-3368d5303413,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-383a173ab-65ce-4c08-928d-3368d5303413
+LTDZ1,3,3,[0.00119492 0.00075033 0.00306568],[0.99650417 0.99828503 0.9984257 ],101,600,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-3.d5e8ea49-8dd7-442b-88c0-185295baead9,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-3d5e8ea49-8dd7-442b-88c0-185295baead9
+LTDZ1,3,3,[1.39370245e-05 1.99407580e-03 5.58550198e-04],[0.9979906  0.9998895  0.99966102],114,1000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-3.40bba691-b3f2-4e7e-82c8-f9698e6d0a68,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-340bba691-b3f2-4e7e-82c8-f9698e6d0a68
+LTDZ1,3,3,[0.00042668 0.00049414 0.00076634],[0.99974065 0.9999258  0.99933065],195,3000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-3.76da4a6d-9887-43ca-95ce-dd3ecf30bc38,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-376da4a6d-9887-43ca-95ce-dd3ecf30bc38
+LTDZ1,3,3,[6.28905815e-05 5.48231868e-05 9.44220437e-05],[0.99988425 0.99987    0.9998149 ],334,6000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-3.432ff67d-01e4-4dd4-b686-52b438e058cf,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-3432ff67d-01e4-4dd4-b686-52b438e058cf
+LTDZ1,3,3,[1.34331074e-05 8.19369465e-06 1.29875840e-04],[0.99996935 0.99995956 0.99991459],415,10000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-3.25d30a5c-3830-4a51-9af8-51a35f7d623a,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-325d30a5c-3830-4a51-9af8-51a35f7d623a
+LTDZ1,3,3,[3.44941850e-06 7.21658994e-05 4.18861177e-05],[0.99997818 0.99989496 0.9999771 ],534,15000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-3.1b514b70-bd54-447b-90c0-e944b3ae6b2c,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-31b514b70-bd54-447b-90c0-e944b3ae6b2c
+LTDZ1,3,3,[3.62989121e-05 5.66893198e-05 3.64262298e-05],[0.99998596 0.99999201 0.99998813],626,20000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-3.8f637dad-241d-46bc-a0c7-4755183b23b6,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-38f637dad-241d-46bc-a0c7-4755183b23b6
+LTDZ1,3,3,[1.00376341e-05 2.38422727e-05 1.77502204e-05],[0.99999558 0.99998912 0.999933  ],1069,50000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-3.448fd80f-85de-4e65-ac38-9d19b28ea97a,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-3448fd80f-85de-4e65-ac38-9d19b28ea97a
+LTDZ1,3,3,[1.32151257e-05 1.94614876e-05 6.05530849e-07],[0.99998525 0.99999897 0.99998358],1716,100000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-3.e2000553-6ac1-40b9-b2cb-bf8fa9814ae2,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/LTDZ1/LTDZ1_Obj-3_Var-3e2000553-6ac1-40b9-b2cb-bf8fa9814ae2
+SK2,2,4,[-9.95533394 -9.94012964 -9.72034214 -9.9499812 ],[9.88948934 9.86694695 9.90376489 9.90852381],4,100,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2/SK2_Obj-2_Var-4.c0a4a206-8320-4597-972b-fe7fe63592bb,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2/SK2_Obj-2_Var-4c0a4a206-8320-4597-972b-fe7fe63592bb
+SK2,2,4,[-9.90835043 -9.986439   -9.93279069 -9.98232929],[9.94553779 9.99306181 9.97126115 9.93277005],4,200,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2/SK2_Obj-2_Var-4.7d998d58-134f-4daf-ab61-a8e014c270bb,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2/SK2_Obj-2_Var-47d998d58-134f-4daf-ab61-a8e014c270bb
+SK2,2,4,[-9.95847877 -9.98826816 -9.88297175 -9.99619004],[9.93823309 9.73295666 9.99728407 9.95463924],2,300,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2/SK2_Obj-2_Var-4.2677ebe4-8640-4bea-aefa-9415823ec1ec,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2/SK2_Obj-2_Var-42677ebe4-8640-4bea-aefa-9415823ec1ec
+SK2,2,4,[-9.94841267 -9.85942891 -9.85768306 -9.93865115],[9.97126415 9.96733356 9.98376426 9.99614456],8,500,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2/SK2_Obj-2_Var-4.3f6da4da-ab75-43e9-ac0f-0d99fa05c0e6,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2/SK2_Obj-2_Var-43f6da4da-ab75-43e9-ac0f-0d99fa05c0e6
+SK2,2,4,[-9.98070798 -9.97591498 -9.99583866 -9.9706929 ],[9.9639375  9.99458272 9.91979114 9.98017002],3,600,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2/SK2_Obj-2_Var-4.3bf27837-1f6e-4264-8968-1d26345a8b30,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2/SK2_Obj-2_Var-43bf27837-1f6e-4264-8968-1d26345a8b30
+SK2,2,4,[-9.99926159 -9.98432066 -9.99809888 -9.94951939],[9.98240778 9.97697176 9.98053522 9.95730984],6,1000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2/SK2_Obj-2_Var-4.c57947d3-3847-476c-8fd2-e75d1d409fb4,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2/SK2_Obj-2_Var-4c57947d3-3847-476c-8fd2-e75d1d409fb4
+SK2,2,4,[-9.99146732 -9.96623132 -9.9920633  -9.99735893],[9.99921818 9.99970411 9.99691766 9.98425584],6,3000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2/SK2_Obj-2_Var-4.07802f4f-cd29-4de3-a96b-4cec36a5692c,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2/SK2_Obj-2_Var-407802f4f-cd29-4de3-a96b-4cec36a5692c
+SK2,2,4,[-9.99842975 -9.9968471  -9.99141517 -9.99724213],[9.9982463  9.99558545 9.99450899 9.99859   ],6,6000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2/SK2_Obj-2_Var-4.63630d1d-3c22-4602-82f7-6984e9221e73,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2/SK2_Obj-2_Var-463630d1d-3c22-4602-82f7-6984e9221e73
+SK2,2,4,[-9.99549653 -9.99959349 -9.99889534 -9.99878266],[9.99472    9.99962261 9.99802473 9.99889691],7,10000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2/SK2_Obj-2_Var-4.b7cf5b24-3fee-425d-8c9c-b1c124b931ae,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2/SK2_Obj-2_Var-4b7cf5b24-3fee-425d-8c9c-b1c124b931ae
+SK2,2,4,[-9.9991176  -9.99958452 -9.99951849 -9.99714256],[9.99840917 9.997845   9.99980056 9.99887905],11,15000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2/SK2_Obj-2_Var-4.de9c61bd-9242-44ef-a6a9-b400da6a92d8,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2/SK2_Obj-2_Var-4de9c61bd-9242-44ef-a6a9-b400da6a92d8
+SK2,2,4,[-9.999939   -9.9991252  -9.99884206 -9.99972122],[9.9997448  9.99973657 9.99943912 9.99988953],14,20000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2/SK2_Obj-2_Var-4.30d488dc-f67b-49ff-96d5-d6951c468995,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2/SK2_Obj-2_Var-430d488dc-f67b-49ff-96d5-d6951c468995
+SK2,2,4,[-9.99907767 -9.9998842  -9.99978954 -9.99979455],[9.99974884 9.99986379 9.99944458 9.99996181],16,50000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2/SK2_Obj-2_Var-4.2ef3e9d3-c544-4a71-ab69-9d2ff8a20a40,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2/SK2_Obj-2_Var-42ef3e9d3-c544-4a71-ab69-9d2ff8a20a40
+SK2,2,4,[-9.99953679 -9.99969275 -9.99980144 -9.99982781],[9.9997791  9.99986283 9.999859   9.99982234],16,100000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2/SK2_Obj-2_Var-4.ef169545-03dd-4df4-b310-0744e1af4074,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2/SK2_Obj-2_Var-4ef169545-03dd-4df4-b310-0744e1af4074
+SK2_TYPO,2,4,[-9.96280647 -9.92071461 -9.97168136 -9.05660619],[9.72923753 9.80576712 9.71711597 9.90620731],3,100,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4.e70a9cd5-045a-4743-bf9e-338efdd36491,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4e70a9cd5-045a-4743-bf9e-338efdd36491
+SK2_TYPO,2,4,[-9.94737061 -9.97063641 -9.99901128 -9.76368697],[9.91656075 9.8821512  9.97924369 9.95344347],6,200,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4.2336dbc6-9eb0-4718-bb30-e8018e248981,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-42336dbc6-9eb0-4718-bb30-e8018e248981
+SK2_TYPO,2,4,[-9.92231476 -9.99695851 -9.86697587 -9.97035345],[9.93072449 9.95978331 9.98910234 9.98158214],4,300,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4.ce90aded-a67d-43cb-be92-26f58d7cc58f,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4ce90aded-a67d-43cb-be92-26f58d7cc58f
+SK2_TYPO,2,4,[-9.99334325 -9.99681211 -9.9645313  -9.9239499 ],[9.94549432 9.99371777 9.99964859 9.9552651 ],9,500,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4.eb65053b-e551-40ca-ac59-984e87a3510f,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4eb65053b-e551-40ca-ac59-984e87a3510f
+SK2_TYPO,2,4,[-9.88412176 -9.99908309 -9.98150605 -9.92288807],[9.98411441 9.88650522 9.99704734 9.93896677],4,600,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4.760c13c2-2e6f-4b9f-abe1-2e171666b90b,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4760c13c2-2e6f-4b9f-abe1-2e171666b90b
+SK2_TYPO,2,4,[-9.9878849  -9.98775188 -9.99664856 -9.98120924],[9.9815622  9.98833224 9.99519193 9.99330858],8,1000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4.31fa4b3f-4a97-4cb0-86ba-2ebee7ddc026,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-431fa4b3f-4a97-4cb0-86ba-2ebee7ddc026
+SK2_TYPO,2,4,[-9.99331328 -9.99061445 -9.99156458 -9.995549  ],[9.99933965 9.99924609 9.9994397  9.99715543],8,3000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4.dbccf299-3f8f-440a-8e84-26283c4b39dc,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4dbccf299-3f8f-440a-8e84-26283c4b39dc
+SK2_TYPO,2,4,[-9.99342315 -9.99872529 -9.98609829 -9.99907241],[9.99967691 9.99972146 9.98727584 9.99923901],7,6000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4.7ed1eb92-fbeb-4221-996a-48b317a8cd41,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-47ed1eb92-fbeb-4221-996a-48b317a8cd41
+SK2_TYPO,2,4,[-9.99689522 -9.99623913 -9.9994402  -9.99924325],[9.99672606 9.99743498 9.999553   9.99854166],9,10000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4.d1612c2a-f1ba-45a6-8c11-3f96d62f8fad,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4d1612c2a-f1ba-45a6-8c11-3f96d62f8fad
+SK2_TYPO,2,4,[-9.99926791 -9.99937321 -9.99853776 -9.99847575],[9.99868787 9.99890995 9.9972647  9.99937002],8,15000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4.ff3aea96-6232-4b8b-bd77-ee0f7246a6f5,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4ff3aea96-6232-4b8b-bd77-ee0f7246a6f5
+SK2_TYPO,2,4,[-9.99874047 -9.99988925 -9.99975125 -9.9983365 ],[9.99858776 9.9998043  9.9993569  9.99934828],13,20000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4.4503fec3-fae6-4321-a875-f09461365fec,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-44503fec3-fae6-4321-a875-f09461365fec
+SK2_TYPO,2,4,[-9.99982857 -9.99919747 -9.99919517 -9.99963451],[9.99966539 9.99999108 9.99992152 9.99864407],13,50000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4.a4214719-8a7c-4e90-b370-578f3aa0c7dc,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4a4214719-8a7c-4e90-b370-578f3aa0c7dc
+SK2_TYPO,2,4,[-9.99998392 -9.99996336 -9.99984567 -9.99985707],[9.99973204 9.99993382 9.99983196 9.99988555],23,100000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4.e01791cd-aa8d-4acd-bb7f-24bd2f519e5a,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/SK2_TYPO/SK2_TYPO_Obj-2_Var-4e01791cd-aa8d-4acd-bb7f-24bd2f519e5a
+KUR1,2,2,[-5.0417     -4.85725483],[4.98576638 4.91696623],6,100,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-2.43ae6666-a82b-448c-a7b7-81fb958e7522,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-243ae6666-a82b-448c-a7b7-81fb958e7522
+KUR1,2,2,[-5.02544329 -4.9667643 ],[4.95714705 4.96553832],7,200,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-2.77c4cb8a-2b8d-413a-b4e4-7dd5f2f4cafb,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-277c4cb8a-2b8d-413a-b4e4-7dd5f2f4cafb
+KUR1,2,2,[-5.02473567 -5.00700283],[4.96328583 4.97399357],8,300,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-2.a89a8481-ee22-4eb1-acaf-c669aac52b80,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-2a89a8481-ee22-4eb1-acaf-c669aac52b80
+KUR1,2,2,[-5.03820294 -5.03030819],[4.94801353 4.99951355],15,500,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-2.df6e3c5c-1499-418a-b371-9df14434d816,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-2df6e3c5c-1499-418a-b371-9df14434d816
+KUR1,2,2,[-5.03414359 -5.03733239],[4.98166045 4.98125149],12,600,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-2.033dd1c0-b6cf-4ce6-a17d-2c945737c24d,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-2033dd1c0-b6cf-4ce6-a17d-2c945737c24d
+KUR1,2,2,[-5.04022421 -5.02618329],[4.9974894  4.99145719],13,1000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-2.467e4064-b427-4fe7-8c4a-b9c28241780a,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-2467e4064-b427-4fe7-8c4a-b9c28241780a
+KUR1,2,2,[-5.0496432  -5.04743762],[4.99351943 4.9983641 ],21,3000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-2.10e04991-17b5-4808-93f2-d3028adc9a4b,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-210e04991-17b5-4808-93f2-d3028adc9a4b
+KUR1,2,2,[-5.04989461 -5.04292066],[4.99520915 4.99691734],37,6000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-2.e3a9d223-f124-4663-999e-7b17da1ac269,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-2e3a9d223-f124-4663-999e-7b17da1ac269
+KUR1,2,2,[-5.04959641 -5.04862539],[4.99976593 4.99987335],41,10000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-2.f00f9ec9-c5f1-4acf-960d-f030eaaab025,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-2f00f9ec9-c5f1-4acf-960d-f030eaaab025
+KUR1,2,2,[-5.04933879 -5.04874298],[4.99916587 4.99836636],62,15000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-2.61150ece-8bd3-4f32-bd8d-92680c884183,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-261150ece-8bd3-4f32-bd8d-92680c884183
+KUR1,2,2,[-5.04963053 -5.04974677],[4.99944681 4.99974784],72,20000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-2.1da06212-20db-4b2c-ab04-cfaf0f917999,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-21da06212-20db-4b2c-ab04-cfaf0f917999
+KUR1,2,2,[-5.04969922 -5.04994688],[4.99985565 4.99987641],109,50000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-2.40136e19-529c-4947-92f3-c6e4b2b2e0e3,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-240136e19-529c-4947-92f3-c6e4b2b2e0e3
+KUR1,2,2,[-5.04993326 -5.04983481],[4.99986301 4.99967715],169,100000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-2.ebf7701c-7ccd-4d02-823a-1a8b19984619,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-2ebf7701c-7ccd-4d02-823a-1a8b19984619
+KUR1,2,3,[-4.93660742 -4.96255308 -5.03712173],[4.98433709 4.98741564 4.69421224],3,100,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-3.08ca7ff3-6d8b-4696-acdc-cc957514a991,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-308ca7ff3-6d8b-4696-acdc-cc957514a991
+KUR1,2,3,[-4.96875327 -5.04713393 -5.02945209],[4.89937724 4.98435813 4.95170775],6,200,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-3.22e6c18e-f770-4a75-9129-0dfa556a4dfe,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-322e6c18e-f770-4a75-9129-0dfa556a4dfe
+KUR1,2,3,[-4.96271176 -4.91945133 -5.04753125],[4.99745399 4.97409093 4.99788397],4,300,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-3.3c0a08cb-2600-49a3-86b1-5b022ee62b58,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-33c0a08cb-2600-49a3-86b1-5b022ee62b58
+KUR1,2,3,[-5.03265561 -5.03096666 -5.02338246],[4.99396903 4.9246894  4.98432138],7,500,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-3.ac2f28bd-e1b0-4f1b-bcd5-a4af4ce5a95e,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-3ac2f28bd-e1b0-4f1b-bcd5-a4af4ce5a95e
+KUR1,2,3,[-4.97850647 -5.03852758 -5.02443545],[4.95680389 4.99782918 4.99807826],8,600,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-3.5f82d0e2-5557-4a22-a29a-296a4d05d257,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-35f82d0e2-5557-4a22-a29a-296a4d05d257
+KUR1,2,3,[-5.04383011 -5.03662594 -5.04908143],[4.99479583 4.98509794 4.9832974 ],8,1000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-3.41758470-ae3f-4fe0-8694-47ea128eda64,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-341758470-ae3f-4fe0-8694-47ea128eda64
+KUR1,2,3,[-5.04678307 -5.04960787 -5.0494383 ],[4.99796782 4.9998266  4.99354836],10,3000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-3.16f4fb2b-3d0a-4c5c-a8dd-1d9c0f9431b7,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-316f4fb2b-3d0a-4c5c-a8dd-1d9c0f9431b7
+KUR1,2,3,[-5.0458769  -5.0461702  -5.04957266],[4.99917335 4.99945062 4.99851998],9,6000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-3.8a7779a3-c399-46bf-932c-251cab105a90,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-38a7779a3-c399-46bf-932c-251cab105a90
+KUR1,2,3,[-5.04958194 -5.04795437 -5.04855897],[4.99965815 4.99956199 4.99774556],12,10000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-3.f764ddce-39c8-45af-9252-df79a114f220,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-3f764ddce-39c8-45af-9252-df79a114f220
+KUR1,2,3,[-5.04955556 -5.04872073 -5.04985404],[4.99961807 4.99940315 4.99995501],15,15000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-3.f6d98d01-91c1-4e17-8680-5465b8fe9c48,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-3f6d98d01-91c1-4e17-8680-5465b8fe9c48
+KUR1,2,3,[-5.04960191 -5.04899719 -5.04991994],[4.99846516 4.99929245 4.99979277],18,20000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-3.eee55c62-5275-4db7-8e13-908f5c9dfc05,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-3eee55c62-5275-4db7-8e13-908f5c9dfc05
+KUR1,2,3,[-5.04941614 -5.04985411 -5.0497875 ],[4.99997746 4.99834875 4.99977918],21,50000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-3.1ec2ff00-2530-40bc-8e30-854b70d39d9d,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-31ec2ff00-2530-40bc-8e30-854b70d39d9d
+KUR1,2,3,[-5.04996947 -5.04978239 -5.04997343],[4.99977842 4.9999985  4.99992577],27,100000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-3.e7dbf4c3-fe8c-4dbb-8019-1eac69766640,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-3e7dbf4c3-fe8c-4dbb-8019-1eac69766640
+KUR1,2,4,[-5.03345674 -5.04776627 -4.96786956 -4.99256033],[4.99407739 4.92481697 4.9631385  4.87396831],7,100,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-4.155d27bf-3876-451a-abdb-149a7e205e17,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-4155d27bf-3876-451a-abdb-149a7e205e17
+KUR1,2,4,[-4.95989779 -4.97628084 -5.02941253 -4.93962103],[4.85205075 4.96119414 4.95723149 4.9563806 ],8,200,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-4.9b986e9a-92ce-4361-8916-84838c10c5c5,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-49b986e9a-92ce-4361-8916-84838c10c5c5
+KUR1,2,4,[-5.03063367 -5.03131384 -5.04843123 -4.96599819],[4.99474326 4.97880791 4.98421593 4.96313411],3,300,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-4.07a2a66e-c7cc-4604-9d41-860841c615ca,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-407a2a66e-c7cc-4604-9d41-860841c615ca
+KUR1,2,4,[-5.04645366 -4.99171536 -5.01322843 -5.03208247],[4.99592384 4.98887084 4.97962216 4.95692613],7,500,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-4.2f3c6d11-e775-4011-8107-9ae6698ee413,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-42f3c6d11-e775-4011-8107-9ae6698ee413
+KUR1,2,4,[-5.02545678 -5.01624621 -5.04846095 -5.04845244],[4.99260405 4.99119335 4.98457656 4.99295984],8,600,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-4.f0e2676c-906a-4137-8903-fa87d8c99e35,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-4f0e2676c-906a-4137-8903-fa87d8c99e35
+KUR1,2,4,[-5.04953525 -5.04691481 -5.04707136 -5.04766848],[4.98885644 4.97978706 4.99386684 4.99784578],7,1000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-4.d9b37814-a7d0-41ae-8b53-c080027e4b60,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-4d9b37814-a7d0-41ae-8b53-c080027e4b60
+KUR1,2,4,[-5.04997042 -5.04786877 -5.0497823  -5.04600707],[4.99275454 4.99098664 4.98986478 4.99260577],10,3000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-4.fd8715cb-7e96-4863-be81-35428d93fdc6,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-4fd8715cb-7e96-4863-be81-35428d93fdc6
+KUR1,2,4,[-5.04912118 -5.04875991 -5.04869987 -5.04753387],[4.99948173 4.99859997 4.99663904 4.99947914],10,6000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-4.5a732b5b-3e9e-4ee1-8168-e66441ceaa35,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-45a732b5b-3e9e-4ee1-8168-e66441ceaa35
+KUR1,2,4,[-5.04956876 -5.04922051 -5.04941968 -5.0485086 ],[4.99810308 4.99743005 4.99763783 4.99848649],9,10000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-4.e0ecc60e-fd74-455c-8e81-5804bbbebe8c,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-4e0ecc60e-fd74-455c-8e81-5804bbbebe8c
+KUR1,2,4,[-5.049846   -5.04981923 -5.04934035 -5.04997325],[4.99995309 4.99994581 4.99877633 4.99867278],14,15000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-4.a83f6ddd-9035-44fe-adb9-d001657db70e,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-4a83f6ddd-9035-44fe-adb9-d001657db70e
+KUR1,2,4,[-5.04986585 -5.0477123  -5.04896632 -5.04999564],[4.9995306  4.99947321 4.99875466 4.99941448],15,20000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-4.611d00a2-00e3-4ad8-b054-9f072d32d617,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-4611d00a2-00e3-4ad8-b054-9f072d32d617
+KUR1,2,4,[-5.04984925 -5.04884433 -5.04979724 -5.04997177],[4.99996306 4.99994274 4.9991189  4.99997938],20,50000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-4.2e86a2d4-1a18-47d1-8153-fd38ea62cdaa,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-42e86a2d4-1a18-47d1-8153-fd38ea62cdaa
+KUR1,2,4,[-5.0499298  -5.04991451 -5.04994215 -5.04984337],[4.99997992 4.999987   4.99992157 4.99995645],23,100000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-4.e61ab97b-1498-4976-b54a-5e8e4e5adc0a,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-4e61ab97b-1498-4976-b54a-5e8e4e5adc0a
+KUR1,2,5,[-4.78949837 -5.03308818 -4.79088883 -4.99675207 -5.02755494],[4.93638504 4.93381331 4.96904954 4.51340536 4.97392776],6,100,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-5.989752f2-0c8a-4c25-b227-41a8a4442fe3,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-5989752f2-0c8a-4c25-b227-41a8a4442fe3
+KUR1,2,5,[-5.00454865 -5.03662807 -5.01774805 -4.94305471 -4.87154744],[4.91558109 4.99859639 4.90713423 4.99117581 4.95332835],6,200,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-5.e05733f7-f819-4bb3-8675-6592f5cc37b7,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-5e05733f7-f819-4bb3-8675-6592f5cc37b7
+KUR1,2,5,[-5.01504166 -5.04760767 -5.03447362 -4.9713045  -4.95470787],[4.95934603 4.97182934 4.97965927 4.98841551 4.99968428],1,300,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-5.9e6b55c7-f50e-48ab-8e03-2cddf2615908,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-59e6b55c7-f50e-48ab-8e03-2cddf2615908
+KUR1,2,5,[-5.04934916 -5.02887031 -5.02716842 -5.03342665 -5.04367717],[4.9680927  4.99463469 4.98275414 4.99628469 4.99984766],7,500,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-5.4daaaa10-289d-4366-94ae-97aec33d81ec,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-54daaaa10-289d-4366-94ae-97aec33d81ec
+KUR1,2,5,[-5.04580432 -5.04243614 -5.03899652 -5.04903387 -5.01873909],[4.988039   4.99801125 4.96541695 4.99706449 4.98913388],6,600,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-5.8446cb19-990c-40ab-b634-a123abeb3ca8,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-58446cb19-990c-40ab-b634-a123abeb3ca8
+KUR1,2,5,[-5.04851929 -5.04046181 -5.04719665 -5.03726344 -5.04384809],[4.98176488 4.98454185 4.99849949 4.97983382 4.99080807],5,1000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-5.ef678349-9d7d-4881-b8d5-5b989ea7f925,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-5ef678349-9d7d-4881-b8d5-5b989ea7f925
+KUR1,2,5,[-5.04932421 -5.04917795 -5.04653117 -5.03837309 -5.049184  ],[4.99966697 4.99829243 4.9988463  4.99860478 4.99712136],8,3000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-5.c6101e59-ba69-4882-8001-5885e9898de9,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-5c6101e59-ba69-4882-8001-5885e9898de9
+KUR1,2,5,[-5.04814144 -5.04950198 -5.04962832 -5.04897627 -5.04924699],[4.99983549 4.99789281 4.99924974 4.99664208 4.99710682],6,6000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-5.835f49b2-fce7-4b29-bf8a-77953243140f,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-5835f49b2-fce7-4b29-bf8a-77953243140f
+KUR1,2,5,[-5.04619023 -5.04974018 -5.04641046 -5.04909242 -5.04903948],[4.99840022 4.99947097 4.99802744 4.99946204 4.99855062],11,10000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-5.8f4b45ae-b801-4814-8a45-63eab10fb22a,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-58f4b45ae-b801-4814-8a45-63eab10fb22a
+KUR1,2,5,[-5.04922055 -5.0477316  -5.04910917 -5.04962711 -5.04926739],[4.9987129  4.99983236 4.99867734 4.99982969 4.99984414],6,15000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-5.c5cc6330-fbd8-493f-806a-5e8996115a81,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-5c5cc6330-fbd8-493f-806a-5e8996115a81
+KUR1,2,5,[-5.04993191 -5.04997177 -5.04999393 -5.04951132 -5.048011  ],[4.99996921 4.99983243 4.99977898 4.99921136 4.99998941],13,20000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-5.a805f1b6-3c63-48aa-a674-afde612f1402,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-5a805f1b6-3c63-48aa-a674-afde612f1402
+KUR1,2,5,[-5.04997259 -5.0499291  -5.04961738 -5.04980026 -5.04993372],[4.99967568 4.99999207 4.99970966 4.99976146 4.99973651],11,50000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-5.65b284cb-6bd8-44c5-8dc5-315996ade21f,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-565b284cb-6bd8-44c5-8dc5-315996ade21f
+KUR1,2,5,[-5.04987948 -5.049677   -5.04949387 -5.04986705 -5.04973809],[4.9997864  4.99994804 4.99995043 4.99996382 4.99999754],14,100000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/KUR1/KUR1_Obj-2_Var-5.3dceb32a-4947-4c25-adae-9ee84c63499f,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/KUR1/KUR1_Obj-2_Var-53dceb32a-4947-4c25-adae-9ee84c63499f
+ZDT1,2,10,"[4.14210449e-02 2.71092697e-03 8.22221977e-05 1.10271653e-02
+ 3.23471357e-02 1.59625608e-03 7.14299965e-05 1.05873274e-03
+ 1.59367526e-02 2.66129355e-02]","[0.9874377  0.9963569  0.99832563 0.9987438  0.99834589 0.98889212
+ 0.99700463 0.99343587 0.9712591  0.99998141]",14,100,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-10.e4866ece-e3e8-454b-a2b6-f03022582913,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-10e4866ece-e3e8-454b-a2b6-f03022582913
+ZDT1,2,10,"[3.69842008e-03 7.66230023e-03 5.05891429e-03 1.57496707e-02
+ 3.36879155e-03 2.29236561e-03 1.24040494e-03 3.93916660e-03
+ 2.88974043e-05 9.64729680e-05]","[0.99945499 0.99919892 0.98831911 0.99836562 0.99900841 0.99678858
+ 0.98371678 0.99618495 0.99852337 0.99948982]",10,200,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-10.3690a801-4e5d-4eb7-919e-8689d9a808aa,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-103690a801-4e5d-4eb7-919e-8689d9a808aa
+ZDT1,2,10,"[0.00226291 0.00027662 0.01595076 0.003416   0.00467147 0.00316401
+ 0.00186262 0.00016776 0.00540926 0.00176769]","[0.99807642 0.99812381 0.99748402 0.99621314 0.99776765 0.99181594
+ 0.9992962  0.99468651 0.99795073 0.99986746]",10,300,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-10.390fb792-8755-448f-b1f6-73da9fa929f3,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-10390fb792-8755-448f-b1f6-73da9fa929f3
+ZDT1,2,10,"[3.18342525e-03 4.16078085e-05 3.90837214e-03 2.42352871e-03
+ 1.50696649e-03 7.69766113e-04 2.12553052e-04 1.21332973e-03
+ 1.79465012e-03 4.87376207e-03]","[0.99904622 0.99747789 0.99939391 0.99904334 0.99960752 0.9977477
+ 0.99974261 0.99912171 0.9958949  0.99999976]",14,500,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-10.e58e212e-c001-4e7e-a755-3c3c9ff69aff,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-10e58e212e-c001-4e7e-a755-3c3c9ff69aff
+ZDT1,2,10,"[1.95779198e-03 1.61599512e-03 3.14157644e-03 5.31499878e-03
+ 5.70607565e-04 2.57829499e-04 5.37966481e-05 5.60436920e-03
+ 1.26235282e-03 4.79402779e-04]","[0.99997335 0.99802298 0.99830342 0.99956166 0.99913729 0.99980929
+ 0.99909874 0.99710665 0.99830852 0.99606734]",12,600,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-10.7c507158-cc64-472d-8fa9-43713a080141,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-107c507158-cc64-472d-8fa9-43713a080141
+ZDT1,2,10,"[0.00102846 0.00238782 0.00069311 0.00161806 0.00014771 0.00036097
+ 0.00034273 0.00039284 0.00050807 0.00116561]","[0.99752457 0.99836316 0.99953694 0.99888487 0.99896575 0.99869
+ 0.99930742 0.9982592  0.99816461 0.99912821]",14,1000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-10.80764380-c0de-442f-bb9a-36ad55becc17,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-1080764380-c0de-442f-bb9a-36ad55becc17
+ZDT1,2,10,"[1.53955807e-05 8.35784262e-05 5.53532811e-04 3.18259412e-04
+ 5.40176880e-04 3.71875094e-05 3.68759732e-04 9.54522883e-05
+ 1.05708357e-04 1.22368574e-04]","[0.99998847 0.99998542 0.99984487 0.99971329 0.9997865  0.9995245
+ 0.99999408 0.99996515 0.9993176  0.99952104]",10,3000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-10.3d90ed71-8b90-41a3-83e4-90c51d3c426e,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-103d90ed71-8b90-41a3-83e4-90c51d3c426e
+ZDT1,2,10,"[1.08181132e-04 1.74059142e-04 1.98825117e-04 9.69505463e-06
+ 4.38063097e-05 1.90352974e-04 1.37032140e-04 3.17112169e-04
+ 2.07161121e-04 3.91450684e-05]","[0.99964246 0.99997213 0.99979806 0.99986242 0.99957913 0.99982199
+ 0.99989076 0.99992065 0.99975128 0.99992882]",24,6000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-10.c5438704-3fa1-409e-b399-6c84a18d3b60,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-10c5438704-3fa1-409e-b399-6c84a18d3b60
+ZDT1,2,10,"[4.78875409e-06 3.46735271e-04 4.50695197e-05 1.61904855e-04
+ 3.07918661e-05 2.50505544e-05 2.75174108e-05 1.06564098e-04
+ 6.17185308e-05 1.52734574e-04]","[0.99984775 0.99977151 0.99991387 0.9999824  0.99997423 0.99983333
+ 0.99986475 0.99995321 0.99995689 0.99986995]",18,10000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-10.20a217a7-10f1-41c3-9b3d-d9b897ccd24c,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-1020a217a7-10f1-41c3-9b3d-d9b897ccd24c
+ZDT1,2,10,"[5.32491887e-05 5.82202133e-05 5.91180639e-05 7.27481459e-05
+ 4.43999501e-05 1.02510884e-05 1.38532255e-04 1.18086719e-04
+ 2.85677548e-04 6.63102665e-06]","[0.99998394 0.99996422 0.9999385  0.99985338 0.99997209 0.99991645
+ 0.99991865 0.99998191 0.99999855 0.99997468]",26,15000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-10.d60555c8-976c-4c12-a744-fabfee77088e,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-10d60555c8-976c-4c12-a744-fabfee77088e
+ZDT1,2,10,"[1.42053366e-05 3.32002414e-05 2.94114987e-05 4.02179389e-05
+ 3.68717448e-05 4.41322505e-05 6.33949093e-06 4.71830460e-06
+ 1.20226126e-06 6.55959319e-05]","[0.99999269 0.99997106 0.99994067 0.99993236 0.99999151 0.99996614
+ 0.99999702 0.99997763 0.99998657 0.99985479]",20,20000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-10.3cf50219-01bd-41c0-ad22-a7b50e6d6261,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-103cf50219-01bd-41c0-ad22-a7b50e6d6261
+ZDT1,2,10,"[1.57523836e-05 6.40413173e-06 1.69618218e-05 2.59246724e-05
+ 3.78260524e-05 1.36409839e-05 1.82496965e-05 4.02049973e-06
+ 4.04904988e-05 8.93881029e-05]","[0.99996073 0.99999617 0.99998776 0.99999073 0.99994947 0.99999872
+ 0.9999881  0.99998035 0.99995355 0.99994636]",23,50000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-10.0b3b18f9-5a9f-47d8-ae7b-cda5cadf0b2a,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-100b3b18f9-5a9f-47d8-ae7b-cda5cadf0b2a
+ZDT1,2,10,"[4.47990589e-07 4.31573120e-05 1.53309633e-05 1.01809737e-05
+ 4.61858460e-07 1.95197877e-06 2.41985212e-05 1.58637477e-05
+ 4.46003536e-05 1.79005838e-05]","[0.99998841 0.99999291 0.9999944  0.99999814 0.99999696 0.99999743
+ 0.99999531 0.99998676 0.99998989 0.99999993]",25,100000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-10.f2939404-d109-4198-ab2c-688e57183247,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-10f2939404-d109-4198-ab2c-688e57183247
+ZDT1,2,20,"[0.0103831  0.00305509 0.00308035 0.01708664 0.00311396 0.00113442
+ 0.02495516 0.03391876 0.0121486  0.00544685 0.00461372 0.02559849
+ 0.00243539 0.0143043  0.00037699 0.00068299 0.00191354 0.01316961
+ 0.03014054 0.00495335]","[0.98906322 0.9918203  0.99548206 0.99206234 0.99211089 0.98611626
+ 0.99284913 0.9996531  0.99761086 0.99588841 0.9810739  0.99872846
+ 0.98562487 0.995954   0.97956555 0.99861494 0.98382264 0.98643877
+ 0.99426045 0.99743082]",12,100,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-20.616ac202-3cba-480a-9567-16625bd7c2a7,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-20616ac202-3cba-480a-9567-16625bd7c2a7
+ZDT1,2,20,"[0.00861882 0.00095739 0.01304711 0.0057302  0.00946723 0.00629015
+ 0.00443306 0.00758568 0.00585752 0.00574417 0.00024907 0.00083969
+ 0.00372233 0.01119622 0.00269838 0.00043115 0.00155471 0.00121059
+ 0.00121856 0.00683436]","[0.99490785 0.99223441 0.99663768 0.99870714 0.99953366 0.98876106
+ 0.99762817 0.99746684 0.99830522 0.99924371 0.99338745 0.99761744
+ 0.98707912 0.99710104 0.99777741 0.99644847 0.99784495 0.99985241
+ 0.99230604 0.9979424 ]",10,200,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-20.173f1b02-6cd1-4f21-b9dc-f2ac90b46018,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-20173f1b02-6cd1-4f21-b9dc-f2ac90b46018
+ZDT1,2,20,"[9.56117928e-03 3.87409591e-03 1.01299398e-02 6.44195333e-03
+ 3.68668860e-03 8.65618742e-03 1.28434891e-03 7.15900720e-04
+ 3.10329935e-03 8.07877551e-03 1.79994775e-03 2.17848181e-03
+ 4.59015028e-03 2.04560345e-03 6.06070172e-03 2.66033301e-04
+ 4.52526953e-05 1.32286998e-03 3.93639119e-03 9.74293273e-04]","[0.99390991 0.99279775 0.99880698 0.98972335 0.99954263 0.99754913
+ 0.99932375 0.99929599 0.99736281 0.99241794 0.9965948  0.99886054
+ 0.99689787 0.9995792  0.99920912 0.99328773 0.99904196 0.9976501
+ 0.99968538 0.99027941]",16,300,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-20.252f5c0e-f0cc-469e-a9b4-ca08fec9d526,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-20252f5c0e-f0cc-469e-a9b4-ca08fec9d526
+ZDT1,2,20,"[3.89878367e-03 3.32571326e-03 8.71691895e-05 4.14304233e-04
+ 1.65177234e-03 1.63039868e-03 2.57391586e-03 2.02358538e-03
+ 9.31152451e-04 2.18187408e-04 5.14533949e-03 2.19258180e-03
+ 2.54185233e-03 2.99734057e-03 6.40363386e-04 1.51518464e-03
+ 2.13712470e-03 1.36545095e-04 4.44431244e-03 3.53134760e-03]","[0.99588062 0.99838764 0.99373989 0.99890859 0.99625804 0.99999322
+ 0.99918285 0.99944201 0.99917568 0.99888257 0.99414285 0.99257449
+ 0.99988426 0.99682266 0.99566026 0.99998716 0.9977202  0.9997277
+ 0.99826363 0.99478399]",11,500,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-20.181bb840-2513-48a8-929f-61f3455f0cb4,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-20181bb840-2513-48a8-929f-61f3455f0cb4
+ZDT1,2,20,"[3.15318369e-03 2.04629793e-03 3.54088245e-03 1.74281590e-03
+ 1.11203166e-03 5.13401230e-05 1.31687037e-03 5.05640008e-05
+ 1.92017817e-03 2.91277387e-04 8.01596035e-04 5.71295847e-05
+ 3.84027870e-03 1.76742855e-04 1.29939205e-04 1.33741379e-03
+ 2.13146635e-04 1.06354532e-03 7.58892438e-03 4.77533292e-03]","[0.99856067 0.99828569 0.99993216 0.99772181 0.99146125 0.99961086
+ 0.99735767 0.99923169 0.9922247  0.99854646 0.99944202 0.9994413
+ 0.99900851 0.99998415 0.99763749 0.99565598 0.99961993 0.9998894
+ 0.99868078 0.99853548]",14,600,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-20.6e9b185e-cfcf-4bba-8820-d74b30aae25a,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-206e9b185e-cfcf-4bba-8820-d74b30aae25a
+ZDT1,2,20,"[6.22562762e-04 1.23449465e-04 1.09053519e-03 2.93158759e-05
+ 8.71714178e-04 2.67762935e-03 9.69031345e-04 2.96122357e-03
+ 1.39752087e-03 1.39705160e-04 3.25409419e-03 6.09143543e-04
+ 4.11170997e-04 1.64534651e-04 5.12339616e-04 2.89557637e-04
+ 2.96138739e-04 1.95369799e-03 1.19043035e-03 5.71186356e-04]","[0.99797624 0.99621773 0.99935737 0.99987798 0.99852017 0.99899732
+ 0.99903074 0.9992364  0.99887054 0.99976594 0.99986017 0.99648966
+ 0.99943476 0.99998475 0.99920674 0.99957133 0.99645591 0.99758973
+ 0.99860628 0.99892631]",14,1000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-20.0ad2398c-85f0-4b54-b290-1b62f0213669,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-200ad2398c-85f0-4b54-b290-1b62f0213669
+ZDT1,2,20,"[4.61924101e-04 7.48302918e-05 1.29402011e-04 1.13842671e-03
+ 4.19381483e-04 1.77586857e-04 3.60536464e-04 7.01421119e-05
+ 2.26863019e-04 6.26565543e-04 1.69621685e-04 3.30155892e-04
+ 5.05608363e-04 1.41850900e-04 5.26556795e-04 4.89126912e-04
+ 2.14655830e-04 1.27791295e-03 5.29318128e-05 1.57365290e-05]","[0.99982384 0.99986735 0.9999915  0.99976624 0.99981808 0.99993115
+ 0.99997822 0.99977239 0.99963759 0.99991111 0.99981493 0.9999755
+ 0.9996496  0.99997512 0.99985757 0.99995868 0.99909363 0.99990618
+ 0.99981248 0.99994091]",16,3000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-20.55e5fa06-da3f-426f-a2dd-0045be47f7c5,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-2055e5fa06-da3f-426f-a2dd-0045be47f7c5
+ZDT1,2,20,"[9.57663672e-05 4.23211993e-05 5.83511953e-04 2.38715959e-04
+ 1.53917682e-04 2.10377755e-04 2.22084408e-04 3.91754870e-04
+ 9.72795586e-05 5.34162565e-04 1.97978038e-04 1.50863189e-04
+ 7.32525758e-04 2.23162911e-04 9.49685559e-05 8.30367074e-05
+ 3.08442576e-04 1.38443500e-04 2.22536748e-05 6.25093420e-05]","[0.99986408 0.99978446 0.99995619 0.99982387 0.99977277 0.99967451
+ 0.99997983 0.99982942 0.99952345 0.99996444 0.99987946 0.99962839
+ 0.99963274 0.99985728 0.99981799 0.99994409 0.99999131 0.99996486
+ 0.9992792  0.99982906]",21,6000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-20.3f9a83ad-9939-4195-85d8-0c6f385f10aa,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-203f9a83ad-9939-4195-85d8-0c6f385f10aa
+ZDT1,2,20,"[4.94947449e-05 2.81177583e-04 3.24142543e-05 8.15962153e-05
+ 5.93612527e-05 3.15092736e-04 9.42802271e-05 1.37031606e-04
+ 1.78446648e-05 6.96797857e-05 1.55993625e-04 9.04346023e-05
+ 9.86982830e-08 2.45180092e-05 4.70694213e-04 5.80531939e-05
+ 9.50628830e-06 1.01803401e-04 1.05584902e-05 7.93231529e-05]","[0.9998662  0.99996977 0.99992723 0.99975182 0.9997121  0.99998502
+ 0.99993728 0.99993256 0.99999831 0.99999081 0.99992308 0.99997783
+ 0.99995973 0.99999693 0.99983761 0.99994969 0.99999485 0.99993353
+ 0.99994385 0.99992576]",29,10000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-20.0335f803-d209-4f81-9c1b-896e12983f2d,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-200335f803-d209-4f81-9c1b-896e12983f2d
+ZDT1,2,20,"[1.17925987e-04 1.33078808e-04 2.64051692e-05 1.11810129e-04
+ 1.20499272e-05 5.60038110e-05 1.18436341e-04 1.60478593e-04
+ 1.65894775e-04 7.17466014e-05 8.05674216e-05 5.82507833e-06
+ 2.27769046e-04 1.04235995e-04 2.95945065e-05 1.29610646e-05
+ 5.13867355e-05 6.11496985e-05 1.04246994e-04 6.28199790e-06]","[0.99996966 0.99989308 0.99996568 0.99996389 0.99994757 0.99983191
+ 0.99996823 0.99996132 0.99998534 0.99978787 0.99995191 0.99994301
+ 0.99999272 0.99973228 0.99999668 0.99997083 0.99990336 0.99997712
+ 0.99999119 0.99983605]",22,15000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-20.f7353020-4a76-47b7-8a60-11c0d3ab9af9,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-20f7353020-4a76-47b7-8a60-11c0d3ab9af9
+ZDT1,2,20,"[6.90086245e-05 7.38379125e-05 5.75829354e-05 1.34122279e-05
+ 3.15194511e-06 6.62482752e-05 2.08818500e-05 1.92899389e-05
+ 1.81784339e-05 1.57230692e-06 8.99629824e-06 7.16937339e-05
+ 3.74829971e-05 9.67731525e-06 1.45768944e-05 2.82061682e-05
+ 7.54135132e-06 2.08798871e-05 1.90247411e-05 6.85271685e-05]","[0.99994377 0.99989581 0.99999982 0.99998673 0.99995086 0.99992477
+ 0.9999543  0.99991706 0.99993209 0.99998625 0.99997416 0.99999608
+ 0.99996029 0.99995989 0.999961   0.99990572 0.99997103 0.99995785
+ 0.99993058 0.99989049]",24,20000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-20.d98632f3-1150-49ae-9ad8-e08bc818f9ec,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-20d98632f3-1150-49ae-9ad8-e08bc818f9ec
+ZDT1,2,20,"[4.33038830e-05 4.53000089e-05 1.02466380e-04 1.16301389e-05
+ 5.92930573e-06 6.06151916e-07 9.54868738e-06 5.18207662e-05
+ 5.22312878e-06 1.04300601e-06 2.40927938e-05 7.23977300e-06
+ 1.50451911e-05 3.69283868e-06 7.96569861e-06 4.32447881e-05
+ 3.02918449e-05 7.43888198e-05 1.60708411e-06 7.96721330e-05]","[0.99999402 0.9999958  0.99998112 0.99999147 0.99998671 0.99999721
+ 0.99999426 0.99999741 0.9999845  0.99999014 0.99999474 0.99999597
+ 0.99999966 0.99997908 0.99994253 0.99998513 0.9999877  0.99996916
+ 0.99998211 0.9999839 ]",29,50000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-20.f322e421-e778-4159-b848-d63dbb53deb7,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-20f322e421-e778-4159-b848-d63dbb53deb7
+ZDT1,2,20,"[1.09673563e-05 1.64467164e-06 5.87395021e-06 8.48875788e-06
+ 3.80310417e-06 3.43923902e-06 1.43854942e-06 1.45832647e-06
+ 5.60533859e-06 1.11612742e-05 8.86507984e-06 4.40027319e-06
+ 3.09030534e-05 1.01322201e-05 2.04386276e-05 1.08279983e-05
+ 2.95391714e-05 2.27867709e-06 1.34196243e-05 4.99705473e-06]","[0.99999783 0.99999089 0.99999469 0.99999551 0.99999665 0.99998556
+ 0.99998769 0.99999272 0.99999948 0.99998649 0.99999761 0.99999596
+ 0.9999975  0.99995613 0.99997396 0.99999988 0.99997978 0.9999909
+ 0.9999832  0.99998524]",19,100000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT1/ZDT1_Obj-2_Var-20.8b2dc119-fa97-4d42-9044-50fafcdc224d,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT1/ZDT1_Obj-2_Var-208b2dc119-fa97-4d42-9044-50fafcdc224d
+ZDT2,2,10,"[0.00010406 0.00542013 0.00410283 0.00350313 0.01586575 0.00144135
+ 0.01609161 0.00113805 0.00109563 0.02603599]","[0.99820999 0.99507535 0.99624399 0.98495123 0.99885276 0.98211342
+ 0.9981056  0.98983463 0.96897097 0.9995797 ]",6,100,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-10.bb1d09bf-0d61-435f-8e48-437c389fafd7,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-10bb1d09bf-0d61-435f-8e48-437c389fafd7
+ZDT2,2,10,"[0.00082687 0.01117128 0.00151987 0.00096728 0.00507878 0.00906406
+ 0.00118044 0.00053823 0.01554351 0.01933246]","[0.99842951 0.99975263 0.99807273 0.99714412 0.99639757 0.99423454
+ 0.9967453  0.99844937 0.99941459 0.99623598]",7,200,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-10.ac6e9e48-f252-41e2-ade5-6fcf951f5bb2,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-10ac6e9e48-f252-41e2-ade5-6fcf951f5bb2
+ZDT2,2,10,"[0.00162066 0.00452581 0.00188086 0.00323572 0.00181276 0.00309002
+ 0.00216875 0.00038213 0.00083018 0.00545468]","[0.98895861 0.99887824 0.99489134 0.99973652 0.99948478 0.99846297
+ 0.99690854 0.99690319 0.99248181 0.99254737]",5,300,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-10.09a49d7f-d5cc-44df-878a-aaaaa91160f8,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-1009a49d7f-d5cc-44df-878a-aaaaa91160f8
+ZDT2,2,10,"[0.00226369 0.00082741 0.00063587 0.00533149 0.00105368 0.00232495
+ 0.00972478 0.00145655 0.00323244 0.00122265]","[0.99534933 0.99939963 0.99697245 0.99838426 0.99875643 0.99069698
+ 0.99665713 0.99376339 0.9992405  0.99672061]",10,500,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-10.cb7c2c17-8a4a-4088-9709-097172efc378,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-10cb7c2c17-8a4a-4088-9709-097172efc378
+ZDT2,2,10,"[2.02199083e-03 3.52617040e-03 1.74380477e-05 4.61928135e-04
+ 1.43531897e-04 4.96225287e-03 1.72400735e-03 2.78694790e-03
+ 5.79663258e-04 2.42028807e-03]","[0.99652214 0.99972625 0.99794148 0.99968094 0.99777258 0.99715174
+ 0.99839068 0.99600066 0.99343502 0.9998161 ]",5,600,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-10.4e4064a3-3500-4480-bd02-afdc46809472,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-104e4064a3-3500-4480-bd02-afdc46809472
+ZDT2,2,10,"[0.00037758 0.00021479 0.00032649 0.0002226  0.00165834 0.00187393
+ 0.00049436 0.00450706 0.00016787 0.00048726]","[0.99697173 0.99896344 0.99848924 0.99986068 0.99829204 0.99898646
+ 0.99870425 0.99982548 0.99924151 0.99958921]",10,1000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-10.a788e13e-5b0f-46a7-a6aa-34345fa99391,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-10a788e13e-5b0f-46a7-a6aa-34345fa99391
+ZDT2,2,10,"[2.49052172e-05 4.45163207e-08 7.89000731e-04 2.34844789e-04
+ 1.11909865e-03 2.64132068e-05 5.92194953e-05 7.41817756e-05
+ 8.22718264e-04 1.15096041e-04]","[0.99993781 0.99990789 0.99957599 0.99978994 0.99989643 0.99991136
+ 0.99998153 0.99985878 0.99993634 0.99970658]",5,3000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-10.b7b75ccd-7e04-4fd4-a941-cb4a4d4b6a19,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-10b7b75ccd-7e04-4fd4-a941-cb4a4d4b6a19
+ZDT2,2,10,"[1.70264839e-04 3.13902855e-05 2.30758243e-04 1.16336815e-04
+ 2.40545889e-05 4.17791640e-05 2.44861572e-05 2.45492890e-04
+ 5.34144877e-05 2.71684673e-05]","[0.99999963 0.99998405 0.99990404 0.99993846 0.99979079 0.99999605
+ 0.999987   0.99982804 0.99980056 0.99993462]",8,6000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-10.289df1c5-678e-41a3-be4c-caa96d18fecf,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-10289df1c5-678e-41a3-be4c-caa96d18fecf
+ZDT2,2,10,"[3.60664443e-05 2.45764121e-05 4.03708992e-05 4.30535028e-05
+ 3.96407566e-05 2.45962338e-05 8.13511229e-05 2.23065169e-05
+ 2.91107692e-05 3.59774885e-05]","[0.99997549 0.99980006 0.99989337 0.99990339 0.99995088 0.99981404
+ 0.99990558 0.99999712 0.9999968  0.99995152]",11,10000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-10.2e43ed41-607b-47d0-8df1-b8c026d77202,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-102e43ed41-607b-47d0-8df1-b8c026d77202
+ZDT2,2,10,"[2.82910682e-04 1.09832631e-04 1.66889548e-05 1.21066281e-04
+ 1.60649611e-05 7.60263788e-07 4.47054191e-06 3.31436709e-05
+ 1.95548124e-04 5.95039945e-05]","[0.99998272 0.99999427 0.99995957 0.99990917 0.99986844 0.99995899
+ 0.99992763 0.99967452 0.99998676 0.99996918]",8,15000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-10.db2a61da-d971-4c6a-b39c-8ecf80f62532,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-10db2a61da-d971-4c6a-b39c-8ecf80f62532
+ZDT2,2,10,"[2.26985534e-06 1.04099524e-04 1.36272990e-05 5.27126639e-05
+ 1.35610679e-05 8.83011549e-05 1.54713344e-04 9.75050175e-05
+ 1.45593833e-05 4.50990527e-05]","[0.99995791 0.99997861 0.99998372 0.99992204 0.99995678 0.99998713
+ 0.99996013 0.99998786 0.99983805 0.99995164]",9,20000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-10.9deffeff-382b-4c8b-8f1e-3990cd576d68,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-109deffeff-382b-4c8b-8f1e-3990cd576d68
+ZDT2,2,10,"[5.17574729e-05 3.77065914e-05 3.32905425e-05 4.39859749e-06
+ 5.63148691e-05 2.43342380e-05 2.78094273e-05 4.53113197e-05
+ 1.63717958e-05 1.49336261e-05]","[0.99996665 0.9999422  0.99999994 0.99998678 0.99999921 0.99998695
+ 0.99999504 0.99989302 0.99999202 0.9999858 ]",10,50000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-10.704e11b3-17f6-4b2b-a1a0-ed55437a50ad,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-10704e11b3-17f6-4b2b-a1a0-ed55437a50ad
+ZDT2,2,10,"[2.70611724e-05 3.63261929e-05 1.75646516e-06 3.35935018e-06
+ 8.40162787e-06 3.98255284e-06 4.30391667e-06 2.75381877e-05
+ 2.26467744e-05 5.58964116e-06]","[0.99997724 0.99998669 0.99999268 0.9999975  0.9999926  0.99999289
+ 0.99999991 0.99999335 0.99998173 0.99998177]",11,100000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-10.af619366-4f9f-4b9d-8736-c4c0092233cf,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-10af619366-4f9f-4b9d-8736-c4c0092233cf
+ZDT2,2,20,"[0.00496776 0.0037563  0.01271626 0.00889207 0.01556919 0.00865099
+ 0.01024567 0.00346567 0.00307251 0.0097506  0.00437636 0.01091785
+ 0.03199448 0.01199349 0.0041252  0.00261325 0.01355579 0.00030622
+ 0.00100943 0.00701505]","[0.99294182 0.97973378 0.98564823 0.97325455 0.99689708 0.99812105
+ 0.99224863 0.99839266 0.99089804 0.99246711 0.99871978 0.99545286
+ 0.99388646 0.97596122 0.99900855 0.99997379 0.99833502 0.99835018
+ 0.99858814 0.9836861 ]",6,100,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-20.88f696d3-cffb-41a7-83c2-4e3860af2727,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-2088f696d3-cffb-41a7-83c2-4e3860af2727
+ZDT2,2,20,"[0.00148226 0.0009175  0.00252783 0.00258877 0.00143459 0.00252281
+ 0.0104202  0.00825829 0.00272578 0.00024084 0.00748561 0.00162595
+ 0.00291695 0.00206245 0.00527229 0.0042241  0.00942364 0.00631306
+ 0.00108566 0.00096275]","[0.99509352 0.98331902 0.99708673 0.99811362 0.97482123 0.99895161
+ 0.97975658 0.99868049 0.9992683  0.99980114 0.9947874  0.98863401
+ 0.99534803 0.99835937 0.99597005 0.99039921 0.98619517 0.99905852
+ 0.99362032 0.99087039]",5,200,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-20.78119ec1-2e3c-4547-b6ea-5e0fbcc08fc2,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-2078119ec1-2e3c-4547-b6ea-5e0fbcc08fc2
+ZDT2,2,20,"[0.00010647 0.0010703  0.00238046 0.00058833 0.00129906 0.00080855
+ 0.00552922 0.00027142 0.0034416  0.00572364 0.0012837  0.00132916
+ 0.00298638 0.00567855 0.00222013 0.00453774 0.00520698 0.00018169
+ 0.00120552 0.00282403]","[0.991055   0.99616836 0.98849832 0.9949331  0.9987798  0.99895026
+ 0.99823053 0.99084183 0.99758189 0.99688316 0.99889412 0.99913211
+ 0.99564375 0.99652937 0.99660682 0.99651077 0.99455989 0.9995283
+ 0.99769519 0.99817453]",8,300,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-20.7f558750-2675-4994-a58c-b37bb608c08e,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-207f558750-2675-4994-a58c-b37bb608c08e
+ZDT2,2,20,"[9.31045714e-05 3.01890334e-03 5.02206286e-03 1.45416687e-03
+ 2.28868541e-03 2.84960535e-03 6.81093441e-03 2.73228619e-03
+ 8.64139618e-05 3.16178059e-03 3.06430194e-04 1.90052761e-03
+ 7.39481932e-04 1.27570302e-03 2.85114114e-03 6.06904481e-03
+ 1.17337966e-03 3.34060331e-03 1.09633857e-04 3.05113038e-03]","[0.99945557 0.99362432 0.99994988 0.99808812 0.99363628 0.99764387
+ 0.99509122 0.99903293 0.99412975 0.99993173 0.99945067 0.98963162
+ 0.99941164 0.99694378 0.99630896 0.99772094 0.99884721 0.99872203
+ 0.99837    0.99998294]",9,500,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-20.e29ac475-1f7e-4c79-a88c-ef51694c6248,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-20e29ac475-1f7e-4c79-a88c-ef51694c6248
+ZDT2,2,20,"[0.00332343 0.00052118 0.00251529 0.00102746 0.00446409 0.00023198
+ 0.00222626 0.00049116 0.00524796 0.00080014 0.00972569 0.00030744
+ 0.00121776 0.00311414 0.00168815 0.00184161 0.00661989 0.00033508
+ 0.00284481 0.00026778]","[0.99997358 0.99879353 0.99854998 0.99954615 0.99968371 0.99826874
+ 0.99977886 0.99978334 0.99730913 0.99962404 0.99999731 0.99942261
+ 0.9993488  0.9995014  0.99996833 0.99645616 0.99973161 0.99961427
+ 0.99778315 0.99752511]",10,600,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-20.8df0002d-c209-4ac3-9294-311d84665691,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-208df0002d-c209-4ac3-9294-311d84665691
+ZDT2,2,20,"[4.56119248e-04 1.91807055e-03 9.82672438e-05 6.20608630e-04
+ 1.26405824e-04 1.49925131e-04 5.90337506e-04 2.11367513e-03
+ 2.03697707e-03 2.32904526e-04 3.91515750e-04 4.12828721e-03
+ 2.42107549e-03 4.47591013e-04 1.43368301e-03 5.63459512e-04
+ 7.38520435e-04 2.17541977e-04 2.02672735e-03 6.84471744e-05]","[0.99945831 0.99890794 0.99924849 0.99951981 0.99949072 0.99719328
+ 0.99871957 0.9983677  0.99994084 0.99925679 0.99824448 0.99914325
+ 0.99860704 0.99948763 0.9999684  0.99984049 0.99891746 0.99944006
+ 0.99898811 0.99976111]",8,1000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-20.5e92bef0-8cb5-4fb7-b72a-f3bd56ca92b1,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-205e92bef0-8cb5-4fb7-b72a-f3bd56ca92b1
+ZDT2,2,20,"[2.61834390e-04 2.09562377e-04 1.14609777e-03 1.31833971e-06
+ 2.36314846e-06 2.24631523e-04 5.03230181e-04 9.22644366e-04
+ 3.60581753e-05 6.99616520e-04 2.70542638e-05 6.36557873e-04
+ 1.85662877e-05 2.09867633e-05 5.49803881e-04 1.69629635e-04
+ 1.70107950e-04 1.15090464e-03 8.82166185e-05 1.83284310e-04]","[0.99977172 0.99998888 0.99993563 0.99930576 0.99876916 0.99914062
+ 0.9997481  0.99990616 0.99948731 0.99988667 0.99934846 0.99959991
+ 0.99966483 0.99996089 0.999355   0.99977291 0.99995052 0.99991542
+ 0.99966778 0.99921545]",9,3000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-20.dd4060e0-f023-439f-8573-f78d2dd093e7,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-20dd4060e0-f023-439f-8573-f78d2dd093e7
+ZDT2,2,20,"[1.21756857e-05 2.87777462e-04 4.54863888e-04 3.37010311e-04
+ 2.59157982e-05 1.99611991e-04 2.43515311e-04 1.79411842e-04
+ 2.30677461e-04 1.51015952e-04 5.40496393e-05 9.50615638e-05
+ 4.08506130e-05 1.97048438e-04 2.96801203e-04 1.61640327e-04
+ 1.03842105e-04 2.03555095e-04 3.92629556e-05 1.73365719e-04]","[0.99977729 0.99956814 0.9996346  0.9998961  0.99999899 0.99967751
+ 0.99985578 0.9998808  0.9994733  0.99995546 0.99989742 0.99998631
+ 0.99970894 0.99995173 0.99990788 0.99969578 0.99996354 0.99992548
+ 0.9999918  0.99987033]",12,6000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-20.82f87b67-9911-4144-af91-51d9d680831b,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-2082f87b67-9911-4144-af91-51d9d680831b
+ZDT2,2,20,"[1.69736982e-05 2.57570844e-05 2.47222293e-04 1.00245081e-04
+ 2.01956257e-04 1.51825751e-04 6.24340871e-05 6.88709964e-05
+ 1.41959280e-05 6.11992126e-05 3.77737454e-05 1.71804183e-04
+ 1.95551874e-05 1.52656905e-05 8.37609459e-05 5.84795928e-05
+ 4.48300142e-05 5.08012863e-05 1.53513471e-04 1.98621068e-04]","[0.99996046 0.99990215 0.99995915 0.99996603 0.99998587 0.99985948
+ 0.99998826 0.99994716 0.99992487 0.99997172 0.99992518 0.99994497
+ 0.99981843 0.999849   0.99988857 0.99996102 0.99991179 0.99985278
+ 0.99997699 0.99996098]",13,10000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-20.643dfb79-4a47-4d7f-a0f6-60d9ab6f724a,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-20643dfb79-4a47-4d7f-a0f6-60d9ab6f724a
+ZDT2,2,20,"[2.78694956e-05 3.00873379e-06 5.77610811e-06 5.54505145e-05
+ 8.96046773e-06 1.72192248e-05 1.87751798e-05 1.18694401e-05
+ 1.54220540e-04 1.24215770e-06 1.33353928e-05 1.22478457e-04
+ 6.44287701e-05 1.71678670e-05 1.13392878e-04 1.71742959e-05
+ 3.69935762e-05 5.06049059e-05 1.89013458e-04 6.34202923e-05]","[0.99983015 0.99999003 0.99987715 0.99998445 0.99976204 0.99990377
+ 0.99986617 0.99993097 0.9999954  0.99995459 0.999879   0.99997278
+ 0.99992856 0.99990576 0.99990546 0.99995925 0.99998783 0.99995388
+ 0.99997752 0.99990356]",17,15000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-20.a1ec6c45-6529-4a6d-bfeb-10b7dd2dbcc6,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-20a1ec6c45-6529-4a6d-bfeb-10b7dd2dbcc6
+ZDT2,2,20,"[1.87592902e-04 1.21319331e-04 4.52356161e-06 2.99784428e-05
+ 5.73176698e-05 1.45195952e-04 2.00580936e-06 2.38541558e-04
+ 1.61448067e-05 7.82588050e-05 1.61445353e-06 3.04002398e-05
+ 1.22502110e-05 1.31276366e-07 4.27286912e-05 9.36132981e-05
+ 1.00473780e-04 1.10236792e-04 9.51214976e-05 5.88005427e-05]","[0.99995268 0.99971067 0.99984786 0.99989006 0.99990464 0.99991299
+ 0.99994693 0.99985507 0.99999738 0.99992299 0.99997534 0.99997859
+ 0.99999527 0.99994241 0.99999608 0.99984229 0.99988762 0.99995397
+ 0.9997224  0.99999977]",9,20000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-20.7d8813f5-3897-4422-8633-ad5efb3940be,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-207d8813f5-3897-4422-8633-ad5efb3940be
+ZDT2,2,20,"[1.36678785e-05 5.99112174e-06 2.24009178e-06 5.43495346e-05
+ 5.65692288e-05 2.63334677e-06 5.15663563e-08 7.65092046e-06
+ 3.61951150e-05 4.21030123e-05 3.92607465e-05 8.24943466e-06
+ 1.68197637e-05 4.68541088e-06 6.99961486e-06 4.39267490e-05
+ 2.38982782e-05 1.84319192e-05 1.25037553e-06 1.29743330e-05]","[0.99998748 0.99998707 0.99999717 0.99999383 0.99996154 0.99999201
+ 0.99997609 0.99999907 0.99997402 0.99996824 0.99999497 0.999994
+ 0.99998899 0.99999051 0.9999517  0.99996596 0.99994408 0.99993312
+ 0.99998057 0.99999215]",10,50000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-20.52af97de-0318-43f7-ad2c-27fb4ec7fff6,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-2052af97de-0318-43f7-ad2c-27fb4ec7fff6
+ZDT2,2,20,"[3.47306582e-06 3.78692149e-06 4.50293987e-05 1.13450937e-05
+ 4.31940166e-06 1.85248934e-06 9.02953810e-07 1.14504529e-05
+ 7.97023698e-06 2.80175347e-05 1.13577315e-06 1.33253156e-05
+ 5.82924602e-06 4.19637313e-06 3.81109834e-06 5.05921323e-06
+ 5.66968232e-06 5.75076511e-06 3.52091889e-06 1.65135566e-05]","[0.99999207 0.99999144 0.99999208 0.99999415 0.99999852 0.99999815
+ 0.9999979  0.99999492 0.99998401 0.99998712 0.99999049 0.99998721
+ 0.9999998  0.99999391 0.99999099 0.99999517 0.99998762 0.9999945
+ 0.99998194 0.99999816]",17,100000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT2/ZDT2_Obj-2_Var-20.04e08121-0aed-4b67-b6fc-75b007571548,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT2/ZDT2_Obj-2_Var-2004e08121-0aed-4b67-b6fc-75b007571548
+ZDT3,2,10,"[0.0002266  0.00166638 0.01082492 0.00508202 0.00223712 0.0284396
+ 0.00091194 0.01044738 0.00782515 0.00489094]","[0.99507171 0.99569519 0.99774501 0.99957516 0.99901182 0.99544184
+ 0.99250335 0.99589052 0.98610599 0.99992818]",10,100,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-10.9dd6c597-e772-4de3-970d-3502b7383ea0,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-109dd6c597-e772-4de3-970d-3502b7383ea0
+ZDT3,2,10,"[0.00470886 0.01273682 0.00224248 0.01818318 0.00174482 0.00567182
+ 0.00139734 0.00103187 0.00275903 0.01634982]","[0.99731268 0.99997473 0.99941631 0.99893312 0.99646492 0.99953449
+ 0.99972483 0.99096032 0.99729091 0.99560559]",8,200,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-10.27840f75-5794-43e0-9faf-da0ffac7f33c,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-1027840f75-5794-43e0-9faf-da0ffac7f33c
+ZDT3,2,10,"[0.00253841 0.00010462 0.00718312 0.00156227 0.00207392 0.00034433
+ 0.00060956 0.0010289  0.00124755 0.00211798]","[0.99024903 0.99841504 0.99686955 0.99244276 0.9995925  0.99783275
+ 0.99647699 0.99885413 0.99913739 0.99634478]",18,300,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-10.17761394-dd05-4719-a3ee-b4cdd765d4a5,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-1017761394-dd05-4719-a3ee-b4cdd765d4a5
+ZDT3,2,10,"[0.00105789 0.00409508 0.0009292  0.00185695 0.00356612 0.00011804
+ 0.00217431 0.00045873 0.00180836 0.00242476]","[0.9985478  0.99853611 0.99940224 0.99946132 0.99933513 0.99985431
+ 0.99963139 0.99651253 0.99706975 0.9989688 ]",15,500,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-10.a20dae9d-656e-45ee-99d3-a801ccfb5cff,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-10a20dae9d-656e-45ee-99d3-a801ccfb5cff
+ZDT3,2,10,"[2.54180814e-03 1.39225571e-03 1.22680208e-03 4.62312611e-03
+ 5.31694067e-04 5.51310614e-05 2.18531885e-03 1.97490685e-03
+ 3.31232444e-03 4.38657287e-03]","[0.99914204 0.99983425 0.99940266 0.99737983 0.99994265 0.99865712
+ 0.9999998  0.99983613 0.99920531 0.99981923]",13,600,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-10.2713564e-bcd6-4280-b40a-64f9804440b8,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-102713564e-bcd6-4280-b40a-64f9804440b8
+ZDT3,2,10,"[0.00236837 0.00026944 0.00174989 0.00048037 0.00082247 0.00222098
+ 0.0003128  0.00120938 0.0037975  0.00027012]","[0.99983309 0.99968183 0.99942732 0.99980605 0.99973759 0.99983002
+ 0.99965515 0.99826878 0.99818283 0.99962198]",15,1000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-10.dec779af-b6c6-43fe-a08d-ce446b184d08,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-10dec779af-b6c6-43fe-a08d-ce446b184d08
+ZDT3,2,10,"[3.17547874e-05 4.42066534e-05 3.80478759e-05 3.14550179e-04
+ 4.41714112e-05 1.35947077e-04 1.46794095e-04 2.46643431e-04
+ 4.87231554e-04 4.36061729e-04]","[0.99984566 0.9995388  0.99996756 0.99998986 0.9998376  0.99941466
+ 0.99944151 0.99977676 0.99989407 0.99970306]",16,3000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-10.eb81aa46-1b94-4c5e-bd39-34d32c6cb963,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-10eb81aa46-1b94-4c5e-bd39-34d32c6cb963
+ZDT3,2,10,"[3.52502051e-04 1.29222174e-04 7.70785692e-05 2.87304907e-04
+ 1.92963835e-05 2.52167293e-04 2.24155676e-04 2.81266762e-04
+ 2.00881947e-05 5.82110251e-04]","[0.99966348 0.99997868 0.99965138 0.99994495 0.99989947 0.999809
+ 0.99922524 0.9998149  0.99987855 0.99981722]",18,6000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-10.7a48287c-893f-461d-83e3-bf700af9beb4,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-107a48287c-893f-461d-83e3-bf700af9beb4
+ZDT3,2,10,"[4.37861807e-06 1.03886847e-04 1.81115036e-04 1.44505554e-05
+ 1.69573660e-04 4.00626431e-05 1.83809113e-04 1.76030982e-04
+ 1.34783947e-04 3.79714099e-05]","[0.99992325 0.99999145 0.99992985 0.99972331 0.99999151 0.9999593
+ 0.99973935 0.99952971 0.99991164 0.9999749 ]",24,10000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-10.a0f90b86-8d05-4ddf-b510-aa82d03d5a69,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-10a0f90b86-8d05-4ddf-b510-aa82d03d5a69
+ZDT3,2,10,"[6.19542690e-05 1.57466372e-04 2.54366186e-05 6.24222538e-05
+ 1.00399600e-05 6.64622084e-06 1.96715835e-04 4.76085321e-05
+ 7.77522618e-05 2.10379282e-05]","[0.99989162 0.999918   0.99996787 0.99981925 0.99994694 0.99997118
+ 0.99993639 0.99999283 0.99989422 0.99990623]",24,15000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-10.d7fc4905-1697-4300-8ecf-42e5021d522d,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-10d7fc4905-1697-4300-8ecf-42e5021d522d
+ZDT3,2,10,"[9.73616035e-05 3.53679689e-05 1.12620111e-06 1.10538655e-04
+ 1.23756550e-04 3.86603953e-05 4.68411245e-05 3.93426411e-05
+ 2.86994606e-05 4.21531122e-05]","[0.999975   0.99988775 0.99997325 0.99999979 0.99993508 0.99989602
+ 0.99995865 0.99994848 0.9999092  0.99997307]",28,20000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-10.a2f0821c-c906-447a-bb03-970814459643,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-10a2f0821c-c906-447a-bb03-970814459643
+ZDT3,2,10,"[7.86960260e-06 7.99272892e-05 1.47939239e-05 3.14514724e-05
+ 3.80653968e-05 6.03895568e-05 4.26502924e-05 1.44517054e-05
+ 3.47934111e-05 1.18117103e-06]","[0.99999303 0.99998636 0.99998977 0.99998381 0.99994864 0.99994586
+ 0.99996203 0.9999904  0.99996524 0.99999455]",23,50000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-10.ead3ea7f-5595-4d8d-9790-bad3ce81e9a9,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-10ead3ea7f-5595-4d8d-9790-bad3ce81e9a9
+ZDT3,2,10,"[1.95489463e-07 2.70284871e-06 5.36766714e-06 2.53496531e-06
+ 5.89016696e-06 2.89455320e-07 5.30234985e-06 2.04241303e-05
+ 1.64376832e-06 5.05822695e-06]","[0.99998009 0.99998699 0.99999273 0.99998954 0.99999607 0.99999868
+ 0.99999793 0.99999616 0.9999938  0.99999889]",30,100000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-10.c5e04b55-50c5-489f-afd6-242e277e79b8,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-10c5e04b55-50c5-489f-afd6-242e277e79b8
+ZDT3,2,20,"[0.04379481 0.00250774 0.00189372 0.04434109 0.00261255 0.01420108
+ 0.02245059 0.00173188 0.01561512 0.00382922 0.00348765 0.0005117
+ 0.01129935 0.00987038 0.00723328 0.00427609 0.01441914 0.01720373
+ 0.00249017 0.00434045]","[0.99722072 0.99725153 0.99874881 0.97975659 0.97122357 0.99923688
+ 0.99480695 0.98246504 0.9861709  0.97482595 0.99368143 0.98679045
+ 0.97857634 0.9985441  0.96745543 0.98928862 0.98094049 0.99578711
+ 0.99959434 0.99599455]",7,100,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-20.97355573-b5df-4de9-bbd6-49876701f945,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-2097355573-b5df-4de9-bbd6-49876701f945
+ZDT3,2,20,"[1.92790302e-04 3.73081371e-03 1.11085915e-02 1.02645976e-02
+ 5.94041793e-03 8.81999940e-04 1.70428879e-03 5.78072891e-03
+ 1.82864544e-03 9.84333809e-03 9.53879844e-05 5.61519588e-04
+ 4.65708526e-03 2.70957129e-03 4.84017084e-04 2.36310381e-03
+ 2.03025369e-02 6.30253183e-03 4.55560752e-03 2.09614139e-02]","[0.99535285 0.99430233 0.99983736 0.99849074 0.9990188  0.99423827
+ 0.99943587 0.99908564 0.99834398 0.99740813 0.99789778 0.98512291
+ 0.99365306 0.99688948 0.99874744 0.99779147 0.99209838 0.99682297
+ 0.99951829 0.99768777]",12,200,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-20.04806990-ed45-4a57-857a-c7362a44cefe,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-2004806990-ed45-4a57-857a-c7362a44cefe
+ZDT3,2,20,"[0.00334573 0.00588179 0.00131112 0.00508636 0.00223352 0.00261964
+ 0.00062563 0.00107727 0.00457396 0.00490971 0.00572978 0.00311454
+ 0.00019331 0.0032377  0.00078149 0.00187377 0.00139079 0.00376261
+ 0.00099517 0.00093811]","[0.99318118 0.99619427 0.98019605 0.99649375 0.99834962 0.99926565
+ 0.99827475 0.99906264 0.99465347 0.99926569 0.99756307 0.99775735
+ 0.99184585 0.99874492 0.99537351 0.98121566 0.99646693 0.99946828
+ 0.99652848 0.99702876]",20,300,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-20.08e77d46-ea00-4a92-a2c3-e52558b94054,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-2008e77d46-ea00-4a92-a2c3-e52558b94054
+ZDT3,2,20,"[4.51486661e-03 3.20105653e-03 1.52065561e-03 4.84704438e-04
+ 3.24057359e-04 1.99790147e-03 1.16473292e-04 6.29254743e-04
+ 1.51787113e-03 2.50107919e-03 1.57750202e-04 6.82990427e-03
+ 2.48229479e-03 1.96341422e-04 3.45562329e-03 1.97677081e-03
+ 1.43441120e-05 1.43462652e-03 1.99735814e-03 6.58868069e-04]","[0.99634308 0.9996586  0.99641101 0.99331789 0.99982667 0.99772119
+ 0.99956363 0.99918574 0.99854415 0.99996417 0.99945913 0.9990867
+ 0.99759815 0.99977466 0.99950734 0.9980278  0.99912184 0.99701438
+ 0.99964894 0.99534673]",18,500,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-20.274b0e60-0069-4296-99be-6e386a3681db,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-20274b0e60-0069-4296-99be-6e386a3681db
+ZDT3,2,20,"[1.18215056e-04 9.10940431e-04 4.55554136e-04 2.73778135e-03
+ 2.52976236e-03 2.62617620e-04 2.14171144e-03 9.31324321e-04
+ 2.16679639e-03 2.20202393e-03 1.03551158e-03 1.03139764e-03
+ 4.89437973e-03 2.71240456e-03 3.42429557e-03 4.12971515e-03
+ 4.03014205e-05 1.56694408e-03 3.84986188e-04 4.05456749e-04]","[0.99886629 0.99977435 0.99851433 0.99648916 0.9978184  0.99668137
+ 0.99998079 0.99685891 0.99987785 0.99993629 0.99770461 0.99496345
+ 0.99925944 0.99864547 0.99968424 0.99877496 0.99790718 0.99794887
+ 0.99553982 0.99794243]",16,600,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-20.578efce6-9a38-4e8c-950a-6fc5aaab47f0,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-20578efce6-9a38-4e8c-950a-6fc5aaab47f0
+ZDT3,2,20,"[1.46800254e-03 1.23332729e-03 1.12036027e-05 2.00340156e-04
+ 1.03874570e-03 4.03773169e-04 3.20673346e-04 3.90655592e-04
+ 3.34677834e-05 2.12575411e-03 1.67397348e-03 4.16351566e-04
+ 5.12301845e-04 4.25031675e-04 1.88694170e-04 1.02637605e-03
+ 1.01027644e-05 2.80927710e-05 6.47233802e-04 1.31752373e-03]","[0.99992388 0.998725   0.99971185 0.99975645 0.99937099 0.9998093
+ 0.99811526 0.99970726 0.99842966 0.99772619 0.99978288 0.99942518
+ 0.99971307 0.99812308 0.99902137 0.99990529 0.99997403 0.99990226
+ 0.9996019  0.99697694]",17,1000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-20.2bc84be0-6104-43ae-b35a-f4c776f85941,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-202bc84be0-6104-43ae-b35a-f4c776f85941
+ZDT3,2,20,"[6.87568623e-05 1.27763570e-03 1.65177908e-04 1.35680211e-05
+ 3.88952414e-05 3.33220642e-04 3.41297143e-05 7.39246296e-04
+ 6.68238739e-04 1.00787590e-04 3.21936388e-04 9.44819073e-05
+ 1.93988639e-04 4.07949447e-04 2.85871963e-04 1.30699215e-04
+ 3.67398394e-04 8.58773847e-04 3.79729275e-04 3.57199451e-04]","[0.99853045 0.99970802 0.99981116 0.99970168 0.99990865 0.99908022
+ 0.99994806 0.99998152 0.99928773 0.99998074 0.99992458 0.99991005
+ 0.99978551 0.99965768 0.99979279 0.99913398 0.99991775 0.99971229
+ 0.99987138 0.99957823]",25,3000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-20.2b5e756a-c794-4baa-8a89-3bcef093f952,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-202b5e756a-c794-4baa-8a89-3bcef093f952
+ZDT3,2,20,"[6.22262550e-05 1.37365463e-04 2.04502443e-05 5.48693382e-05
+ 8.63865866e-05 5.90678332e-05 1.87181780e-04 8.14751035e-05
+ 1.21138304e-05 3.35113976e-04 1.70737795e-04 7.87238323e-05
+ 1.80111441e-04 2.90845294e-05 1.55398866e-04 4.67690740e-05
+ 1.64032512e-04 7.85139693e-05 1.28284933e-04 2.03096577e-04]","[0.99990301 0.99975163 0.99955077 0.99994142 0.99991626 0.99980702
+ 0.99970886 0.99998564 0.99984642 0.99973239 0.99968439 0.99994809
+ 0.99997403 0.99988006 0.99997241 0.9999267  0.99990554 0.9998563
+ 0.99978006 0.99997333]",22,6000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-20.5a134ac7-eccb-40f5-904f-4a7fbd429e9b,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-205a134ac7-eccb-40f5-904f-4a7fbd429e9b
+ZDT3,2,20,"[2.10932662e-05 1.07510760e-04 1.92857728e-05 4.67445602e-05
+ 8.09279194e-05 2.28953329e-05 1.24940190e-04 9.64339474e-05
+ 6.37144592e-05 1.57429039e-05 6.89545019e-05 2.16749247e-05
+ 1.44256047e-04 1.36385794e-04 2.95197204e-05 9.03641758e-05
+ 1.07998439e-04 9.20558824e-05 4.55692249e-04 3.63944468e-04]","[0.99990429 0.99991486 0.99980085 0.99994982 0.99985227 0.99995066
+ 0.99967747 0.99995559 0.99997391 0.99978882 0.99989819 0.99999478
+ 0.99941933 0.99973158 0.99978953 0.99993884 0.99985539 0.99980374
+ 0.99998708 0.99983464]",23,10000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-20.63ece3a8-4e06-419c-8459-36b4aba5a15e,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-2063ece3a8-4e06-419c-8459-36b4aba5a15e
+ZDT3,2,20,"[3.76030633e-05 7.59829698e-06 2.08524504e-04 4.39161819e-05
+ 5.00716557e-05 1.07629114e-05 9.02809129e-05 1.03048292e-05
+ 7.45194491e-05 3.48313631e-06 5.47409144e-05 4.17045971e-06
+ 2.45626510e-04 2.86033212e-05 5.58267708e-06 7.35027325e-06
+ 4.25598034e-05 1.27788741e-05 2.76227770e-05 8.59562884e-05]","[0.99998178 0.99984807 0.99991782 0.99980277 0.99978623 0.9999993
+ 0.99995598 0.99995109 0.99999519 0.99997446 0.99994856 0.99999759
+ 0.99996232 0.99978618 0.99999268 0.99994803 0.99999427 0.99994789
+ 0.9999609  0.99998231]",26,15000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-20.9cf0ed73-c347-452c-b7fb-9b8948e6b690,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-209cf0ed73-c347-452c-b7fb-9b8948e6b690
+ZDT3,2,20,"[1.20329141e-04 5.12487599e-05 1.49393534e-05 4.61061246e-05
+ 4.38228368e-05 3.30395678e-05 1.07785602e-04 1.02215949e-05
+ 9.54277017e-05 3.66749487e-06 5.36628595e-07 3.59591531e-05
+ 3.62758368e-05 1.44816024e-06 1.39563658e-04 8.54916708e-06
+ 6.60690586e-05 1.18709922e-04 6.90631309e-05 1.39784699e-05]","[0.99988476 0.99999353 0.99993256 0.99996035 0.99994997 0.99998982
+ 0.99997147 0.99997954 0.99997404 0.99992407 0.99985407 0.99999477
+ 0.99992971 0.99998905 0.99999532 0.99998246 0.99991397 0.99999335
+ 0.9999552  0.99974569]",23,20000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-20.cfe0acea-9619-4122-a673-5a0a6692a2bc,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-20cfe0acea-9619-4122-a673-5a0a6692a2bc
+ZDT3,2,20,"[1.10407986e-05 4.73715443e-07 4.84015031e-06 2.56746051e-05
+ 2.04972350e-05 2.32241266e-06 9.51242005e-06 5.31046849e-06
+ 6.23489620e-06 2.24744213e-06 6.58955484e-06 3.03452756e-05
+ 1.35105545e-05 1.46202491e-05 2.16127261e-05 5.54268660e-06
+ 1.25397849e-05 4.99394408e-05 6.77822694e-06 2.92031550e-05]","[0.99993246 0.99999953 0.99996752 0.9999937  0.99998411 0.99999777
+ 0.99999311 0.99996881 0.99999423 0.99998444 0.99997798 0.99997055
+ 0.99998563 0.99999331 0.99991336 0.9999752  0.99998708 0.99999679
+ 0.99998762 0.99998695]",28,50000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-20.6f4e5ff8-9edb-48c4-8e43-daed9184393c,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-206f4e5ff8-9edb-48c4-8e43-daed9184393c
+ZDT3,2,20,"[1.42077598e-05 8.23197709e-06 7.78641431e-06 2.66061715e-06
+ 1.84505171e-05 1.00856979e-05 8.26921233e-06 4.06293005e-05
+ 7.55347868e-06 3.36519004e-06 1.03359675e-05 2.18346737e-05
+ 6.65541334e-06 2.68586818e-05 1.36975672e-05 7.84011782e-06
+ 1.97877832e-06 7.87253288e-08 1.72920877e-05 3.16844508e-06]","[0.99998812 0.99999898 0.99999075 0.99999495 0.99999787 0.99999655
+ 0.99999493 0.99999141 0.99999944 0.99998614 0.99999731 0.99999689
+ 0.99999673 0.99999749 0.99999963 0.99999925 0.99996629 0.99997465
+ 0.99999185 0.99999971]",20,100000,/Users/wuyoscar/Documents/Project/MOOP/Result/Random_Search/ZDT3/ZDT3_Obj-2_Var-20.83d9f925-9eac-4e63-88e5-a3e0b48ef526,/Users/wuyoscar/Documents/Project/MOOP/Result/Images/Random_Search/ZDT3/ZDT3_Obj-2_Var-2083d9f925-9eac-4e63-88e5-a3e0b48ef526
