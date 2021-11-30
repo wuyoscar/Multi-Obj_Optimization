@@ -1,7 +1,7 @@
 #! /bin/bash
 i=0
 while read -ra p
-do for pop in 100 200 300 500 600 1000 3000 6000 10000 15000 20000 50000 100000
+do for pop in 150000 300000 500000
 do
 python /Users/wuyoscar/Documents/Project/MOOP/experiments/RandomSearch_pipeline.py -p ${p[0]}  -n ${p[1]} -ob ${p[2]} -pop $pop
 echo This is runing ${i} job
