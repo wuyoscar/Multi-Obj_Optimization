@@ -137,7 +137,7 @@ if __name__ == "__main__":
         plt.scatter(non_donmiated_solution[:, 0], non_donmiated_solution[:, 1], alpha=0.4,s=30, facecolors='none', edgecolors='blue')
         plt.scatter(approx_ideal[0], approx_ideal[1], facecolors='none', edgecolors='red', marker="*", s=100, label="Ideal Point (Approx)")
         plt.scatter(approx_nadir[0], approx_nadir[1], facecolors='none', edgecolors='black', marker="p", s=100, label="Nadir Point (Approx)")
-        plt.title(f"Objective Space with pop_size {non_donmiated_solution.shape[0]}")
+        plt.title(f"found non_dominated solution: {non_donmiated_solution.shape[0]}")
         plt.xlabel("$f1$")
         plt.ylabel("$f2$")
         plt.legend()
