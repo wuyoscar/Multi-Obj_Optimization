@@ -1,12 +1,9 @@
 from bs4 import BeautifulSoup 
-from requests_html import HTMLSession
 import requests
 import numpy as np 
 import pandas as pd 
 import  xlsxwriter
-import re
 from newspaper import Article
-import nltk
 from newspaper import ArticleException
 import nltk
 nltk.download('punkt')
